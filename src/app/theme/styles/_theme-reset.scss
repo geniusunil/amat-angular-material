@@ -1,0 +1,189 @@
+@import "variables";
+@mixin theme-reset($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+
+    .bg-primary {
+        @include _mat-toolbar-color($primary);
+    }
+    .bg-accent {
+        @include _mat-toolbar-color($accent);
+    }
+    .bg-warn {
+        @include _mat-toolbar-color($warn);
+    }
+
+    .secondary-text-color{
+        color: mat-color($foreground, secondary-text);
+    }
+    .primary-color{
+        color: mat-color($primary) !important;
+    }
+    .accent-color{
+        color: mat-color($accent) !important;
+    }
+    .warn-color{
+        color: mat-color($warn) !important;
+    }
+
+    .header{
+        background: mat-color($background, card);
+        color: mat-color($foreground, base);
+        .info-content{
+            .top-contact-form{        
+                border-color: mat-color($foreground, divider);
+            }
+        }
+    }
+    .content-header h4{
+        color: mat-color($primary, lighter);
+    }
+    .favorites-container:after{
+        color: mat-color($accent);
+    }
+
+
+    .horizontal-menu{
+        background: mat-color($background, card);
+    }
+    .horizontal-menu-item {        
+        .horizontal-sub-menu{
+            background: mat-color($background, card);
+        }
+        .mat-button{
+            color: mat-color($foreground, secondary-text);
+            .horizontal-menu-title{
+                color: mat-color($foreground, text);
+            }
+            &.parent-item{
+                .horizontal-menu-icon{
+                    background: mat-color($background, focused-button);
+                    color: mat-color($foreground, secondary-text);
+                }
+                &.active-link{
+                    background: mat-color($background, focused-button);
+                    .horizontal-menu-icon{
+                        background: mat-color($primary);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+        
+    .menu-item{
+        .mat-button{            
+            .menu-icon{
+                background: mat-color($background, focused-button);
+                color: mat-color($foreground, secondary-text);
+            }
+            .menu-title{
+                color: mat-color($foreground, text);
+            }
+            &.active-link{
+                background: mat-color($background, focused-button);
+                .menu-icon{
+                    background: mat-color($primary);
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .menu-expand-icon{
+        color: mat-color($foreground, secondary-text);
+    }
+    .breadcrumb a{
+        color: mat-color($primary, lighter);
+    }
+    .top-toolbar, .landing-toolbar{
+        background: mat-color($primary, darker);
+        color: mat-color($primary, lighter);
+    }
+    .menu-toolbar{
+        background: mat-color($primary, 900);
+        color: mat-color($primary, 100);
+    } 
+    .ps__thumb-y{
+        background-color: mat-color($primary);
+    }
+
+    .testimonial-item, .pricing-card {
+        border-top: 4px solid mat-color($accent);        
+    }
+
+    /* ngx-charts */
+    .ngx-charts{
+        text{
+            fill: mat-color($foreground, text); 
+        }       
+    }
+    [class*=gradient-] .ngx-charts{
+        text{
+            fill: #fff;
+        }       
+    }
+
+    /* ngx-pagination */
+    .annular-pagination .ngx-pagination{
+        margin-bottom: 0;
+        padding: 4px;
+        .current {
+            @include _mat-toolbar-color($primary);
+        }
+        a:hover, button:hover{
+            background: rgba(mat-color($primary), 0.2);
+            color: mat-color($foreground, base);
+        }
+    } 
+
+    /* angular-calendar */
+    .cal-day-view .cal-hour-segment:hover, 
+    .cal-day-view .cal-drag-over .cal-hour-segment,
+    .cal-week-view .cal-day-headers .cal-header:hover, 
+    .cal-week-view .cal-day-headers .cal-drag-over,
+    .cal-month-view .cal-cell-row .cal-cell:hover, 
+    .cal-month-view .cal-cell.cal-has-events.cal-open{
+        background-color: rgba(mat-color($primary), 0.4);  
+    }
+    .cal-month-view .cal-cell-row:hover{
+        background-color: rgba(mat-color($primary), 0.05);         
+    }
+    .cal-week-view .cal-header.cal-today,
+    .cal-month-view .cal-day-cell.cal-today{
+        background-color: rgba(mat-color($primary), 0.4);   
+    }
+    .cal-day-view .cal-hour:nth-child(odd){
+        background-color: inherit;
+    }
+    .cal-event-action i{
+        margin: 4px;
+    }
+
+    /* ngx-quill */
+    .ql-snow .ql-picker,
+    .ql-editor.ql-blank::before{
+        color: mat-color($foreground, text);
+    }
+    .ql-snow .ql-stroke{
+        stroke: mat-color($foreground, text);
+    }
+    .ql-snow .ql-fill{
+        fill: mat-color($foreground, text);
+    }
+    .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label, 
+    .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options{
+        background: mat-color($background, app-bar);
+    }
+
+    /* ngx-charts */
+    .ngx-charts{
+        text{
+            fill: mat-color($foreground, text); 
+        }       
+    }
+
+}
+

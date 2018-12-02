@@ -1,0 +1,151 @@
+@import "mixins";
+
+.app[dir="rtl"]{
+    &.fixed-sidenav{
+        .footer{
+            float: left;
+        }
+    }
+    &.fixed-footer{
+        .footer{
+            right: auto;
+            left: 0;
+        }
+    }
+    .info-content .close-btn{
+        right: auto !important;
+        left: 8px;        
+    }
+    .options-icon{
+        left: -4px;
+    }
+    .menu-item .mat-button .menu-icon{
+        margin-left: 12px;
+    }
+    .menu-expand-icon{
+        right: auto;
+        left: 10px;
+    }
+    .sub-menu{
+        @include menu-level-padding('rtl');
+        .mat-button{
+            padding-right: 20px;      
+        }
+    }
+    &.compact{
+        .menu-item .mat-button .menu-icon{
+            margin-left: 0;
+        }
+        .sub-menu .mat-button{
+            padding-right: 0 !important;
+        }
+    }
+    &.mini{
+        .menu-item .mat-button .menu-icon{
+            margin-left: 0;
+        }
+        .sub-menu .mat-button{
+            padding-right: 0 !important;
+        }
+        .menu-expand-icon{
+            right: auto;
+            left: 0px;
+        }
+    }
+    .horizontal-menu-item {
+        .horizontal-menu-icon{
+            margin-right: 0;
+            margin-left: 8px;
+        }
+    }
+    .horizontal-sub-menu .horizontal-sub-menu{
+        left: auto;
+        right: 100%;
+    }
+    &.horizontal-menu{
+        &.compact{
+            .horizontal-menu-item{
+                 .horizontal-sub-menu{
+                     .mat-button{
+                        .horizontal-menu-icon{
+                            margin-right: 0;
+                            margin-left: 10px;
+                        }
+                    }
+                 }
+            }
+        }
+    }
+    .back-to-top{
+        right: auto;
+        left: 20px;
+    }
+    .messages img{
+        margin-right: 0;
+        margin-left: 8px;
+    }
+    .messages{
+        img, .row-1{
+            margin-right: 0;
+            margin-left: 8px;
+        }
+        span.text{
+            text-align: right;
+        }
+    }
+    .flags img{
+        margin-right: 0;
+        margin-left: 8px;
+    }    
+    .tile{
+        text-align: left;
+        .mat-icon{
+            left:auto;
+            right: 32px;
+        }
+    }    
+    .user-content .info-list span{
+        padding-left: 0;
+        padding-right: 8px;
+    }
+    .ql-editor.ql-blank::before{
+        right: 6px;
+    }
+    .ql-editor{
+        text-align: right;
+    }
+    .chat-status-icon{
+        margin-right: 0;
+        margin-left: 6px;
+    }
+    .chat-sidenav, .mailbox-sidenav{
+        border-right: none;
+        border-left: 1px solid transparent;      
+    }
+    .cal-month-view {
+        .cal-day-number{
+            float: left;
+            margin-right: 0;
+            margin-left: 15px;
+        }
+        .cal-day-badge{
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+    .mat-dialog-title{
+        text-align: right;
+    }
+    .favorites-container:after{
+        right: auto;
+        left: -14px;
+    }
+    .ps__rail-y{
+        right: auto !important;
+        left: 0 !important;
+    }
+    .ps__thumb-y{
+        right: auto !important;
+        left: 1px !important;
+    }
+}

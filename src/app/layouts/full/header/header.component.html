@@ -1,0 +1,42 @@
+
+ <div fxLayout="row" fxLayoutAlign="start center" fxShow="false" fxShow.gt-xs class="search-bar">
+    <form method="get">
+            <select name="location">
+                    <option value="accounts">accounts</option>
+                    
+                    <option value="contacts">contacts</option>
+                    <option value="dashboard">dashboard</option>
+                    <option value="events">events</option>
+                  </select>
+        <input type="text" placeholder="Search" class="mat-elevation-z3"  [class.show]="toggleSearchBar">
+        <button mat-icon-button (click)="toggleSearchBar = !toggleSearchBar" type="button">
+            <mat-icon>search</mat-icon>
+        </button> 
+    </form>
+</div>
+ <button mat-icon-button>
+        <mat-icon>add_box</mat-icon>  
+</button>  
+<button mat-button class="m-r-10 p-l-0">
+<span> Create New</span>
+</button>
+<button mat-icon-button class="m-r-10">
+<mat-icon matBadge="15" matBadgeColor="warn" class="m-r-20" >notifications_none</mat-icon>
+</button>
+<button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5"> <img src="assets/images/users/1.jpg" alt="user" class="profile-pic"> </button>
+<button mat-button   [matMenuTriggerFor]="profile" class="m-r-10 p-l-0">
+        <span>Shetty k</span> <mat-icon>keyboard_arrow_down</mat-icon> 
+</button>
+ 
+
+<mat-menu #profile="matMenu" class="mymegamenu">
+    <button mat-menu-item>
+        <mat-icon>settings</mat-icon> Settings </button>
+    <button mat-menu-item>
+        <mat-icon>account_box</mat-icon> Profile </button>
+    <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon> Disable notifications </button>
+    <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon> Sign Out </button>
+</mat-menu>
+

@@ -1,0 +1,5 @@
+$green-dark-primary: mat-palette($mat-green, 700, 50, 800);
+$green-dark-accent: mat-palette($mat-amber, A200, A100, A700);
+$green-dark-warn: mat-palette($mat-red, A200);
+
+$green-dark-theme: mat-dark-theme($green-dark-primary, $green-dark-accent, $green-dark-warn);

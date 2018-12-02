@@ -1,0 +1,19 @@
+<div class="navbar-header">
+    <a class="navbar-brand toHide" style="text-align: center" href="index.html">
+        Utiliko
+    </a>
+    <img class="icons show" src="./assets/images/logo/stark.jpg" [style.display]="logoDisplay">
+</div>
+<mat-nav-list appAccordion>
+    <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected" group="{{menuitem.state}}">
+        <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
+            <mat-icon class="show">{{ menuitem.icon }}</mat-icon> 
+            <span class="toHide">{{ menuitem.name }}</span> 
+            <span fxFlex></span> 
+            <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span> 
+        </a>
+
+        
+    </mat-list-item>
+
+</mat-nav-list>

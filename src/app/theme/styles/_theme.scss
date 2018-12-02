@@ -1,0 +1,46 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import 'theme-reset';
+.app{
+    &.indigo-light{
+        @import "skins/indigo-light";
+        @include angular-material-theme($indigo-light-theme);
+        @include theme-reset($indigo-light-theme);
+    }
+    &.teal-light{
+        @import "skins/teal-light";
+        @include angular-material-theme($teal-light-theme);
+        @include theme-reset($teal-light-theme);
+    }
+    &.red-light{
+        @import "skins/red-light";
+        @include angular-material-theme($red-light-theme);
+        @include theme-reset($red-light-theme);
+    }
+    &.gray-light{
+        @import "skins/gray-light";
+        @include angular-material-theme($gray-light-theme);
+        @include theme-reset($gray-light-theme);
+    }
+    &.blue-dark{
+        @import "skins/blue-dark";
+        @include angular-material-theme($blue-dark-theme);
+        @include theme-reset($blue-dark-theme);
+    }
+    &.green-dark{
+        @import "skins/green-dark";
+        @include angular-material-theme($green-dark-theme);
+        @include theme-reset($green-dark-theme);
+    }
+    &.pink-dark{
+        @import "skins/pink-dark";
+        @include angular-material-theme($pink-dark-theme);
+        @include theme-reset($pink-dark-theme);
+    }
+    &.gray-dark{
+        @import "skins/gray-dark";
+        @include angular-material-theme($gray-dark-theme);
+        @include theme-reset($gray-dark-theme);
+    }
+}

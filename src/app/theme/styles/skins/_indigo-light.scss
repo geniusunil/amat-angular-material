@@ -1,0 +1,5 @@
+$indigo-light-primary: mat-palette($mat-indigo, 700, 50, 800);
+$indigo-light-accent: mat-palette($mat-pink, A200, A100, A400);
+$indigo-light-warn: mat-palette($mat-red, 500);
+
+$indigo-light-theme: mat-light-theme($indigo-light-primary, $indigo-light-accent, $indigo-light-warn);

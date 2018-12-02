@@ -1,0 +1,5 @@
+$teal-light-primary: mat-palette($mat-teal, 700, 50, 800);
+$teal-light-accent: mat-palette($mat-deep-orange, 600, A400, 900);
+$teal-light-warn: mat-palette($mat-red, 600);
+
+$teal-light-theme: mat-light-theme($teal-light-primary, $teal-light-accent, $teal-light-warn);

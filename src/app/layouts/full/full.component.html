@@ -1,0 +1,61 @@
+
+<div class="main-container"> 
+    
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+        <!-- ============================================================== -->
+        <!-- Sidebar - style you can find in sidebar.scss -->
+        <!-- ============================================================== -->
+        <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches"   [@childAnimation]="isOpen ? 'open' : 'closed'" >
+            
+                <app-sidebar></app-sidebar>
+               
+            
+        </mat-sidenav>
+        <!-- ============================================================== -->
+        <!-- Sidebar - style you can find in sidebar.scss -->
+        <!-- ============================================================== -->
+    <mat-sidenav-content [style.marginLeft.px]="widthSidebar" [@marginLeft]="isOpen ? 'open' : 'closed'" >
+        <mat-toolbar color="primary" class="topbar telative">
+                <!-- <div class="navbar-header">
+                    <a class="navbar-brand" style="text-align: center" href="index.html">
+                        Utiliko
+                    </a>
+                </div> -->
+
+                <!-- ============================================================== -->
+                <!-- sidebar toggle -->
+                <!-- ============================================================== -->
+                
+                <button mat-icon-button (click)="sidebarToggle()" value="sidebarclosed">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span fxFlex> Utiliko Business Management</span>
+                <!-- ============================================================== -->
+                <!-- app header component - style you can find in header.scss / header.component.ts-->
+                <!-- ============================================================== -->
+                <app-header></app-header>
+            </mat-toolbar>    
+    <!-- ============================================================== -->
+    <!-- End Topbar - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+            <div class="page-content">
+                        
+                    <router-outlet><app-spinner></app-spinner></router-outlet>
+                
+            </div>    
+        </mat-sidenav-content>
+            <!-- ============================================================== -->
+        <!-- Header container - style you can find in header.scss -->
+        <!-- ============================================================== -->
+
+        <!-- ============================================================== -->
+        <!-- Page container - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        
+        
+        <!-- ============================================================== -->
+        <!-- Page container - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+    </mat-sidenav-container>
+</div>
