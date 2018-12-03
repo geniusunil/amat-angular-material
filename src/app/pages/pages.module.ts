@@ -8,6 +8,17 @@ import { PagesRoutes } from './pages.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { MailboxComponent } from './mailbox/mailbox.component';
+import { DiscussionComponent } from './discussion/discussion.component';
+import { AccountingComponent } from './accounting/accounting.component';
+import { HrComponent } from './hr/hr.component';
+import { ReportsComponent } from './reports/reports.component';
+import { UtilitiesComponent } from './utilities/utilities.component';
+import { SurveyComponent } from './survey/survey.component';
+import { ClientComponent } from './client/client.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { SalesComponent } from './sales/sales.component';
+import { SupportComponent } from './support/support.component';
 
 
 @NgModule({
@@ -17,6 +28,7 @@ import { MailboxComponent } from './mailbox/mailbox.component';
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes)
   ],
-  declarations: [PagesComponent, DashboardComponent, CalendarComponent, MailboxComponent]
+  declarations: [PagesComponent, DashboardComponent, CalendarComponent, MailboxComponent, DiscussionComponent,AccountingComponent, HrComponent, ReportsComponent, UtilitiesComponent, SurveyComponent,ClientComponent ,VendorComponent,TasksComponent,SalesComponent,SupportComponent ]
+  
 })
 export class PagesModule {}
