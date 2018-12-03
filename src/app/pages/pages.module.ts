@@ -7,6 +7,7 @@ import { PagesComponent } from './pages.component';
 import { PagesRoutes } from './pages.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { MailboxComponent } from './mailbox/mailbox.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { CalendarComponent } from './calendar/calendar.component';
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes)
   ],
-  declarations: [PagesComponent, DashboardComponent, CalendarComponent]
+  declarations: [PagesComponent, DashboardComponent, CalendarComponent, MailboxComponent]
 })
 export class PagesModule {}

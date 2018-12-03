@@ -18,7 +18,7 @@ import { MaterialModule } from './material-module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { PagesComponent } from './pages/pages.component';
-import { MailboxComponent } from './mailbox/mailbox.component';
+
 // import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { MailboxComponent } from './mailbox/mailbox.component';
     AppHeaderComponent,
     SpinnerComponent,
     AppSidebarComponent,
-    MailboxComponent,
+    
     // PagesComponent
   ],
   imports: [
