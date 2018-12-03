@@ -7,7 +7,7 @@ import { PagesComponent } from './pages.component';
 import { PagesRoutes } from './pages.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import { DiscussionComponent } from './discussion/discussion.component';
+
 
 @NgModule({
   imports: [
@@ -16,6 +16,6 @@ import { DiscussionComponent } from './discussion/discussion.component';
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes)
   ],
-  declarations: [PagesComponent, DashboardComponent, CalendarComponent, DiscussionComponent]
+  declarations: [PagesComponent, DashboardComponent, CalendarComponent]
 })
 export class PagesModule {}
