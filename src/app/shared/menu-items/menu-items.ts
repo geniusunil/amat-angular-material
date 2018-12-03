@@ -8,8 +8,8 @@ export interface Menu {
 }
 
 const MENUITEMS = [
-  { state: 'pages', name: 'Dashboard', type: 'link', icon: 'home' },
-  { state: 'pages', name: 'Calender', type: 'link', icon: 'calendar_today' },
+  { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'home' },
+  { state: 'calendar', name: 'Calender', type: 'link', icon: 'calendar_today' },
   { state: 'pages', name: 'Discussion', type: 'link', icon: 'av_timer' },
   { state: 'pages', name: 'Mailbox', type: 'link', icon: 'mail' },
   { state: 'pages', name: 'Client', type: 'link', icon: 'people' },

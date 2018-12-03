@@ -5,6 +5,12 @@ import { FullComponent } from './layouts/full/full.component';
 export const AppRoutes: Routes = [
   {
     path: '',
+    redirectTo:'/dashboard',
+      pathMatch:'full',
+  },
+  {
+    path: '',
+    
     component: FullComponent,
     children: [
       {
@@ -14,5 +20,6 @@ export const AppRoutes: Routes = [
       }
     ],
     
-  }
+  },
+  
 ];
