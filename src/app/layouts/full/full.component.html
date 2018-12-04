@@ -6,12 +6,14 @@
         <!-- ============================================================== -->
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
+        <!-- <ng-scrollbar> -->
         <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches"   [@childAnimation]="isOpen ? 'open' : 'closed'" >
-            
+            <ng-scrollbar>
                 <app-sidebar ></app-sidebar>
-               
+            </ng-scrollbar>
             
         </mat-sidenav>
+        <!-- </ng-scrollbar> -->
         <!-- ============================================================== -->
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->

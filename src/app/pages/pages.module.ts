@@ -26,7 +26,8 @@ import { SupportComponent } from './support/support.component';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
-    RouterModule.forChild(PagesRoutes)
+    RouterModule.forChild(PagesRoutes),
+    
   ],
   declarations: [PagesComponent, DashboardComponent, CalendarComponent, MailboxComponent, DiscussionComponent,AccountingComponent, HrComponent, ReportsComponent, UtilitiesComponent, SurveyComponent,ClientComponent ,VendorComponent,TasksComponent,SalesComponent,SupportComponent ]
   

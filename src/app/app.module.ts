@@ -17,6 +17,8 @@ import { MaterialModule } from './material-module';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
+
+import { NgScrollbarModule } from 'ngx-scrollbar';
 import { PagesComponent } from './pages/pages.component';
 import { ClientComponent } from './pages/client/client.component';
 import { VendorComponent } from './pages/vendor/vendor.component';
@@ -58,7 +60,8 @@ import { UtilitiesComponent } from './pages/utilities/utilities.component'; */
     FlexLayoutModule,
     HttpClientModule,
     SharedModule,
-    RouterModule.forRoot(AppRoutes)
+    RouterModule.forRoot(AppRoutes),
+    NgScrollbarModule
   ],
   providers: [
     {
