@@ -8,7 +8,10 @@ Main sidebar
 ******************/
 #snav{
     // overflow:hidden;
-    
+    .mat-drawer-inner-container{
+
+        width:237px;
+    }
     .navbar-header {
         display:flex;
         text-align: center;

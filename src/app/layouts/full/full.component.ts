@@ -54,6 +54,23 @@ import { AppSidebarComponent } from './sidebar/sidebar.component';
         animate('0.5s')
       ]),
     ]),
+    trigger('widthInner', [
+      // ...
+      state('open', style({
+        width : '245px',
+        // opacity: 1,
+        // backgroundColor: 'yellow'
+      })),
+      state('closed', style({
+        width: '87px',
+        // opacity: 0.5,
+        // backgroundColor: 'green'
+      })),
+      transition('* => *', [
+        animate('0.5s')
+      ]),
+    ]),
+    
   ],
 })
 export class FullComponent implements OnDestroy, AfterViewInit {
