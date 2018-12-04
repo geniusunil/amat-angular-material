@@ -8,7 +8,7 @@
         <!-- ============================================================== -->
         <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches"   [@childAnimation]="isOpen ? 'open' : 'closed'" >
             
-                <app-sidebar [@widthInner]="isOpen ? 'open' : 'closed'"></app-sidebar>
+                <app-sidebar ></app-sidebar>
                
             
         </mat-sidenav>
