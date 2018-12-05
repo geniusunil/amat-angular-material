@@ -1,8 +1,8 @@
 <div class="navbar-header">
-    <a class="navbar-brand toHide" style="text-align: center" href="index.html">
+    <a class="navbar-brand show" style="text-align: center" href="index.html">
         Utiliko
     </a>
-    <img class="icons show" src="./assets/images/logo/stark.jpg" [style.display]="logoDisplay">
+    
 </div>
 <mat-nav-list appAccordion>
     <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected" group="{{menuitem.state}}">
