@@ -30,7 +30,10 @@ export class AppSidebarComponent implements OnDestroy {
   var elements = document.getElementsByClassName("show");
   [].forEach.call(elements, function(el) {
     el.style.width ="inherit";
+   
 });
+document.getElementById("utiliko").style.font = "600 1.2em/24px 'Open Sans', sans-serif";
+
 }
 
   expand() {
@@ -39,6 +42,8 @@ export class AppSidebarComponent implements OnDestroy {
     [].forEach.call(elements, function(el) {
       el.style.display ="block";
   });
+
+document.getElementById("utiliko").style.font = "600 1.9em/24px 'Open Sans', sans-serif";
   }
   
   constructor(
