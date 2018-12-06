@@ -28,9 +28,11 @@ File: scss
     background: $bodycolor;
     
 }
-
+.mat-toolbar-single-row{
+    height:3.5vw !important;
+}
 html .page-wrapper{
-    height:calc(100vh - 64px);
+    height:calc(100vh - 3.5vw);
     .page-content .padding{
         padding: 15px;
     }

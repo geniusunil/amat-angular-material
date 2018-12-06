@@ -25,7 +25,7 @@ import { AppSidebarComponent } from './sidebar/sidebar.component';
     trigger('childAnimation', [
       // ...
       state('open', style({
-        width : '225px',
+        width : '14.5vw',
         // opacity: 1,
         // backgroundColor: 'yellow'
       })),
@@ -41,7 +41,7 @@ import { AppSidebarComponent } from './sidebar/sidebar.component';
     trigger('marginLeft', [
       // ...
       state('open', style({
-        marginLeft : '225px',
+        marginLeft : '14.5vw',
         // opacity: 1,
         // backgroundColor: 'yellow'
       })),
@@ -59,8 +59,8 @@ import { AppSidebarComponent } from './sidebar/sidebar.component';
 })
 export class FullComponent implements OnDestroy, AfterViewInit {
   mobileQuery: MediaQueryList;
-  widthSidebarExpanded : number = 225;
-  widthSidebarCollapsed : number = 75;
+  widthSidebarExpanded : number = 14.5;
+  widthSidebarCollapsed : number = 5.5;
   widthSidebar : number = this.widthSidebarExpanded;
   private _mobileQueryListener: () => void;
   isOpen = true;
