@@ -10,6 +10,8 @@ import {
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from '../../../shared/menu-items/menu-items';
+import { IconsModule } from '../../../icons/icons.module';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

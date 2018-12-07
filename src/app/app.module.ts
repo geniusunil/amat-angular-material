@@ -25,6 +25,7 @@ import { VendorComponent } from './pages/vendor/vendor.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { SalesComponent } from './pages/sales/sales.component';
 import { SupportComponent } from './pages/support/support.component';
+import { IconsModule } from './icons/icons.module';
 /* import { HrComponent } from './pages/hr/hr.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 import { SurveyComponent } from './pages/survey/survey.component';
@@ -61,7 +62,8 @@ import { UtilitiesComponent } from './pages/utilities/utilities.component'; */
     HttpClientModule,
     SharedModule,
     RouterModule.forRoot(AppRoutes),
-    NgScrollbarModule
+    NgScrollbarModule,
+    IconsModule
   ],
   providers: [
     {
