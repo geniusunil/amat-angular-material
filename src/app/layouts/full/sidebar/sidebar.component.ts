@@ -38,7 +38,21 @@ export class AppSidebarComponent implements OnDestroy {
     document.getElementById("utiliko").style.font = "600 20px/24px 'Open Sans', sans-serif";
     var elements = document.getElementsByClassName("nav");
     [].forEach.call(elements, function (el) {
-      el.style.padding = "0 5px"
+      el.style.padding = "0 5px";
+    });
+
+    var elements = document.getElementsByClassName("sidebarIcon");
+    [].forEach.call(elements, function (el) {
+      el.style.width = "100%";
+      el.style.marginRight = "0";
+    });
+
+    var x = document.querySelectorAll(".sidebarIcon svg");
+    [].forEach.call(x, function (el) {
+      el.style.height = "27px";
+      el.style.width = "27px"
+      el.style.margin = "auto";
+      el.style.display = "block";
     });
 
   }
@@ -60,6 +74,19 @@ export class AppSidebarComponent implements OnDestroy {
     var elements = document.getElementsByClassName("nav");
     [].forEach.call(elements, function (el) {
       el.style.padding = "0 5px"
+    });
+
+    var elements = document.getElementsByClassName("sidebarIcon");
+    [].forEach.call(elements, function (el) {
+      el.style.width = "initial";
+    });
+
+    var x = document.querySelectorAll(".sidebarIcon svg");
+    [].forEach.call(x, function (el) {
+      el.style.height = "18px";
+      el.style.width = "18px";
+      el.style.margin = "0 8px";
+     
     });
   }
 

@@ -21,13 +21,7 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
 import { FeatherIconsPipe } from './feather-pipe';
-/* import { HrComponent } from './pages/hr/hr.component';
-import { ReportsComponent } from './pages/reports/reports.component';
-import { SurveyComponent } from './pages/survey/survey.component';
-// import { AccountingComponent } from './pages/accounting/accounting.component';
-import { UtilitiesComponent } from './pages/utilities/utilities.component'; */
 
-// import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [

@@ -72,7 +72,7 @@ mat-sidenav {
             margin-bottom: 10px;
             align-items: center;
             display: flex;
-            font-size: 15px;
+            font-size: 14px;
             white-space: nowrap;
             color:$sidebar-text;
             mat-icon:not(.dd-icon){
@@ -83,6 +83,7 @@ mat-sidenav {
             }
             .sidebarIcon{
                 margin-right:8px;
+                
             }
             .dd-icon{
                 font-size: 16px;
