@@ -37,9 +37,7 @@ Main sidebar
             b {
                margin-right: 5px;
             }
-            img{
-                
-            }
+            
         }
     }
 }
@@ -82,6 +80,9 @@ mat-sidenav {
             }
             mat-icon{
                 color:$sidebar-icons;
+            }
+            .sidebarIcon{
+                margin-right:8px;
             }
             .dd-icon{
                 font-size: 16px;

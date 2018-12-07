@@ -19,13 +19,8 @@ import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 
 import { NgScrollbarModule } from 'ngx-scrollbar';
-import { PagesComponent } from './pages/pages.component';
-import { ClientComponent } from './pages/client/client.component';
-import { VendorComponent } from './pages/vendor/vendor.component';
-import { TasksComponent } from './pages/tasks/tasks.component';
-import { SalesComponent } from './pages/sales/sales.component';
-import { SupportComponent } from './pages/support/support.component';
-import { IconsModule } from './icons/icons.module';
+
+import { FeatherIconsPipe } from './feather-pipe';
 /* import { HrComponent } from './pages/hr/hr.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 import { SurveyComponent } from './pages/survey/survey.component';
@@ -41,6 +36,7 @@ import { UtilitiesComponent } from './pages/utilities/utilities.component'; */
     AppHeaderComponent,
     SpinnerComponent,
     AppSidebarComponent,
+    FeatherIconsPipe
     /* ClientComponent,
     VendorComponent,
     TasksComponent,
@@ -63,7 +59,7 @@ import { UtilitiesComponent } from './pages/utilities/utilities.component'; */
     SharedModule,
     RouterModule.forRoot(AppRoutes),
     NgScrollbarModule,
-    IconsModule
+    
   ],
   providers: [
     {
