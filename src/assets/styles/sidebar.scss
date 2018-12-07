@@ -47,7 +47,12 @@ mat-sidenav {
   padding-top: 0px;
 }
 #snav{
-    
+    .sub-menu{
+        display:none;
+    }
+    .nav-small:hover .sub-menu,.nav-small:visited .sub-menu{
+        display: block !important;
+    }
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
     .mat-list-item {
         height: auto;

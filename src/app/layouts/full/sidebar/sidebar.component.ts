@@ -39,6 +39,7 @@ export class AppSidebarComponent implements OnDestroy {
     var elements = document.getElementsByClassName("nav");
     [].forEach.call(elements, function (el) {
       el.style.padding = "0 5px";
+      el.classList.add('nav-small');
     });
 
     var elements = document.getElementsByClassName("sidebarIcon");
@@ -73,7 +74,9 @@ export class AppSidebarComponent implements OnDestroy {
     document.getElementById("utiliko").style.font = "600 30px/24px 'Open Sans', sans-serif";
     var elements = document.getElementsByClassName("nav");
     [].forEach.call(elements, function (el) {
-      el.style.padding = "0 5px"
+      el.style.padding = "0 5px";
+      el.classList.remove('nav-small');
+
     });
 
     var elements = document.getElementsByClassName("sidebarIcon");

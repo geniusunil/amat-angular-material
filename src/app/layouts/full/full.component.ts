@@ -30,7 +30,7 @@ import { AppSidebarComponent } from './sidebar/sidebar.component';
         // backgroundColor: 'yellow'
       })),
       state('closed', style({
-        width: '75px',
+        width: '5.5vw',
         // opacity: 0.5,
         // backgroundColor: 'green'
       })),
@@ -46,7 +46,7 @@ import { AppSidebarComponent } from './sidebar/sidebar.component';
         // backgroundColor: 'yellow'
       })),
       state('closed', style({
-        marginLeft: '75px',
+        marginLeft: '5.5vw',
         // opacity: 0.5,
         // backgroundColor: 'green'
       })),
