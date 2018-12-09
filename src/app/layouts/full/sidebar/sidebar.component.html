@@ -1,5 +1,5 @@
 <div class="navbar-header">
-    <a class="navbar-brand show" id="utiliko" style="text-align: center" href="index.html">
+    <a class="navbar-brand" id="utiliko" href="index.html">
         Utiliko
     </a>
     
@@ -10,15 +10,25 @@
             <!-- <div class="iconTestContainer"> -->
                 
                    
-                <span class="sidebarIcon" [innerHTML]= "[menuitem.icon] | feather"></span>
+                <span class="sidebarIcon toHide" [innerHTML]= "[menuitem.icon] | feather"></span>
 
                 <span class="toHide">{{ menuitem.name }}</span> 
-                <span fxFlex class="sub-menu">abc</span> 
+                <span class="btnwrap hide"><button class="mat-small" [innerHTML]= "[menuitem.icon] | feather" mat-button id="menuBtn" (click)="stateChange([menuitem.state])" [matMenuTriggerFor]="menu"></button></span>
+                
+                <!-- <span fxFlex class="sub-menu">abc</span>  -->
                 <!-- <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>  -->
             <!-- </div> -->
         </a>
 
         
     </mat-list-item>
-
+    
 </mat-nav-list>
+
+<mat-menu #menu="matMenu" >
+  <ng-container *ngFor="let submenuitem of menuItems.getSubMenuitem([state])" routerLinkActive="selected"> 
+      <button mat-menu-item >{{ submenuitem.name }}</button>
+   
+</ng-container>
+ </mat-menu>
+<!-- <child-component #x="menuInOtherComponent"></child-component> -->

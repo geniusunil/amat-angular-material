@@ -18,11 +18,20 @@ import { MenuItems } from '../../../shared/menu-items/menu-items';
   styleUrls: []
 })
 export class AppSidebarComponent implements OnDestroy {
-
+  
   mobileQuery: MediaQueryList;
   logoDisplay: string = 'none';
   private _mobileQueryListener: () => void;
-
+  state : string = 'sales';
+  stateChange(newState) {
+    // console.log("i got "+newState);
+    this.state = newState;
+    if(newState!='sales' && newState!='support' && newState!='hr'&& newState!='accounting'&& newState!='reports'&& newState!='utilities'&& newState!='survey' ){
+      // console.log("here");
+      // document.removeChild(document.getElementsByClassName("cdk-overlay-connected-position-bounding-box")[0]);
+      document.getElementsByClassName("cdk-overlay-container")[0].innerHTML="";
+    }
+  }
   collapse() {
     this.logoDisplay = 'block';
     var elements = document.getElementsByClassName("toHide");
@@ -55,7 +64,10 @@ export class AppSidebarComponent implements OnDestroy {
       el.style.margin = "auto";
       el.style.display = "block";
     });
-
+    var elements = document.getElementsByClassName("btnwrap");
+    [].forEach.call(elements, function (el) {
+      el.style.display = "block";
+    });
   }
 
   expand() {
@@ -91,6 +103,10 @@ export class AppSidebarComponent implements OnDestroy {
       el.style.margin = "0 8px";
      
     });
+    var elements = document.getElementsByClassName("btnwrap");
+    [].forEach.call(elements, function (el) {
+      el.style.display = "none";
+    });
   }
 
   constructor(
@@ -107,5 +123,7 @@ export class AppSidebarComponent implements OnDestroy {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-
+  hostClickHandler(item: string) {
+    alert(item);
+  }
 }

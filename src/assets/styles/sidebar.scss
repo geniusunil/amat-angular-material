@@ -13,6 +13,18 @@ Main sidebar
         align-items: center;
         margin:auto;
     } */
+    .btnwrap{
+        width:100%;
+    }
+    .mat-button.mat-small{
+        min-width: 100%;
+        padding:0;
+        svg{
+            height:27px;
+            width:27px;
+            vertical-align: middle;
+        }
+    }
     .navbar-header {
         display:flex;
         text-align: center;
