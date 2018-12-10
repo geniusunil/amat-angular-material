@@ -59,7 +59,7 @@ import { FeatherIconsPipe } from './feather-pipe';
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy,
-      
+       
     }
   ],
   bootstrap: [AppComponent]

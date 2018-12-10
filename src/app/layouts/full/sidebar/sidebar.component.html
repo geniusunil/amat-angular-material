@@ -13,7 +13,8 @@
                 <span class="sidebarIcon toHide" [innerHTML]= "[menuitem.icon] | feather"></span>
 
                 <span class="toHide">{{ menuitem.name }}</span> 
-                <span class="btnwrap hide"><button class="mat-small" [innerHTML]= "[menuitem.icon] | feather" mat-button id="menuBtn" (click)="stateChange([menuitem.state])" [matMenuTriggerFor]="menu"></button></span>
+                <span class="btnwrap hide">
+                    <button #button class="mat-small" [innerHTML]= "[menuitem.icon] | feather" mat-button id="menuBtn" (click)="stateChange([menuitem.state])" [matMenuTriggerFor]="menu" #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger,button,[menuitem.state])" (mouseleave)="buttonLeave(levelOneTrigger, button)"></button></span>
                 
                 <!-- <span fxFlex class="sub-menu">abc</span>  -->
                 <!-- <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>  -->

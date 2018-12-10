@@ -6,7 +6,8 @@ import {
   ViewChild,
   HostListener,
   Directive,
-  AfterViewInit
+  AfterViewInit,
+  Renderer2
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from '../../../shared/menu-items/menu-items';
@@ -26,11 +27,7 @@ export class AppSidebarComponent implements OnDestroy {
   stateChange(newState) {
     // console.log("i got "+newState);
     this.state = newState;
-    if(newState!='sales' && newState!='support' && newState!='hr'&& newState!='accounting'&& newState!='reports'&& newState!='utilities'&& newState!='survey' ){
-      // console.log("here");
-      // document.removeChild(document.getElementsByClassName("cdk-overlay-connected-position-bounding-box")[0]);
-      document.getElementsByClassName("cdk-overlay-container")[0].innerHTML="";
-    }
+    
   }
   collapse() {
     this.logoDisplay = 'block';
@@ -112,7 +109,8 @@ export class AppSidebarComponent implements OnDestroy {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    public menuItems: MenuItems
+    public menuItems: MenuItems,
+    private ren: Renderer2
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -126,4 +124,93 @@ export class AppSidebarComponent implements OnDestroy {
   hostClickHandler(item: string) {
     alert(item);
   }
+
+  /* following content is copied from 
+  https://stackblitz.com/edit/mat-nested-menu-yclrmd?embed=1&file=app/nested-menu-example.html
+  https://stackoverflow.com/questions/53618333/how-to-open-and-close-angular-mat-menu-on-hover/53618962#53618962
+  */
+  
+  menuenter() {
+    this.isMatMenuOpen = true;
+    if (this.isMatMenu2Open) {
+      this.isMatMenu2Open = false;
+    }
+  }
+
+  menuLeave(trigger, button) {
+    setTimeout(() => {
+      if (!this.isMatMenu2Open && !this.enteredButton) {
+        this.isMatMenuOpen = false;
+        trigger.closeMenu();
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-program-focused');
+      } else {
+        this.isMatMenuOpen = false;
+      }
+    }, 80)
+  }
+
+  menu2enter() {
+    this.isMatMenu2Open = true;
+  }
+
+  menu2Leave(trigger1, trigger2, button) {
+    setTimeout(() => {
+      if (this.isMatMenu2Open) {
+        trigger1.closeMenu();
+        this.isMatMenuOpen = false;
+        this.isMatMenu2Open = false;
+        this.enteredButton = false;
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-program-focused');
+      } else {
+        this.isMatMenu2Open = false;
+        trigger2.closeMenu();
+      }
+    }, 100)
+  }
+
+  buttonEnter(trigger,button,newState) {
+    this.stateChange(newState);
+    trigger.openMenu();
+    this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-focused');
+    this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
+    /* setTimeout(() => {
+      if(this.prevButtonTrigger && this.prevButtonTrigger != trigger){
+        this.prevButtonTrigger.closeMenu();
+        this.prevButtonTrigger = trigger;
+        this.isMatMenuOpen = false;
+        this.isMatMenu2Open = false;
+        trigger.openMenu()
+      }
+      else if (!this.isMatMenuOpen) {
+        this.enteredButton = true;
+        this.prevButtonTrigger = trigger
+        trigger.openMenu()
+      }
+      else {
+        this.enteredButton = true;
+        this.prevButtonTrigger = trigger
+      }
+    }) */
+  }
+
+  buttonLeave(trigger,button) {
+    trigger.closeMenu();
+    this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
+    /* setTimeout(() => {
+      if (this.enteredButton && !this.isMatMenuOpen) {
+        trigger.closeMenu();
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-program-focused');
+      } if (!this.isMatMenuOpen) {
+        trigger.closeMenu();
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
+        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-program-focused');
+      } else {
+        this.enteredButton = false;
+      }
+    }, 100)*/
+  } 
 }

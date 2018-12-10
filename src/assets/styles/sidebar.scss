@@ -328,3 +328,11 @@ use profile section
     color: #ffffff;
 
 }
+
+#snav .mat-list-item:hover > .mat-list-item-content > a {
+
+    background:$sidebar-selected-item;
+    border-radius: 4px;
+    color: #ffffff;
+
+}
