@@ -131,14 +131,14 @@ export class AppSidebarComponent implements OnDestroy {
   */
   
   menuenter() {
-    this.isMatMenuOpen = true;
+    /* this.isMatMenuOpen = true;
     if (this.isMatMenu2Open) {
       this.isMatMenu2Open = false;
-    }
+    } */
   }
 
   menuLeave(trigger, button) {
-    setTimeout(() => {
+    /* setTimeout(() => {
       if (!this.isMatMenu2Open && !this.enteredButton) {
         this.isMatMenuOpen = false;
         trigger.closeMenu();
@@ -147,15 +147,15 @@ export class AppSidebarComponent implements OnDestroy {
       } else {
         this.isMatMenuOpen = false;
       }
-    }, 80)
+    }, 80) */
   }
 
   menu2enter() {
-    this.isMatMenu2Open = true;
+    /* this.isMatMenu2Open = true; */
   }
 
   menu2Leave(trigger1, trigger2, button) {
-    setTimeout(() => {
+    /* setTimeout(() => {
       if (this.isMatMenu2Open) {
         trigger1.closeMenu();
         this.isMatMenuOpen = false;
@@ -167,7 +167,7 @@ export class AppSidebarComponent implements OnDestroy {
         this.isMatMenu2Open = false;
         trigger2.closeMenu();
       }
-    }, 100)
+    }, 100) */
   }
 
   buttonEnter(trigger,button,newState) {

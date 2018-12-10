@@ -2,7 +2,8 @@
 File: scss
 */
 
-$mini-sidebar-width: 80px;
+$sidebar-width-mini: 80px;
+$sidebar-width:14.5vw;
 /*******************
 Main sidebar
 ******************/
@@ -256,14 +257,14 @@ use profile section
           display: none;
         }
         &.mat-sidenav ~ .mat-drawer-content {
-          margin-left: $mini-sidebar-width;
+          margin-left: $sidebar-width-mini;
         }
         &.mat-sidenav {
           -webkit-transition: width .2s cubic-bezier(.25,.8,.25,1), transform .2s cubic-bezier(.25,.8,.25,1)!important;
           transition: width .2s cubic-bezier(.25,.8,.25,1), transform .2s cubic-bezier(.25,.8,.25,1)!important;
         }
         &.mat-sidenav:not(:hover) {
-          width: $mini-sidebar-width;
+          width: $sidebar-width-mini;
           .sub-menu, .dd-icon, .selected .sub-item {
             display: none;
             visibility: hidden;
@@ -298,7 +299,7 @@ use profile section
             right: 16px;
           }
           .mat-list-item > .mat-list-item-content > a > .material-icons {
-            width: $mini-sidebar-width!important;
+            width: $sidebar-width-mini!important;
             padding: 0;
             margin: 0;
           }
@@ -310,7 +311,7 @@ use profile section
         }
         .minisidebar #snav.mat-sidenav ~ .mat-drawer-content {
           margin-left: 0px!important;
-          margin-right: $mini-sidebar-width!important;
+          margin-right: $sidebar-width-mini!important;
         }
     }
 }
