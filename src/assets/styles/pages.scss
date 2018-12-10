@@ -3,7 +3,7 @@
 File: scss
 */
 
-
+@import './sidebar';
 /*============================================================== 
  For all pages 
  ============================================================== */
@@ -106,7 +106,10 @@ html .page-wrapper{
     }
 }
 .cdk-overlay-container{
-    left:14.5vw;
+    left:$sidebar-width-collapsed;
+}
+.cdk-overlay-connected-position-bounding-box{
+    left:0 !important;
 }
 .status{
     float:right;
