@@ -172,9 +172,22 @@ export class AppSidebarComponent implements OnDestroy {
 
   buttonEnter(trigger,button,newState) {
     this.stateChange(newState);
+    
+
     trigger.openMenu();
+    
+    /*var menu = <HTMLElement>(document.getElementsByClassName('cdk-overlay-connected-position-bounding-box')[0]);
+    console.log("buttonEnter");
+    menu.style.top = '45px'; */
     this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-focused');
     this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
+    //var elements = document.getElementsByClassName("cdk-overlay-connected-position-bounding-box");
+    var elements = document.getElementsByClassName("cdk-overlay-connected-position-bounding-box");
+
+    console.log(elements);
+    [].forEach.call(elements, function (el) {
+      el.style.top = '45px';
+    });
     /* setTimeout(() => {
       if(this.prevButtonTrigger && this.prevButtonTrigger != trigger){
         this.prevButtonTrigger.closeMenu();
@@ -199,6 +212,12 @@ export class AppSidebarComponent implements OnDestroy {
     trigger.closeMenu();
     this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
         this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
+        var elements = document.getElementsByClassName("cdk-overlay-container");
+
+    console.log("executing");
+    [].forEach.call(elements, function (el) {
+      // el.innerHTML = "";
+    });
     /* setTimeout(() => {
       if (this.enteredButton && !this.isMatMenuOpen) {
         trigger.closeMenu();
