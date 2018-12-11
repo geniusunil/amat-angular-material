@@ -1,10 +1,8 @@
 /*
 File: scss
 */
+@import './pages.scss';
 
-$sidebar-width-mini: 80px;
-$sidebar-width:14.5vw;
-$sidebar-width-collapsed:5.5vw;
 /*******************
 Main sidebar
 ******************/
@@ -15,6 +13,7 @@ Main sidebar
         align-items: center;
         margin:auto;
     } */
+    
     .btnwrap{
         width:100%;
     }
@@ -54,11 +53,17 @@ Main sidebar
             
         }
     }
+    @include mobile{
+
+    }
 }
 
 mat-sidenav {
-  width: 14.5vw;
+  width: $sidebar-width;
   padding-top: 0px;
+  @include mobile{
+    width:0 !important;
+  }
 }
 #snav{
     .sub-menu{
