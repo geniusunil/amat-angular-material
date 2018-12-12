@@ -7,16 +7,13 @@ File: scss
 /*============================================================== 
  For all pages 
  ============================================================== */
- $sidebar-width-mini: 80px;
- $sidebar-width:14.5vw;
- $sidebar-width-collapsed:5.5vw;
+
 
  
 /*******************
  Main container
 *******************/
-$desktop : 1023px;
-$mobile : 767px;
+
 
 @mixin mobile{
     @media(max-width:#{$mobile}){
