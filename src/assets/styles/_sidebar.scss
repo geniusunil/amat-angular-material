@@ -1,7 +1,7 @@
 /*
 File: scss
 */
-@import './variable';
+@import './pages.scss';
 
 /*******************
 Main sidebar
@@ -59,10 +59,10 @@ Main sidebar
 }
 
 mat-sidenav {
-  width: $sidebar-width-current;
+  width: $sidebar-width;
   padding-top: 0px;
   @include mobile{
-    $sidebar-width-current:0;
+    width:0 !important;
   }
 }
 #snav{

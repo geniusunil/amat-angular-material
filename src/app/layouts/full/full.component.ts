@@ -1,7 +1,6 @@
 import * as $ from 'jquery';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-
 import {
   ChangeDetectorRef,
   Component,
@@ -32,6 +31,11 @@ import { AppSidebarComponent } from './sidebar/sidebar.component';
       })),
       state('closed', style({
         width: '5.5vw',
+        // opacity: 0.5,
+        // backgroundColor: 'green'
+      })),
+      state('fullClosed', style({
+        width: '0',
         // opacity: 0.5,
         // backgroundColor: 'green'
       })),

@@ -7,12 +7,7 @@ File: scss
 
 $bodyfont: 'Open Sans', sans-serif;
 $headingfont: 'Open Sans', sans-serif;
-$desktop : 1023px;
-$mobile : 767px;
-$sidebar-width-mini: 80px;
-$sidebar-width:14.5vw;
-$sidebar-width-collapsed:5.5vw;
-$sidebar-width-current:$sidebar-width;
+
 @import '~@angular/material/theming';
 
 /*Material Theme Colors*/

@@ -17,7 +17,7 @@
         <!-- ============================================================== -->
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
-    <mat-sidenav-content [style.marginLeft.px]="widthSidebar" [@marginLeft]="isOpen ? 'open' : 'closed'" >
+    <mat-sidenav-content [style.marginLeft.px]="widthSidebar" [@marginLeft]="isOpen ? 'open' : (isOpen ? 'closed' : 'fullClosed')" >
             <ng-scrollbar [autoHide] = "true" [overlay]="true">
         <mat-toolbar color="primary" class="topbar telative">
                 <!-- <div class="navbar-header">
