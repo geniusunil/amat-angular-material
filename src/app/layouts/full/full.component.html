@@ -7,7 +7,7 @@
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
         <!-- <ng-scrollbar> -->
-        <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches"   [@childAnimation]="isOpen ? 'open' : 'closed'" >
+        <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="'side'" fixedTopGap="0" [opened]="'true'" [disableClose]="'true'"   [@childAnimation]="isOpen ? (isWide ? 'open' : 'fullOpened') : (isWide ? 'closed' : 'fullClosed')" >
             <ng-scrollbar [autoHide] = "true" [overlay]="true">
                 <app-sidebar ></app-sidebar>
             </ng-scrollbar>
@@ -17,7 +17,7 @@
         <!-- ============================================================== -->
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
-    <mat-sidenav-content [style.marginLeft.px]="widthSidebar" [@marginLeft]="isOpen ? 'open' : (isOpen ? 'closed' : 'fullClosed')" >
+    <mat-sidenav-content  [@marginLeft]="isOpen ? (isWide ? 'open' : 'fullOpened') : (isWide ? 'closed' : 'fullClosed')" >
             <ng-scrollbar [autoHide] = "true" [overlay]="true">
         <mat-toolbar color="primary" class="topbar telative">
                 <!-- <div class="navbar-header">
@@ -33,7 +33,7 @@
                 <button mat-icon-button (click)="sidebarToggle()" value="sidebarclosed">
                     <mat-icon>menu</mat-icon>
                 </button>
-                <span fxFlex> Utiliko Business Management</span>
+                <span class="hideOnMobile" fxFlex> Utiliko Business Management</span>
                 <!-- ============================================================== -->
                 <!-- app header component - style you can find in header.scss / header.component.ts-->
                 <!-- ============================================================== -->

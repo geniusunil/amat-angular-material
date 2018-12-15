@@ -2,14 +2,14 @@
 
 File: scss
 */
-
+@import './pages';
 
 /*******************
  Topbar
 *******************/
 mat-toolbar{
     box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
-    
+    // display:block !important;
     &.topbar{
         padding: 0px 15px;
     }
@@ -113,3 +113,9 @@ mat-toolbar{
 mat-toolbar .navbar-header{
     background-color:#E5E8ED;
 } */
+
+.hideOnMobile{
+    @include belowDesktop{
+        display:none;
+    }
+}
