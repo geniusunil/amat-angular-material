@@ -10,8 +10,14 @@ File: scss
 mat-toolbar{
     box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
     // display:block !important;
+    // justify-content: flex-end;
     &.topbar{
         padding: 0px 15px;
+    }
+    button{
+        @include mobile{
+            float:right;
+        }
     }
     /* .navbar-header {
         
@@ -118,4 +124,12 @@ mat-toolbar .navbar-header{
     @include belowDesktop{
         display:none;
     }
+}
+app-header{
+    float:right;
+    margin-left:auto;
+    @include mobile{
+        display: none;
+    }
+    
 }
