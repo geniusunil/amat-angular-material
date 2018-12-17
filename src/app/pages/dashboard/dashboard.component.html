@@ -6,8 +6,8 @@
                 
 </div>
 <div class="padding">
-  <div fxLayout="row">
-      <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50%">
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+      <div fxFlex.gt-sm="33.33%" style="max-width: 500px">
           <mat-card >
               <mat-card-content>
                   <mat-card-title class="flex">
@@ -37,7 +37,7 @@
               </mat-card-content>
           </mat-card>
       </div>
-      <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50%">
+      <div fxFlex.gt-sm="33.33%" style="max-width: 500px" >
           <mat-card>
               <mat-card-content>
                   <mat-card-title class="flex"><mat-icon class="custom-green symbol">assignment</mat-icon>Invoice</mat-card-title>
@@ -66,7 +66,36 @@
               </mat-card-content>
           </mat-card>
       </div>
-      <div fxFlex.gt-sm="33.33%" >
+      <div fxFlex.gt-sm="33.33%" style="max-width: 500px">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title class="flex"><mat-icon class="custom-pink symbol">check_circle</mat-icon>Task</mat-card-title>
+                <mat-grid-list cols="2" rowHeight="2:1">
+                        <mat-grid-tile class="one">
+                           
+                                <span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
+                                <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
+                            
+                        </mat-grid-tile>
+                        
+                        <mat-grid-tile class="two"><span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
+                        </mat-grid-tile>
+                        
+                        <mat-grid-tile class="three"><span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="four"><span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
+                        </mat-grid-tile>
+                      </mat-grid-list>
+                <mat-list>
+
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+      <!-- <div fxFlex.gt-sm="33.33%" >
           <mat-card>
               <mat-card-content>
                   <mat-card-title class="flex"><mat-icon class="custom-pink symbol">check_circle</mat-icon><span>Task</span></mat-card-title>
@@ -93,7 +122,7 @@
                   
               </mat-card-content>
           </mat-card>
-      </div>
+      </div> -->
   </div>
   <div fxLayout="row" fxLayoutWrap="wrap">
       <!-- Card column -->
