@@ -60,7 +60,7 @@ export class MenuItems {
   }
   getSubMenuitem(subMenu): Menu[] {
 
-    console.log("log"+subMenu);
+    // console.log("log"+subMenu);
     if(subMenu=='sales'){
       return foo[0];
     }
