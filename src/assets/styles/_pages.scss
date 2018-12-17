@@ -418,6 +418,7 @@ html {
     height:3.5vw;
     background-color:$sidebar;
     color:$sidebar-selected-item;
+    min-height:45px;
 }
 #title-inner{
     display:flex;
@@ -472,4 +473,7 @@ html {
         border-width: 0 0 1px;
         border-style: solid;
     }
+}
+.fiveHundred{
+    max-width: 500px;
 }
