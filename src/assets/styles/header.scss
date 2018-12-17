@@ -40,21 +40,17 @@ mat-toolbar{
         }
     } */
     .search-bar{
-        display:inline;
+        
         float: left;
-
+        width: 18vw;
     }
-    .search-bar select{
-        border-top-left-radius:15px;
-        border-bottom-left-radius:15px;
-        padding: 5px;
-        color:#7d7d7d;
-    }
+    
     .search-bar input{
         border-top-right-radius:15px;
         border-bottom-right-radius:15px;
         padding: 6px;
         border:none;
+        width:12vw;
     }
     .search-bar button{
         margin-left:-39px;
@@ -132,4 +128,30 @@ app-header{
         display: none;
     }
     
+}
+
+.ng-select.custom {
+    border:0px;
+    min-height: 0px;
+    border-radius: 0;
+    
+}
+.ng-select.custom .ng-select-container  {            
+    min-height: 0px;
+    border-radius: 15px 0 0 15px !important;
+    
+        padding: 5px;
+        color:#7d7d7d;
+       
+        float:left;
+        height:27px;
+        margin:7px 0;
+        width:6vw;
+}
+
+.ng-select .ng-arrow-wrapper{
+    padding-top:5px;
+}
+.ng-dropdown-panel.ng-select-bottom{
+    top:35px;
 }

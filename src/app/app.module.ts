@@ -21,6 +21,7 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
 import { FeatherIconsPipe } from './feather-pipe';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { FeatherIconsPipe } from './feather-pipe';
     SharedModule,
     RouterModule.forRoot(AppRoutes),
     NgScrollbarModule,
-    
+    NgSelectModule, FormsModule
   ],
   providers: [
     {

@@ -13,7 +13,7 @@ File: scss
  *	7. Widgets
  *	8. Custom Templates
  */
-
+ @import "~@ng-select/ng-select/themes/default.theme.css";
 @import 'variable';
 
 @import 'spinner';

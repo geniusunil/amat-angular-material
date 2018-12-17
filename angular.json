@@ -80,7 +80,7 @@
               "src/assets/styles/style.scss"
             ],
             "assets": [
-              "src/assets",
+              "src/assets"
              
             ]
           }

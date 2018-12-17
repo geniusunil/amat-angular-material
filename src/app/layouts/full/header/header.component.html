@@ -1,14 +1,14 @@
 
  <div fxLayout="row" fxLayoutAlign="start center" fxShow="false" fxShow.gt-xs class="search-bar">
     <form method="get">
-        
-            <select name="location">
+        <ng-select class="custom"></ng-select>
+            <!-- <select name="location">
                     <option value="accounts">accounts</option>
                     
                     <option value="contacts">contacts</option>
                     <option value="dashboard">dashboard</option>
                     <option value="events">events</option>
-                  </select>
+                  </select> -->
         <input type="text" placeholder="Search" class="mat-elevation-z3"  [class.show]="toggleSearchBar">
         <button mat-icon-button (click)="toggleSearchBar = !toggleSearchBar" type="button">
             <mat-icon>search</mat-icon>
