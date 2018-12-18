@@ -13,7 +13,7 @@
                 <span class="sidebarIcon toHide" [innerHTML]= "[menuitem.icon] | feather"></span>
 
                 <span class="toHide">{{ menuitem.name }}</span> 
-                <span class="btnwrap2" [attr.data-state]="menuitem.state">
+                <span class="btnwrap2 toHide" [attr.data-state]="menuitem.state">
                     <button #button class="mat-small" mat-button [innerHTML]= "['chevron-right'] | feather" (click)="showSubMenu(menuitem.state)"
                     ></button></span>
                     
