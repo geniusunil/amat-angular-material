@@ -51,6 +51,7 @@ mat-toolbar{
         padding: 6px;
         border:none;
         width:12vw;
+        height:27px;
     }
     .search-bar button{
         margin-left:-39px;
@@ -150,8 +151,41 @@ app-header{
 }
 
 .ng-select .ng-arrow-wrapper{
-    padding-top:5px;
+    // padding-top:5px;
+    top:30%;
+    right:-15%;
+    position: relative;
 }
 .ng-dropdown-panel.ng-select-bottom{
-    top:35px;
+    top:40px;
+    // display:none;
+}
+.customSelect{
+    
+    background-color: white;
+    
+    min-height: 0px;
+    border-radius: 15px 0 0 15px !important;
+    
+        padding: 5px 0 5px 5px;
+        color:#7d7d7d;
+       
+        float:left;
+        height:27px;
+        margin:7px 0;
+        width:6vw;
+        font-size:14px;
+        border-width: 0 1px 0 0;
+        border-style: solid;
+}
+.mat-form-field-underline{
+    display: none;
+}
+.mat-form-field-infix{
+    border:0;
+    padding:0 !important;
+}
+.myPanelClass{
+    margin-top:23px;
+    margin-left:-64px;
 }

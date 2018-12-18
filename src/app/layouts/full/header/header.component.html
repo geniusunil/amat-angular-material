@@ -1,7 +1,18 @@
 
  <div fxLayout="row" fxLayoutAlign="start center" fxShow="false" fxShow.gt-xs class="search-bar">
     <form method="get">
-        <ng-select class="custom"></ng-select>
+        <!-- <ng-select class="custom" [items]="cities3"
+        bindLabel="name"
+        bindValue="name"
+        placeholder="Select city"
+        [(ngModel)]="selectedCityName"></ng-select> -->
+        <mat-form-field class="customSelect">
+            <mat-select [(ngModel)]="selectedValue" name="food" disableOptionCentering panelClass="myPanelClass">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
             <!-- <select name="location">
                     <option value="accounts">accounts</option>
                     
