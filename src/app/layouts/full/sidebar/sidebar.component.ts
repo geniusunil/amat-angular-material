@@ -133,9 +133,9 @@ isMatMenu2Open = false;
   
   ngAfterViewInit(): void {
     var elements = document.getElementsByClassName("btnwrap2");
-    console.log("HI");
+   /*  console.log("HI");
     console.log(elements);
-    (<HTMLElement>elements[0]).style.display = "none";
+    (<HTMLElement>elements[0]).style.display = "none"; */
     [].forEach.call(elements, function (el) {
       console.log("hello");
       console.log(el.dataset.state);
