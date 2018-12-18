@@ -128,18 +128,19 @@ isMatMenu2Open = false;
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-    this._browser.getStorageValue('api_key', api_key => {
-      if (api_key) {
-        this.zone.run(() => this._browser.gotoMain());
-      }
-    })
+    
   }
   
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     var elements = document.getElementsByClassName("btnwrap2");
+    console.log("HI");
+    console.log(elements);
+    (<HTMLElement>elements[0]).style.display = "none";
     [].forEach.call(elements, function (el) {
+      console.log("hello");
       console.log(el.dataset.state);
-      if(this.menuStates.indexOf(el.dataset.state) == -1){
+      var menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
+      if(menuStates.indexOf(el.dataset.state) == -1){
         el.style.display ="none";
       }
     });
