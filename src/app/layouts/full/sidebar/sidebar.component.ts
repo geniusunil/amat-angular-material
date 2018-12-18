@@ -7,7 +7,8 @@ import {
   HostListener,
   Directive,
   AfterViewInit,
-  Renderer2
+  Renderer2,
+  OnInit
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from '../../../shared/menu-items/menu-items';
@@ -19,15 +20,17 @@ import { MenuItems } from '../../../shared/menu-items/menu-items';
   styleUrls: []
 })
 export class AppSidebarComponent implements OnDestroy {
+  
   enteredButton = false;
 isMatMenuOpen = false;
 isMatMenu2Open = false;
   mobileQuery: MediaQueryList;
   logoDisplay: string = 'none';
-  private _mobileQueryListener: () => void;
+  private _mobileQueryListener: () => void;NgZone
   state : string = 'sales';
   prevButtonTrigger;
   menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
+  
   stateChange(newState) {
     // console.log("i got "+newState);
     this.state = newState;
@@ -119,13 +122,29 @@ isMatMenu2Open = false;
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
     public menuItems: MenuItems,
-    private ren: Renderer2
+    private ren: Renderer2,
+    private zone:NgZone
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this._browser.getStorageValue('api_key', api_key => {
+      if (api_key) {
+        this.zone.run(() => this._browser.gotoMain());
+      }
+    })
   }
-
+  
+  ngOnInit(): void {
+    var elements = document.getElementsByClassName("btnwrap2");
+    [].forEach.call(elements, function (el) {
+      console.log(el.dataset.state);
+      if(this.menuStates.indexOf(el.dataset.state) == -1){
+        el.style.display ="none";
+      }
+    });
+    
+  }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
@@ -268,4 +287,13 @@ isMatMenu2Open = false;
       }
     }, 100)
   } 
+
+  // my functions start from here
+  showSubMenu(state){
+    var element=<HTMLElement>document.querySelectorAll(".sub-menu."+state)[0];
+    if(element.style.display == "none")
+      element.style.display = "block";
+      else
+      element.style.display = "none";
+  }
 }
