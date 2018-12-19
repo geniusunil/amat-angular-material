@@ -71,7 +71,10 @@ mat-sidenav {
 }
 #snav{
     .sub-menu{
-        display:none;
+        // display:none;
+        .changeMe,button{
+            height:inherit;
+        }
     }
     .nav-small:hover .sub-menu,.nav-small:visited .sub-menu{
         display: block !important;

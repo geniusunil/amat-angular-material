@@ -6,7 +6,7 @@
 </div>
 <mat-nav-list appAccordion>
     <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected" group="{{menuitem.state}}">
-        <a class="nav" [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
+        <a class="nav" [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'" (click)="stateChange(menuitem.state); showSubMenu(menuitem.state)">
             <!-- <div class="iconTestContainer"> -->
                 
                    
@@ -14,20 +14,23 @@
 
                 <span class="toHide">{{ menuitem.name }}</span> 
                 <span class="btnwrap2 toHide" [attr.data-state]="menuitem.state">
-                    <button #button class="mat-small" mat-button [innerHTML]= "['chevron-right'] | feather" (click)="showSubMenu(menuitem.state)"
+                    <button #button class="mat-small" mat-button [innerHTML]="[fIcon] | feather"
+                   
                     ></button></span>
                     
-                    
-                <span class="btnwrap hide">
-                    <button #button class="mat-small" [innerHTML]= "[menuitem.icon] | feather" mat-button id="menuBtn" (click)="stateChange(menuitem.state)" [matMenuTriggerFor]="menu" #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger,button,menuitem.state)" 
-                    (mouseleave)="buttonLeave(levelOneTrigger,button)" 
-                    ></button></span>
+                    <span class="btnwrap hide">
+                        <button #button class="mat-small" [innerHTML]= "[menuitem.icon] | feather" mat-button id="menuBtn" (click)="stateChange(menuitem.state)" [matMenuTriggerFor]="menu" #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger,button,menuitem.state)" 
+                        (mouseleave)="buttonLeave(levelOneTrigger,button)" 
+                        ></button></span>
+                
                 
                 <!-- <span fxFlex class="sub-menu">abc</span>  -->
                 <!-- <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>  -->
             <!-- </div> -->
         </a>
-        <span class="sub-menu {{ menuitem.state }}" >
+        
+
+        <span class="sub-menu {{ menuitem.state }}" [@subMenuAnimation]="menuitem.state == state? (isSubMenuOpen ? 'open' : 'closed'): 'closed'">
             <ng-container *ngFor="let submenuitem of menuItems.getSubMenuitem([menuitem.state])" routerLinkActive="selected"> 
                 <span class="changeMe">
                 <button mat-menu-item >{{ submenuitem.name }}</button>

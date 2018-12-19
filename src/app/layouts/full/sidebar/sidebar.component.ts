@@ -12,12 +12,34 @@ import {
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from '../../../shared/menu-items/menu-items';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: []
+  styleUrls: [],
+  animations: [
+    trigger('subMenuAnimation', [
+      // ...
+      state('open', style({
+        height : '45px',
+        // opacity: 1,
+        // backgroundColor: 'yellow'
+      })),
+      state('closed', style({
+        height: '0',
+        // opacity: 0.5,
+        // backgroundColor: 'green'
+      })),
+     
+      transition('* => *', [
+        animate('0.5s')
+      ]),
+    ]),
+    
+    
+  ],
 })
 export class AppSidebarComponent implements OnDestroy {
   
@@ -30,16 +52,17 @@ isMatMenu2Open = false;
   state : string = 'sales';
   prevButtonTrigger;
   menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
-  
+  isSubMenuOpen = false;
+  fIcon =  'chevron-right'
   stateChange(newState) {
     // console.log("i got "+newState);
-    this.state = newState;
-    console.log(this.menuStates.indexOf(newState));
+     this.state = newState;
+    /*console.log(this.menuStates.indexOf(newState));
   console.log(newState);
     if(this.menuStates.indexOf(this.state) == -1){
       var element = document.getElementsByClassName("cdk-overlay-container")[0];
       element.innerHTML = "";
-    }
+    } */
   }
   collapse() {
     this.logoDisplay = 'block';
@@ -281,11 +304,39 @@ isMatMenu2Open = false;
 
   // my functions start from here
   showSubMenu(state){
-    var element=<HTMLElement>document.querySelectorAll(".sub-menu."+state)[0];
-    if(element.style.display == "none")
-      element.style.display = "block";
-      else
-      element.style.display = "none";
+    // var element=<HTMLElement>document.querySelectorAll(".sub-menu."+state)[0];
+    console.log(this);
+    if(this.isSubMenuOpen == false && this.menuStates.indexOf(state) != -1){
+      this.isSubMenuOpen = true;
+      this.changeArrowIcon( this,"rotate(90deg)");
+    }
+      
+      else{
+        this.isSubMenuOpen = false;
+        this.changeArrowIcon( this,"rotate(0deg)");
+
+      }
+      
+  }
+  changeArrowIcon(thiss,rotate){
+    var elements = document.getElementsByClassName("btnwrap2");
+   /*  console.log("HI");
+    console.log(elements);
+    (<HTMLElement>elements[0]).style.display = "none"; */
+    [].forEach.call(elements, function (el) {
+      /* console.log("hello");
+      console.log(el.dataset.state); */
+      // var menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
+      console.log(this);
+      if(thiss.state == el.dataset.state){
+        (el.querySelector("svg")).style.transform = rotate;
+        console.log(el.querySelector("svg"));
+      }
+      else{
+        (el.querySelector("svg")).style.transform = "rotate(0deg)";
+
+      }
+    });
   }
   hideUnnecessaryArrows(){
     var elements = document.getElementsByClassName("btnwrap2");
