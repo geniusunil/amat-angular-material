@@ -50,6 +50,7 @@ isMatMenu2Open = false;
   logoDisplay: string = 'none';
   private _mobileQueryListener: () => void;NgZone
   state : string = 'sales';
+  prevState : string = 'sales';
   prevButtonTrigger;
   menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
   isSubMenuOpen = false;
@@ -306,9 +307,13 @@ isMatMenu2Open = false;
   showSubMenu(state){
     // var element=<HTMLElement>document.querySelectorAll(".sub-menu."+state)[0];
     console.log(this);
+    if(this.prevState != state){
+      this.isSubMenuOpen = false;
+    }
     if(this.isSubMenuOpen == false && this.menuStates.indexOf(state) != -1){
       this.isSubMenuOpen = true;
       this.changeArrowIcon( this,"rotate(90deg)");
+      this.prevState = state;
     }
       
       else{
