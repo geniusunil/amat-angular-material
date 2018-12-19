@@ -41,7 +41,7 @@
 
 <mat-menu #menu="matMenu" xPosition="after" yPosition="above">
         <span (mouseenter)="menuenter()" >
-            <span class="head">{{ state }}</span> <hr><br>
+            <span class="head">{{ state }}</span> <hr>
   <ng-container *ngFor="let submenuitem of menuItems.getSubMenuitem([state])" routerLinkActive="selected"> 
       <span class="changeMe">
       <button mat-menu-item >{{ submenuitem.name }}</button>
