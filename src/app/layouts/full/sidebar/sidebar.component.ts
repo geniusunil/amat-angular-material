@@ -80,11 +80,13 @@ isMatMenu2Open = false;
   }
 
   expand() {
+    
     this.logoDisplay = 'none';
     var elements = document.getElementsByClassName("toHide");
     [].forEach.call(elements, function (el) {
       el.style.display = "block";
     });
+    this.hideUnnecessaryArrows(); //should be called only after the toHide loop
     var elements = document.getElementsByClassName("show");
     [].forEach.call(elements, function (el) {
 
@@ -123,7 +125,7 @@ isMatMenu2Open = false;
     media: MediaMatcher,
     public menuItems: MenuItems,
     private ren: Renderer2,
-    private zone:NgZone
+    // private zone:NgZone
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -132,19 +134,7 @@ isMatMenu2Open = false;
   }
   
   ngAfterViewInit(): void {
-    var elements = document.getElementsByClassName("btnwrap2");
-   /*  console.log("HI");
-    console.log(elements);
-    (<HTMLElement>elements[0]).style.display = "none"; */
-    [].forEach.call(elements, function (el) {
-      console.log("hello");
-      console.log(el.dataset.state);
-      var menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
-      if(menuStates.indexOf(el.dataset.state) == -1){
-        el.style.display ="none";
-      }
-    });
-    
+    this.hideUnnecessaryArrows();
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
@@ -296,5 +286,20 @@ isMatMenu2Open = false;
       element.style.display = "block";
       else
       element.style.display = "none";
+  }
+  hideUnnecessaryArrows(){
+    var elements = document.getElementsByClassName("btnwrap2");
+   /*  console.log("HI");
+    console.log(elements);
+    (<HTMLElement>elements[0]).style.display = "none"; */
+    [].forEach.call(elements, function (el) {
+      console.log("hello");
+      console.log(el.dataset.state);
+      var menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
+      if(menuStates.indexOf(el.dataset.state) == -1){
+        el.style.display ="none";
+      }
+    });
+    
   }
 }
