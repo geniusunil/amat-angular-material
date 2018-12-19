@@ -8,7 +8,8 @@ import {
   Directive,
   AfterViewInit,
   Renderer2,
-  OnInit
+  OnInit,
+  Input
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MenuItems } from '../../../shared/menu-items/menu-items';
@@ -42,6 +43,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ],
 })
 export class AppSidebarComponent implements OnDestroy {
+  @Input() isOpen;
   
   enteredButton = false;
 isMatMenuOpen = false;
@@ -59,13 +61,17 @@ isMatMenu2Open = false;
     // console.log("i got "+newState);
      this.state = newState;
     /*console.log(this.menuStates.indexOf(newState));
-  console.log(newState);
+  console.log(newState);*/
     if(this.menuStates.indexOf(this.state) == -1){
       var element = document.getElementsByClassName("cdk-overlay-container")[0];
+      console.log(element);
+      if(element != undefined)
       element.innerHTML = "";
-    } */
+    } 
   }
   collapse() {
+    // console.log(this.isOpen);
+    this.isSubMenuOpen=false;
     this.logoDisplay = 'block';
     var elements = document.getElementsByClassName("toHide");
     [].forEach.call(elements, function (el) {
@@ -185,7 +191,7 @@ isMatMenu2Open = false;
       if (!this.isMatMenu2Open && !this.enteredButton) {
         this.isMatMenuOpen = false;
         trigger.closeMenu();
-        console.log("closemenu from menuleave");
+        // console.log("closemenu from menuleave");
         this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
         this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-program-focused');
       } else {
@@ -236,8 +242,8 @@ isMatMenu2Open = false;
       el.style.top = '45px';
     });
   })*/
-  console.log(this.menuStates.indexOf(newState));
-  console.log(newState);
+  // console.log(this.menuStates.indexOf(newState));
+  // console.log(newState);
   if(this.menuStates.indexOf(newState) != -1){
     
   
@@ -306,11 +312,11 @@ isMatMenu2Open = false;
   // my functions start from here
   showSubMenu(state){
     // var element=<HTMLElement>document.querySelectorAll(".sub-menu."+state)[0];
-    console.log(this);
+    // console.log(this);
     if(this.prevState != state){
       this.isSubMenuOpen = false;
     }
-    if(this.isSubMenuOpen == false && this.menuStates.indexOf(state) != -1){
+    if(this.isSubMenuOpen == false && this.menuStates.indexOf(state) != -1 && this.isOpen == true){
       this.isSubMenuOpen = true;
       this.changeArrowIcon( this,"rotate(90deg)");
       this.prevState = state;
@@ -332,10 +338,10 @@ isMatMenu2Open = false;
       /* console.log("hello");
       console.log(el.dataset.state); */
       // var menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
-      console.log(this);
+      // console.log(this);
       if(thiss.state == el.dataset.state){
         (el.querySelector("svg")).style.transform = rotate;
-        console.log(el.querySelector("svg"));
+        // console.log(el.querySelector("svg"));
       }
       else{
         (el.querySelector("svg")).style.transform = "rotate(0deg)";
@@ -349,8 +355,8 @@ isMatMenu2Open = false;
     console.log(elements);
     (<HTMLElement>elements[0]).style.display = "none"; */
     [].forEach.call(elements, function (el) {
-      console.log("hello");
-      console.log(el.dataset.state);
+      // console.log("hello");
+      // console.log(el.dataset.state);
       var menuStates = ['sales','support','accounting','hr','reports','utilities','survey'];
       if(menuStates.indexOf(el.dataset.state) == -1){
         el.style.display ="none";
