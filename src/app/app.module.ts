@@ -22,6 +22,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 
 import { FeatherIconsPipe } from './feather-pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { PagesModule } from './pages/pages.module';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AppHeaderComponent,
     SpinnerComponent,
     AppSidebarComponent,
-    FeatherIconsPipe
+    // FeatherIconsPipe
     /* ClientComponent,
     VendorComponent,
     TasksComponent,
@@ -54,8 +55,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
     SharedModule,
     RouterModule.forRoot(AppRoutes),
     NgScrollbarModule,
-    NgSelectModule, FormsModule
+    NgSelectModule, 
+    // PagesModule
   ],
+  
   providers: [
     {
       provide: LocationStrategy,

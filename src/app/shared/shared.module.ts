@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { MenuItems } from './menu-items/menu-items';
 import { AccordionAnchorDirective, AccordionLinkDirective, AccordionDirective } from './accordion';
+import { FeatherIconsPipe } from '../feather-pipe';
 
 
 @NgModule({
@@ -9,11 +10,13 @@ import { AccordionAnchorDirective, AccordionLinkDirective, AccordionDirective } 
     AccordionAnchorDirective,
     AccordionLinkDirective,
     AccordionDirective
+    ,FeatherIconsPipe
   ],
   exports: [
     AccordionAnchorDirective,
     AccordionLinkDirective,
-    AccordionDirective
+    AccordionDirective,
+    FeatherIconsPipe
    ],
   providers: [ MenuItems ]
 })

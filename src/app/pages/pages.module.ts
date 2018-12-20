@@ -19,7 +19,9 @@ import { VendorComponent } from './vendor/vendor.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { SalesComponent } from './sales/sales.component';
 import { SupportComponent } from './support/support.component';
-
+import { FeatherIconsPipe } from '../feather-pipe';
+import { AppModule } from '../app.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -27,8 +29,12 @@ import { SupportComponent } from './support/support.component';
     MaterialModule,
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes),
-    
+    SharedModule
+    // AppModule
   ],
+ /*  exports:[
+    FeatherIconsPipe
+  ], */
   declarations: [PagesComponent, DashboardComponent, CalendarComponent, MailboxComponent, DiscussionComponent,AccountingComponent, HrComponent, ReportsComponent, UtilitiesComponent, SurveyComponent,ClientComponent ,VendorComponent,TasksComponent,SalesComponent,SupportComponent ]
   
 })
