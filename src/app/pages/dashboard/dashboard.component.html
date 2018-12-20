@@ -40,7 +40,7 @@
       <div fxFlex.gt-sm="33.33%" class="fiveHundred" >
           <mat-card>
               <mat-card-content>
-                  <mat-card-title class="flex"><mat-icon class="custom-green symbol">assignment</mat-icon>Invoice</mat-card-title>
+                  <mat-card-title class="flex"><span class="custom-green symbol" [innerHTML]="'file-text' | feather"></span>Invoice</mat-card-title>
                   <mat-grid-list cols="2" rowHeight="2:1">
                           <mat-grid-tile class="one">
                              
@@ -69,7 +69,7 @@
       <div fxFlex.gt-sm="33.33%" class="fiveHundred">
         <mat-card>
             <mat-card-content>
-                <mat-card-title class="flex"><mat-icon class="custom-pink symbol">check_circle</mat-icon>Task</mat-card-title>
+                <mat-card-title class="flex"><span class="custom-pink symbol" [innerHTML]="'check-square' | feather"></span>Task</mat-card-title>
                 <mat-grid-list cols="2" rowHeight="2:1">
                         <mat-grid-tile class="one">
                            
@@ -95,34 +95,7 @@
             </mat-card-content>
         </mat-card>
     </div>
-      <!-- <div fxFlex.gt-sm="33.33%" >
-          <mat-card>
-              <mat-card-content>
-                  <mat-card-title class="flex"><mat-icon class="custom-pink symbol">check_circle</mat-icon><span>Task</span></mat-card-title>
-                  <mat-grid-list cols="2" rowHeight="2:1">
-                          <mat-grid-tile class="one">
-                             
-                                  <span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
-                                  <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
-                              
-                          </mat-grid-tile>
-                          
-                          <mat-grid-tile class="two"><span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
-                              <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
-                          </mat-grid-tile>
-                          
-                          <mat-grid-tile class="three"><span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
-                              <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
-                          </mat-grid-tile>
-                          <mat-grid-tile class="four"><span class="custom-pink mr5"><mat-icon>add_circle_outline</mat-icon></span>
-                              <span>$0.00<br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
-                          </mat-grid-tile>
-                        </mat-grid-list>
-
-                  
-              </mat-card-content>
-          </mat-card>
-      </div> -->
+     
   </div>
   <div fxLayout="row" fxLayoutWrap="wrap">
       <!-- Card column -->
@@ -141,21 +114,20 @@
                               <mat-card-content>
                                   <mat-list role="list">
                                       <mat-list-item role="listitem" class="dashboard-title">
-                                          <span class="one font-mobile">Project Name</span>
-                                          <span class="two font-mobile">Client Name</span>
+                                          <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
+                                          <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
                                       </mat-list-item>
-                                      <mat-list-item role="listitem"><span class="one">
-                                          <mat-list role="list" class="project_name_list">
-                                              <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span class="status font-mobile">in progress</span></mat-list-item>
-                                              <mat-list-item role="listitem" class="font-mobile">Item 2</mat-list-item>
-                                              <mat-list-item role="listitem" class="font-mobile">Item 3</mat-list-item>
+                                      <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
+                                          <mat-list role="list">
+                                              <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span class="status font-mobile">In Progress</span></mat-list-item>
+                                              <mat-list-item role="listitem" class="font-mobile"><mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                              </mat-list-item>
+                                              <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On : </span>2017-05-29</mat-list-item>
                                             </mat-list>
                                       </span>
-                                          <span class="two font-mobile">Test Sunita</span>
-                                          <span class="three font-mobile"><mat-icon>remove_red_eye</mat-icon></span></mat-list-item>
-                                      <mat-list-item role="listitem"><span class="one font-mobile">Project Name</span>
-                                          <span class="two font-mobile">Test Anita</span>
-                                          <span class="three font-mobile"><mat-icon>remove_red_eye</mat-icon></span></mat-list-item>
+                                          <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
+                                          <span fxFlex="20%" class="three font-mobile"><mat-icon>remove_red_eye</mat-icon></span></mat-list-item>
+                                    
                                     </mat-list>
                               </mat-card-content>
                           </mat-tab>
