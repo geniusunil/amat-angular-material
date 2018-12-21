@@ -102,11 +102,13 @@
       <div fxFlex.gt-sm="100%" fxFlex="100">
           <mat-card>
               <mat-accordion>
-                  <mat-expansion-panel expanded="true">
+                  <mat-expansion-panel expanded="true"  class="custom-header" hideToggle="true" #example>
                       <mat-expansion-panel-header class="custom-green dashboard-title">
                           <mat-panel-title>
                               All Pinned Details
                           </mat-panel-title>
+                          <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z"/></svg></span>
+
                       </mat-expansion-panel-header>
 
                       <mat-tab-group>
@@ -126,7 +128,7 @@
                                             </mat-list>
                                       </span>
                                           <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                                          <span fxFlex="20%" class="three font-mobile"><mat-icon>remove_red_eye</mat-icon></span></mat-list-item>
+                                          <span fxFlex="20%" class="three font-mobile"><svg class="twenty-seven pins" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M11 12h6v-1l-3-1V2l3-1V0H3v1l3 1v8l-3 1v1h6v7l1 1 1-1v-7z"/></svg></span></mat-list-item>
                                     
                                     </mat-list>
                               </mat-card-content>
@@ -157,13 +159,14 @@
           <mat-card>
               <mat-accordion>
                   <mat-expansion-panel expanded="true" class="custom-header" hideToggle="true" #example>
-                      <mat-expansion-panel-header>
+                      <mat-expansion-panel-header class="dashboard-title">
                           <mat-panel-title>
                               Overdue
 
                           </mat-panel-title>
+                          <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z"/></svg></span>
                           <!-- <img height="32" width="32" src="@icon/zondicons/icons/adjust.svg" /> -->
-                          <img height="18" width="18" src="https://unpkg.com/@icon/zondicons/icons/minus-solid.svg" />
+                          <!-- <img height="18" width="18" src="https://unpkg.com/@icon/zondicons/icons/minus-solid.svg" /> -->
                           <!-- <span *ngIf="!example.expanded" [innerHTML]="'minus-circle' | feather"></span> -->
                           <!-- <span *ngIf="example.expanded" [innerHTML]="'minus' | feather"></span> -->
                       </mat-expansion-panel-header>
@@ -208,7 +211,7 @@
               <mat-card>
                   <mat-accordion>
                       <mat-expansion-panel expanded="true">
-                          <mat-expansion-panel-header>
+                          <mat-expansion-panel-header class="dashboard-title"r>
                               <mat-panel-title>
                                   Overdue
                               </mat-panel-title>
@@ -255,7 +258,7 @@
                   <mat-card>
                       <mat-accordion>
                           <mat-expansion-panel expanded="true">
-                              <mat-expansion-panel-header>
+                              <mat-expansion-panel-header class="dashboard-title"r>
                                   <mat-panel-title>
                                       Overdue
                                   </mat-panel-title>
@@ -290,7 +293,7 @@
                       <mat-card>
                           <mat-accordion>
                               <mat-expansion-panel expanded="true">
-                                  <mat-expansion-panel-header>
+                                  <mat-expansion-panel-header class="dashboard-title"r>
                                       <mat-panel-title>
                                           Overdue
                                       </mat-panel-title>
@@ -325,7 +328,7 @@
                           <mat-card>
                               <mat-accordion>
                                   <mat-expansion-panel expanded="true">
-                                      <mat-expansion-panel-header>
+                                      <mat-expansion-panel-header class="dashboard-title"r>
                                           <mat-panel-title>
                                               Overdue
                                           </mat-panel-title>
@@ -360,7 +363,7 @@
                               <mat-card>
                                   <mat-accordion>
                                       <mat-expansion-panel expanded="true">
-                                          <mat-expansion-panel-header>
+                                          <mat-expansion-panel-header class="dashboard-title"r>
                                               <mat-panel-title>
                                                   Overdue
                                               </mat-panel-title>
