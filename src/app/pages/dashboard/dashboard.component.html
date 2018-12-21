@@ -156,30 +156,46 @@
       <div fxFlex.gt-sm="100%" fxFlex="100">
           <mat-card>
               <mat-accordion>
-                  <mat-expansion-panel expanded="true">
+                  <mat-expansion-panel expanded="true" class="custom-header" hideToggle="true" #example>
                       <mat-expansion-panel-header>
                           <mat-panel-title>
                               Overdue
-                          </mat-panel-title>
-                      </mat-expansion-panel-header>
 
+                          </mat-panel-title>
+                          <!-- <img height="32" width="32" src="@icon/zondicons/icons/adjust.svg" /> -->
+                          <img height="18" width="18" src="https://unpkg.com/@icon/zondicons/icons/minus-solid.svg" />
+                          <!-- <span *ngIf="!example.expanded" [innerHTML]="'minus-circle' | feather"></span> -->
+                          <!-- <span *ngIf="example.expanded" [innerHTML]="'minus' | feather"></span> -->
+                      </mat-expansion-panel-header>
                       <mat-tab-group>
-                          <mat-tab label="Projects">
-                              <mat-card-content>Content 1</mat-card-content>
-                          </mat-tab>
-                          <mat-tab label="Invoice">
-                              <mat-card-content>Content 2</mat-card-content>
-                          </mat-tab>
-                          <mat-tab label="Estimates">
-                              <mat-card-content>Content 2</mat-card-content>
-                          </mat-tab>
-                          <mat-tab label="Tickets">
-                              <mat-card-content>Content 2</mat-card-content>
-                          </mat-tab>
-                          <mat-tab label="Leads">
-                              <mat-card-content>Content 2</mat-card-content>
-                          </mat-tab>
-                      </mat-tab-group>
+                        <mat-tab label="Opportunities">
+                            <mat-card-content>Content 1</mat-card-content>
+                        </mat-tab>
+                        <mat-tab label="Calls">
+                            <mat-card-content>Content 2</mat-card-content>
+                        </mat-tab>
+                        <mat-tab label="Meetings">
+                            <mat-card-content>Content 2</mat-card-content>
+                        </mat-tab>
+                        <mat-tab label="Deadlines">
+                            <mat-card-content>Content 2</mat-card-content>
+                        </mat-tab>
+                        <mat-tab label="Projects">
+                            <mat-card-content>Content 2</mat-card-content>
+                        </mat-tab>
+                        <mat-tab label="Tasks">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                      <mat-tab label="Invoices">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                      <mat-tab label="Expired Estimate">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                      <mat-tab label="Unconfirmed Bugs">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                    </mat-tab-group>
                   </mat-expansion-panel>
 
               </mat-accordion>
@@ -208,12 +224,24 @@
                               <mat-tab label="Meetings">
                                   <mat-card-content>Content 2</mat-card-content>
                               </mat-tab>
-                              <mat-tab label="Tickets">
+                              <mat-tab label="Deadlines">
                                   <mat-card-content>Content 2</mat-card-content>
                               </mat-tab>
-                              <mat-tab label="Leads">
+                              <mat-tab label="Projects">
                                   <mat-card-content>Content 2</mat-card-content>
                               </mat-tab>
+                              <mat-tab label="Tasks">
+                                <mat-card-content>Content 2</mat-card-content>
+                            </mat-tab>
+                            <mat-tab label="Invoices">
+                                <mat-card-content>Content 2</mat-card-content>
+                            </mat-tab>
+                            <mat-tab label="Expired Estimate">
+                                <mat-card-content>Content 2</mat-card-content>
+                            </mat-tab>
+                            <mat-tab label="Unconfirmed Bugs">
+                                <mat-card-content>Content 2</mat-card-content>
+                            </mat-tab>
                           </mat-tab-group>
                       </mat-expansion-panel>
   

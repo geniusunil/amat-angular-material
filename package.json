@@ -26,6 +26,7 @@
     "@angular/platform-browser": "7.0.1",
     "@angular/platform-browser-dynamic": "7.0.1",
     "@angular/router": "7.0.1",
+    "@icon/zondicons": "0.0.5",
     "@ng-select/ng-select": "^2.13.1",
     "@swimlane/ngx-charts": "^9.0.0",
     "@swimlane/ngx-datatable": "^13.1.0",
