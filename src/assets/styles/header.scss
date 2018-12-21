@@ -174,7 +174,7 @@ app-header{
         height:27px;
         margin:7px 0;
         width:6vw;
-        font-size:14px;
+        font-size:14px !important;
         border-width: 0 1px 0 0;
         border-style: solid;
 }
@@ -182,7 +182,7 @@ app-header{
     display: none;
 }
 .mat-form-field-infix{
-    border:0;
+    border:0 !important;
     padding:0 !important;
 }
 .myPanelClass{

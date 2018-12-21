@@ -10,7 +10,7 @@ File: scss
  $sidebar-width-mini: 80px;
  $sidebar-width:14.5vw;
  $sidebar-width-collapsed:5.5vw;
-
+@import './variable.scss';
  
 /*******************
  Main container
@@ -172,7 +172,7 @@ html .page-wrapper{
 .xPanelIndicator{
     height:18px;
     width:18px;
-    fill:#7d7d7d;
+    fill:$gray;
 }
 .twenty-seven{
     height:27px;
