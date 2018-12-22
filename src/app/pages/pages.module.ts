@@ -22,7 +22,7 @@ import { SupportComponent } from './support/support.component';
 import { FeatherIconsPipe } from '../feather-pipe';
 import { AppModule } from '../app.module';
 import { SharedModule } from '../shared/shared.module';
-import { DashboardDirective } from './dashboard.directive';
+// import { DashboardDirective } from './dashboard.directive';
 import { HighlightDirective } from './dashboard/highlight.directive';
 
 @NgModule({
@@ -37,7 +37,22 @@ import { HighlightDirective } from './dashboard/highlight.directive';
    exports:[
     DashboardComponent
   ], 
-  declarations: [PagesComponent, DashboardComponent, CalendarComponent, MailboxComponent, DiscussionComponent,AccountingComponent, HrComponent, ReportsComponent, UtilitiesComponent, SurveyComponent,ClientComponent ,VendorComponent,TasksComponent,SalesComponent,SupportComponent, DashboardDirective, HighlightDirective ]
+  declarations: [PagesComponent,
+     DashboardComponent,
+      CalendarComponent,
+       MailboxComponent,
+        DiscussionComponent,
+        AccountingComponent, 
+        HrComponent, 
+        ReportsComponent,
+         UtilitiesComponent, 
+         SurveyComponent,
+         ClientComponent ,
+         VendorComponent,
+         TasksComponent,
+         SalesComponent,
+         SupportComponent, 
+    HighlightDirective ]
   
 })
 export class PagesModule {}
