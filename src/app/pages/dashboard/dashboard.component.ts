@@ -1,7 +1,5 @@
 import { Component, OnInit,AfterContentInit,
   Directive,
-  ElementRef,
-  Input,
   Renderer2 } from '@angular/core';
 //hi
 @Component({
@@ -14,12 +12,10 @@ import { Component, OnInit,AfterContentInit,
 })
 export class DashboardComponent implements OnInit {
   htmlToAdd;
-  constructor(private _el: ElementRef,
+  constructor(
     private _renderer2: Renderer2) { }
-    public param: number;
-    @Input() set appInvitingGuests(param: number) {
-      this.param = param;
-    }
+   
+   
   ngOnInit() {
     
   }
