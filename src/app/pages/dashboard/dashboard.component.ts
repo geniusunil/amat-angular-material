@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
      this._renderer2.appendChild(div, paramText);
   
      this._renderer2.insertBefore(matTabBodyWrapper.parentNode, div, matTabBodyWrapper); */
-  /*    const matTabBodyWrapper = document.getElementsByClassName('mat-tab-header');
-     console.log(matTabBodyWrapper); */
+     const matTabBodyWrapper = document.getElementsByClassName('mat-tab-header');
+     console.log(matTabBodyWrapper);
    }
 }

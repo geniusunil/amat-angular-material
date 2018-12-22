@@ -17,8 +17,8 @@ export class HighlightDirective {
  
     this._renderer2.appendChild(div, paramText);
     console.log(matTabBodyWrapper);
-    this._renderer2.addClass(el.nativeElement, 'wild');
-    this._renderer2.insertBefore(matTabBodyWrapper0.parentNode, div, matTabBodyWrapper);
+    this._renderer2.addClass(el.nativeElement, 'wild'); // use  ngAfterContentInit()
+    // this._renderer2.insertBefore(matTabBodyWrapper0.parentNode, div, matTabBodyWrapper);
  }
 
 }
