@@ -27,6 +27,8 @@ export class DashboardComponent implements OnInit {
 /*     this.htmlToAdd = document.getElementById("overdue").innerHTML +"<div>hi</div>";
     // console.log(this.htmlToAdd);
     document.getElementById("overdue").innerHTML = this.htmlToAdd; */
+    /* const matTabBodyWrapper = document.getElementsByClassName('.mat-tab-header');
+     console.log(matTabBodyWrapper); */
   }
   ngAfterContentInit() {
     /* //out custom div element to be inserted into the angualar material mat tabs element
@@ -37,5 +39,7 @@ export class DashboardComponent implements OnInit {
      this._renderer2.appendChild(div, paramText);
   
      this._renderer2.insertBefore(matTabBodyWrapper.parentNode, div, matTabBodyWrapper); */
+  /*    const matTabBodyWrapper = document.getElementsByClassName('mat-tab-header');
+     console.log(matTabBodyWrapper); */
    }
 }
