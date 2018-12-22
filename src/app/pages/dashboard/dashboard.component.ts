@@ -24,22 +24,21 @@ export class DashboardComponent implements OnInit {
     
   }
   ngAfterViewInit(){
-/*     this.htmlToAdd = document.getElementById("overdue").innerHTML +"<div>hi</div>";
-    // console.log(this.htmlToAdd);
-    document.getElementById("overdue").innerHTML = this.htmlToAdd; */
-    /* const matTabBodyWrapper = document.getElementsByClassName('.mat-tab-header');
-     console.log(matTabBodyWrapper); */
+
   }
   ngAfterContentInit() {
-    /* //out custom div element to be inserted into the angualar material mat tabs element
+    
      const div = this._renderer2.createElement('div');
-     const matTabBodyWrapper = this._el.nativeElement.parentNode.querySelector('.mat-tab-body-wrapper');
-     const paramText = this._renderer2.createText(""+this.param);
-  
-     this._renderer2.appendChild(div, paramText);
-  
-     this._renderer2.insertBefore(matTabBodyWrapper.parentNode, div, matTabBodyWrapper); */
-     const matTabBodyWrapper = document.getElementsByClassName('mat-tab-header');
-     console.log(matTabBodyWrapper);
+    // const matTabBodyWrapper = this._el.nativeElement.parentNode.querySelector('.mat-tab-body-wrapper');
+    const matTabBodyWrapper = (document.getElementById('overdue')).getElementsByClassName('mat-tab-body-wrapper')[0];
+const mat=(document.getElementById('overdue')).getElementsByClassName('mat-tab-header')[0];
+this._renderer2.setStyle(mat,'border','none');
+    const paramText = this._renderer2.createText("hi");
+ 
+    this._renderer2.appendChild(div, paramText);
+ 
+    this._renderer2.insertBefore(matTabBodyWrapper.parentNode, div,matTabBodyWrapper);
+    //  console.log(matTabBodyWrapper);
+     this._renderer2.setStyle(matTabBodyWrapper,'border','1px solid rgba(0, 0, 0, 0.12)');
    }
 }
