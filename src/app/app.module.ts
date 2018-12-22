@@ -23,6 +23,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 import { FeatherIconsPipe } from './feather-pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PagesModule } from './pages/pages.module';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { PagesModule } from './pages/pages.module';
     AppHeaderComponent,
     SpinnerComponent,
     AppSidebarComponent,
+    HighlightDirective,
     // FeatherIconsPipe
     /* ClientComponent,
     VendorComponent,
