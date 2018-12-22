@@ -1,0 +1,356 @@
+[33mcommit de86cc19709c055d91aa366c91ffa06574c23a75[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 21 21:27:55 2018 +0530
+
+    renderer
+
+[33mcommit 2aaa61c1bd76830d5d38628e6eca105bba990959[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 21 17:24:35 2018 +0530
+
+    dashboard
+
+[33mcommit 284a23d9826f2aebf7e883185d289d61b8dfd166[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 21 16:17:12 2018 +0530
+
+    anything
+
+[33mcommit b882c554a4e3f3d01441de560b3f92e01dcdc03b[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 21 15:15:38 2018 +0530
+
+    zondicons
+
+[33mcommit b3c50c4c68ce2cb95ed568d95da3c39c53f00245[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 20 21:02:45 2018 +0530
+
+    dashboard
+
+[33mcommit 1d15717230d2c4a596de54a34089a586fbdbcd2b[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 20 17:30:50 2018 +0530
+
+    anything
+
+[33mcommit 66ffbdea657efb85f677ad8cc09b18da6da90d97[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 20 16:53:05 2018 +0530
+
+    all pinned details
+
+[33mcommit 7259aaedff2cda19da83ec5a287f33f2c7f49e89[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 20 14:44:26 2018 +0530
+
+    font-mobile
+
+[33mcommit 33d140f8f0c77b18c002f72d8ab7b0241f8fa242[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 20 13:23:56 2018 +0530
+
+    pipe shared
+
+[33mcommit 32cbbf7317a3a68947384cd171df3aeeb915684d[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 19 20:45:24 2018 +0530
+
+    menu fixed
+
+[33mcommit fb2e80de8a49613e85d950795bc4dbc482c28c2d[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 19 19:17:14 2018 +0530
+
+    menu fixed
+
+[33mcommit ef917bcc3236658e2b9767223ebdaa5b565b99c7[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 19 17:20:20 2018 +0530
+
+    menu improvements
+
+[33mcommit fd459bfab30f539d0e26b01540f15e8b75951a72[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 19 12:52:02 2018 +0530
+
+    mat menu headings
+
+[33mcommit 1133d18e023adc5bd75a9f4991fd0c5bd481f8f6[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 19 08:13:46 2018 +0530
+
+    improving menus
+
+[33mcommit 1e700b0d0801ed991bce065178824b0d416df504[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 19 08:03:17 2018 +0530
+
+    arrows hiding even after expand()
+
+[33mcommit 84ce0811da9f063f559c3d97167fa5b5d1bf8d16[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 18 20:55:57 2018 +0530
+
+    menu done
+
+[33mcommit c6f44447e3bc4e1859eec88147d13b7fc25f63f9[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 18 20:16:06 2018 +0530
+
+    menu complete
+
+[33mcommit b840b8829f5e8f5cf75f294355632b3694f645fc[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 18 20:13:28 2018 +0530
+
+    menu complete
+
+[33mcommit e3dc99c8862e883d4c61b727138668f7ec045058[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 18 17:30:47 2018 +0530
+
+    trying to hide unnecessary menuopen buttons
+
+[33mcommit 0ee82e9a9cb507fe51c984dbaeead4b3b0a48a78[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 18 15:34:01 2018 +0530
+
+    custom select done
+
+[33mcommit fba6a18d41ba686fbbe66265f145836bbcca3dfd[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 17 20:30:39 2018 +0530
+
+    select customization
+
+[33mcommit ae92ab0b9789bbad4af7f0a8238f4771df4bc14a[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 17 19:23:41 2018 +0530
+
+    responsive changes
+
+[33mcommit 3a9f1eea804cce4f83dac329786c32e3cdb69619[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 17 17:31:27 2018 +0530
+
+    responsive changes
+
+[33mcommit e69f8cc93c525badfeb3a8e68ca9db832c7c0115[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 17 16:24:38 2018 +0530
+
+    menu fixed
+
+[33mcommit 249a58f0cef43ba34683746a5c89d2513870691b[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Sat Dec 15 13:31:12 2018 +0530
+
+    responsive saturday 1:30
+
+[33mcommit 84e10fb73de14dfe34ea4eac8c355c054a5f0553[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Sat Dec 15 12:48:05 2018 +0530
+
+    responsive before floating topbar right
+
+[33mcommit d9e84be6cf0003febc3818bd1c247f704ed7277b[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 14 20:50:34 2018 +0530
+
+    started responsive
+
+[33mcommit 1f130f7e535fdfa30367c8894d838ed477abb369[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 12 20:09:21 2018 +0530
+
+    before trying to access sass variable in ts
+
+[33mcommit 842b22db02fef4976ef3374c65b078e380787c38[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 11 19:57:47 2018 +0530
+
+    started sass responsive work
+
+[33mcommit d9330ec4a04a00b991ff13193d8cb016b04d3c11[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 11 14:43:12 2018 +0530
+
+    menus opening at right position
+
+[33mcommit fe5cb964a3f7855d303fdb0aa06370db20f14010[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 10 21:14:41 2018 +0530
+
+    hover working fine, but menu displaying randomly positioned
+
+[33mcommit f6a895bfa823a2f275aad15f8409440c1d60efc8[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 10 20:36:42 2018 +0530
+
+    cleaned sidebar ts file from errors
+
+[33mcommit ba2347c2d207ac0c9f9263c980d2936f43d5e6c8[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 10 19:54:05 2018 +0530
+
+    hover menu breakthrough
+
+[33mcommit fb5f020c7f271c557e5867e55950a4d067d563bf[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Sun Dec 9 11:08:50 2018 +0530
+
+    menu buttons working
+
+[33mcommit 9a1954c392c32d6092ecbf26a57de4d5e03e2714[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 7 20:37:06 2018 +0530
+
+    checkpoint before modifying select form
+
+[33mcommit 6e586daf7c4995262b94ddd74b1ed1a343c66d81[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 7 16:11:01 2018 +0530
+
+    featherIcons changing size perfectly
+
+[33mcommit c186b41fe298f198e39e8057842c910425c0e8a3[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 7 13:00:32 2018 +0530
+
+    featherIcons implemented
+
+[33mcommit 5cf82ae17e9c3f1775b460635d7e4f77d0af0206[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Fri Dec 7 11:49:46 2018 +0530
+
+    iconsModule installed and used for the first time
+
+[33mcommit f7c4662d1c682f0a9378e851b1fb90bf2268833a[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 6 20:38:57 2018 +0530
+
+    sidebar icons enlarge when collapsed
+
+[33mcommit 0f8300bbabb1aa6107c90d0d9489707b8ceff1df[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 6 19:26:25 2018 +0530
+
+    sticky topbar introduced
+
+[33mcommit c3f8aa432097ad9f5bcb423516aab3c9960b2829[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Thu Dec 6 17:29:45 2018 +0530
+
+    sidebar icons enlarge when collapsed
+
+[33mcommit c2a596487bcfc95bf7c8243ce113514389232f5f[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 5 16:06:30 2018 +0530
+
+    changed utiliko logo display
+
+[33mcommit 0f3fd4d62953d5358ea9818916cfd35f907d3a1b[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Wed Dec 5 15:56:10 2018 +0530
+
+    changed utiliko logo display
+
+[33mcommit e7621608fa447381fcea0112152277fb8e6c09bf[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 4 21:38:56 2018 +0530
+
+    ngx-scrollbar perfectly applied
+
+[33mcommit 73ed95dd1011f1e0dd8e3d1dd680c0a981b1ff6e[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 4 21:09:36 2018 +0530
+
+    ngx scrollbar working
+
+[33mcommit da7aef8e69ad848cc0116f00b62441035b3a414f[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 4 18:36:32 2018 +0530
+
+    removed widthinner animation
+
+[33mcommit e059d36351605b238e49be02ad983650de80e7d6[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 4 18:02:22 2018 +0530
+
+    rollback ranju suggestion
+
+[33mcommit 3de32e96e7867d5c38d86476e57a4fe3122f0ed5[m
+Merge: 53ae472 11b2b97
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 4 13:31:34 2018 +0530
+
+    Merge branch 'master' of gitlab.com:geniusunil/amat
+
+[33mcommit 53ae472a8d8f1add766908e0c77a1c03027621de[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Tue Dec 4 13:30:05 2018 +0530
+
+    faulty scrollbar hiding
+
+[33mcommit 11b2b971b3713cb1e4183a70f58ab5185f40a30e[m
+Author: Sunil Sharma <geniusunil@gmail.com>
+Date:   Tue Dec 4 06:21:00 2018 +0000
+
+    Update README.md
+
+[33mcommit 4fe80090b5cfa55674806bca794c66e37a9a8896[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 3 19:28:22 2018 +0530
+
+    all sidebar links and components created
+
+[33mcommit 563db3a3d3193f471642c320b50fb0ba4c7e33e7[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 3 17:39:08 2018 +0530
+
+    fixed sidebar links
+
+[33mcommit cae7bccf5c4d281615a8a103c19097685d0251fa[m[33m ([m[1;31morigin/office[m[33m)[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 3 12:00:29 2018 +0530
+
+    added mailbox correctly again
+
+[33mcommit 5c46c9cc690d1fd3c3dc203ac98e7e16d9cede2b[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 3 11:57:54 2018 +0530
+
+    added mailbox component
+
+[33mcommit 18d4eafc616a097230c06c147ea8c50857bbdd54[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 3 11:55:05 2018 +0530
+
+    deleted discussion comp
+
+[33mcommit b248469d3d3308c814b91adfa4c3cce6993bf5c8[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Mon Dec 3 11:36:58 2018 +0530
+
+    added branch office and component discussion
+
+[33mcommit 9326113da125927e3d6fbdc8152b2511702f39e8[m
+Merge: b5f3726 95881b4
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Sun Dec 2 13:41:32 2018 +0530
+
+    Merge branch 'master' of gitlab.com:geniusunil/amat
+    First merge
+
+[33mcommit b5f372606534fee0e506570e530bb9041e811a9f[m
+Author: geniusunil <geniusunil@gmail.com>
+Date:   Sun Dec 2 13:36:11 2018 +0530
+
+    initial commit
+
+[33mcommit 95881b41cd17671d2bf0d4c2e5dab1390a092673[m
+Author: Sunil Sharma <geniusunil@gmail.com>
+Date:   Sun Dec 2 06:40:40 2018 +0000
+
+    Initial commit
