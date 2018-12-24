@@ -55,10 +55,12 @@ $mobile : 767px;
 
 html .page-wrapper{
     height:calc(100vh - 3.5vw);
-    .page-content .padding{
-        padding: 15px;
-    }
 }
+.pading_textdata{
+    padding: 24px 19px;
+    }
+
+
 .mat-card-title.flex{
     width:fit-content;
     margin: 0 auto 10px auto;
@@ -460,13 +462,26 @@ html {
     color:$sidebar-selected-item;
     min-height:45px;
 }
+
 #title-inner{
     display:flex;
     align-self:center;
-    padding-left:8px;
-    *{
-        padding:22px;
+    padding-left:33px;
+   
+    #icon_style
+    {
+      .feather {
+        box-sizing: initial !important;
+      
+      }
+      *{
+        padding-right: 8px !important;
+       }
     }
+    #header_text {
+        font-weight: 500;
+    }
+    
 }
 .primary-color{
     color:$primary;
@@ -521,4 +536,31 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
 }
 .fiveHundred{
     max-width: 500px;
+    #data_it {
+        margin-left: 26px;
+    }
+    #numbr_data {
+        border-top: 2px dashed;
+        padding: 5px 0px;
+        
+        margin: 17px 0px;
+    }
+        #bottom_elem {
+            margin: 0px !important;
+            line-height: 0px !important;
+            padding: 12px 0px;
+            font-size: 18px;
+            font-weight: 600;
+            
+        }
+
+}
+#icons_style
+{
+    .feather
+    {
+        margin: 25px 0px;
+        float:left;
+        color:#5b4fa7 !important;
+    }
 }
