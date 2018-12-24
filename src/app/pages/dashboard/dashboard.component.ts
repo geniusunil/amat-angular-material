@@ -48,11 +48,12 @@ export class DashboardComponent implements OnInit {
      const span = this._renderer2.createElement('span');
      console.log(this.sanitizer);
     pipe = new FeatherIconsPipe(this.sanitizer);
-   
-    
-     let name =pipe.transform('home');
+     let name =this.sanitizer.sanitize(SecurityContext.HTML,pipe.transform('printer'));
+     let fileMinus =this.sanitizer.sanitize(SecurityContext.HTML,pipe.transform('file-minus'));
+     let pdf =this.sanitizer.sanitize(SecurityContext.HTML,pipe.transform('file-minus'));
      console.log(name);
-     this._renderer2.setProperty(span, 'innerHTML', this.sanitizer.sanitize(SecurityContext.HTML,name));
+     let final= name + " | "+name + " Selected |" + fileMinus + " | " ;
+     this._renderer2.setProperty(span, 'innerHTML', final);
     // const matTabBodyWrapper = this._el.nativeElement.parentNode.querySelector('.mat-tab-body-wrapper');
     const matTabBodyWrapper = (document.getElementById('overdue')).getElementsByClassName('mat-tab-body-wrapper')[0];
 const mat=(document.getElementById('overdue')).getElementsByClassName('mat-tab-header')[0];
