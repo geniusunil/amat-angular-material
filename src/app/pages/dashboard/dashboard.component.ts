@@ -27,9 +27,7 @@ import { inject, TestBed } from '@angular/core/testing';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-@Directive({
-  selector: '[appInvitingGuests]'
-})
+
 export class DashboardComponent implements OnInit {
   htmlToAdd;
   constructor(
