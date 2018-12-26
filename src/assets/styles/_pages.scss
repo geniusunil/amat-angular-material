@@ -107,7 +107,7 @@ html .page-wrapper{
 }
 .mat-tab-label{
     min-width:115px !important;
-    
+    font-size: 1rem !important;
 }
 
 
@@ -618,8 +618,19 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
             margin: 0px !important;
             line-height: 0px !important;
             padding: 12px 0px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
+            
+        }
+        .ng-star-inserted{
+            height:64px !important;
+            width:65px !important;
+        }
+        #data_elemen {
+            margin: 22px 0px;
+            float: right;
+            margin-right: 23px;
+            text-align: center;
             
         }
 

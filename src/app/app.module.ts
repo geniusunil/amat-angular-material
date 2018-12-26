@@ -23,7 +23,13 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 import { FeatherIconsPipe } from './feather-pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PagesModule } from './pages/pages.module';
+<<<<<<< Updated upstream
 
+=======
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
+// import { HighlightDirective } from './highlight.directive';
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -58,7 +64,16 @@ import { PagesModule } from './pages/pages.module';
     RouterModule.forRoot(AppRoutes),
     NgScrollbarModule,
     NgSelectModule, 
-    // PagesModule
+    NgCircleProgressModule.forRoot({
+     
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+     
+    })
   ],
   
   providers: [

@@ -7,6 +7,8 @@
 </div>
 <div class="pading_textdata">
   <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+      
+
     <div fxFlex.gt-sm="16.66%" class="fiveHundred">
         <mat-card >
             <mat-card-content>
@@ -52,36 +54,48 @@
             </mat-card>
 </div>
 <div fxFlex.gt-sm="16.66%" class="fiveHundred">
-  <mat-card >
+    <mat-card >
       <mat-card-content>
-        <span id="icons_style" [innerHTML]="'x-square' | feather"></span>
-      <div id="data_it"> <span id="data_elem">Converted Client</span>
-        <p id="bottom_elem">20</p></div>
-      </mat-card-content>
-          </mat-card>
+    <circle-progress
+    [percent]="5"
+    [radius]="25"
+    [toFixed]="0"
+    [showTitle]="true"
+    [titleFontSize]="10"
+    [showUnits]="false"
+    [showImage]="false"
+    [showBackground]="false"
+    [showInnerStroke]="true"
+    [clockwise]="false"
+    [responsive]="false"
+    [startFromZero]="false"
+    [animation]="true"
+  [animationDuration]="300"
+    [subtitleFontSize]="0"
+  ></circle-progress>
+   <span id="data_elemen">Done</span>
+   
+</mat-card-content>
+</mat-card>
+
   </div>
+
 </div>
 <div fxLayout="row" fxLayoutWrap="wrap">
   <!-- Card column -->
   <div fxFlex.gt-sm="100%" fxFlex="100">
       <mat-card>
           <mat-accordion>
-              <mat-expansion-panel expanded="true"  class="custom-header" hideToggle="true" #example>
-                  <mat-expansion-panel-header class="custom-green dashboard-title">
-                      <mat-panel-title>
-                          All Pinned Details
-                      </mat-panel-title>
-                      <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z"/></svg></span>
-
-                  </mat-expansion-panel-header>
-
-                  <mat-tab-group>
-                      <mat-tab label="Projects">
+            <mat-tab-group>
+                      <mat-tab label="Client List">
                           <mat-card-content>
                               <mat-list role="list">
                                   <mat-list-item role="listitem" class="dashboard-title">
-                                      <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                      <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
+                                      <span fxFlex="40%" class="one font-mobile gray">Name</span>
+                                      <span fxFlex="10%" class="two font-mobile gray">Client Name</span>
+                                      <span fxFlex="10%" class="two font-mobile gray">Client Name</span>
+                                      <span fxFlex="10%" class="two font-mobile gray">Client Name</span>
+                                      <span fxFlex="10%" class="two font-mobile gray">Client Name</span>
                                   </mat-list-item>
                                   <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
                                       <mat-list role="list">
@@ -97,22 +111,27 @@
                                 </mat-list>
                           </mat-card-content>
                       </mat-tab>
-                      <mat-tab label="Invoice">
+                      <mat-tab label="New Client">
                           <mat-card-content>Content 2</mat-card-content>
                       </mat-tab>
-                      <mat-tab label="Estimates">
+                      <mat-tab label="Import Client">
                           <mat-card-content>Content 2</mat-card-content>
                       </mat-tab>
-                      <mat-tab label="Tickets">
+                      <mat-tab label="Client on Map">
                           <mat-card-content>Content 2</mat-card-content>
                       </mat-tab>
-                      <mat-tab label="Leads">
-                          <mat-card-content>Content 2</mat-card-content>
-                      </mat-tab>
-                  </mat-tab-group>
-              </mat-expansion-panel>
-
-          </mat-accordion>
+                      <mat-tab label="Name">
+                      
+                    </mat-tab >
+                     </mat-tab-group>
+                    
+              </mat-accordion>
       </mat-card>
   </div>
 </div>
+
+  
+    
+    
+    
+
