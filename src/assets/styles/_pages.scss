@@ -112,7 +112,7 @@ html .page-wrapper{
 
 
 .gray{
-    color:#616161;
+    color:$gray;
 }
 
 .mat-list-item svg{
@@ -187,6 +187,20 @@ html .page-wrapper{
 }
 .overdueMeetingsInsert{
     height: 60px;
+    display:flex;
+}
+.overdueMeetingsInsertSpan{
+    vertical-align:middle;
+    display:flex;
+    margin:auto 24px;
+    svg{
+        color:black;
+    }
+    *{
+        margin:0 23px;
+    }
+    color:$gray;
+    
 }
 /*******************
  Login register
