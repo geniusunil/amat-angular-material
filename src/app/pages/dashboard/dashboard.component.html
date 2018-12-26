@@ -113,8 +113,8 @@
 
                       <mat-tab-group>
                           <mat-tab label="Projects">
-                              <mat-card-content>
-                                  <mat-list role="list">
+                              <mat-card-content class="noPadding">
+                                  <mat-list class="noPadding" role="list">
                                       <mat-list-item role="listitem" class="dashboard-title">
                                           <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
                                           <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
@@ -188,7 +188,31 @@
                             <mat-card-content>Content 2</mat-card-content>
                         </mat-tab>
                         <mat-tab label="Tasks">
-                          <mat-card-content>Content 2</mat-card-content>
+                            <mat-card-content class="noPadding">
+                                <mat-list class="noPadding" role="list">
+                                    <mat-list-item role="listitem" class="dashboard-title">
+                                        <span fxFlex="25%" class="one font-mobile gray">Task Name</span>
+                                        <span fxFlex="25%" class="two font-mobile gray">Client/Lead</span>
+                                        <span fxFlex="25%" class="two font-mobile gray">Related To</span>
+                                        <span fxFlex="25%" class="two font-mobile gray">Participants</span>
+                                    </mat-list-item>
+                                    <mat-list-item role="listitem" class="project_name_list"><span fxFlex="25%" class="one">
+                                        <mat-list role="list">
+                                            <mat-list-item role="listitem">
+                                                <span class="pro_name font-mobile">WQ</span><span class="status font-mobile">In Progress</span>
+                                            </mat-list-item>
+                                            <mat-list-item role="listitem" class="font-mobile"><mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                            </mat-list-item>
+                                            <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On : </span>2017-05-29</mat-list-item>
+                                          </mat-list>
+                                    </span>
+                                        <span fxFlex="25%" class="two font-mobile">Test Sunita</span>
+                                        <span fxFlex="25%" class="three font-mobile">Dummy</span>
+                                        <span fxFlex="25%" class="three font-mobile">Dummy</span>
+                                    </mat-list-item>
+                                  
+                                  </mat-list>
+                            </mat-card-content>
                       </mat-tab>
                       <mat-tab label="Invoices">
                           <mat-card-content>Content 2</mat-card-content>
