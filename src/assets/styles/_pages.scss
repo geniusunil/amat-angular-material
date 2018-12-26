@@ -205,6 +205,54 @@ html .page-wrapper{
 .noPadding{
     padding:0 !important;
 }
+.statsSelect{
+    background-color: white;
+    
+    min-height: 0px;
+    
+        padding: 5px 0 5px 5px;
+        color:$gray;
+       
+        float:left;
+        height:27px;
+        
+        width:6vw;
+        font-size:14px !important;
+       border-style:solid;
+    
+    border-radius: 15px !important;
+    border-width:1px !important;
+    margin:0 10px;
+    width:auto;
+    .mat-select-value{
+        color:$gray;
+    }
+}
+.xPanelIndicatorSpan{
+    height:18px;
+    vertical-align: middle;
+    margin:auto 5px;
+}
+.labelCenter .mat-tab-labels{
+    width:fit-content;
+    margin:auto;
+    .mat-tab-label{
+        font-size:10px;
+        min-width:70px !important;
+    }
+}
+.noBorders{
+    border-style:hidden !important;
+}
+.staTile{
+    padding-left:15px !important;
+    figure{
+        justify-content: left !important;
+        padding-left:15px !important;
+        padding-right:15px !important;
+        font-size:14px;
+    }
+}
 /*******************
  Login register
 *******************/
@@ -528,6 +576,7 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
 .dashboard-title{
     background-color:$dashboard-title !important;
     height:44px !important;
+    display:flex;
 }
 .zero{
     font-weight:600;

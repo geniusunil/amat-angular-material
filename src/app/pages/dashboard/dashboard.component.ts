@@ -22,6 +22,10 @@ import { inject, TestBed } from '@angular/core/testing';
     expect(pipe).toBeTruthy();
   })); 
 }); */
+export interface Food {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -33,7 +37,14 @@ export class DashboardComponent implements OnInit {
   constructor(
     private _renderer2: Renderer2,
     private sanitizer:DomSanitizer) { }
-   
+ 
+    foods: Food[] = [
+      {value: 'steak-0', viewValue: 'Select Pipeline'},
+      {value: 'pizza-1', viewValue: 'Accounts'},
+      {value: 'tacos-2', viewValue: 'Contacts'},
+      {value: 'tacos-3', viewValue: 'Dashboard'}
+    ];
+    selectedValue: string = this.foods[0].value;
   ngOnInit() {
     
   }

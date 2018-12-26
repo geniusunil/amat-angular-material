@@ -22,6 +22,7 @@ import { SupportComponent } from './support/support.component';
 import { FeatherIconsPipe } from '../feather-pipe';
 import { AppModule } from '../app.module';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SharedModule } from '../shared/shared.module';
     MaterialModule,
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes),
-    SharedModule
+    SharedModule,
+    FormsModule
     // AppModule
   ],
    exports:[
