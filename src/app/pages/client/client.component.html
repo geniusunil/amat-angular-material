@@ -59,5 +59,60 @@
         <p id="bottom_elem">20</p></div>
       </mat-card-content>
           </mat-card>
+  </div>
 </div>
-    </div>
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <!-- Card column -->
+  <div fxFlex.gt-sm="100%" fxFlex="100">
+      <mat-card>
+          <mat-accordion>
+              <mat-expansion-panel expanded="true"  class="custom-header" hideToggle="true" #example>
+                  <mat-expansion-panel-header class="custom-green dashboard-title">
+                      <mat-panel-title>
+                          All Pinned Details
+                      </mat-panel-title>
+                      <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z"/></svg></span>
+
+                  </mat-expansion-panel-header>
+
+                  <mat-tab-group>
+                      <mat-tab label="Projects">
+                          <mat-card-content>
+                              <mat-list role="list">
+                                  <mat-list-item role="listitem" class="dashboard-title">
+                                      <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
+                                      <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
+                                  </mat-list-item>
+                                  <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
+                                      <mat-list role="list">
+                                          <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span class="status font-mobile">In Progress</span></mat-list-item>
+                                          <mat-list-item role="listitem" class="font-mobile"><mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                          </mat-list-item>
+                                          <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On : </span>2017-05-29</mat-list-item>
+                                        </mat-list>
+                                  </span>
+                                      <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
+                                      <span fxFlex="20%" class="three font-mobile"><svg class="twenty-seven pins" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M11 12h6v-1l-3-1V2l3-1V0H3v1l3 1v8l-3 1v1h6v7l1 1 1-1v-7z"/></svg></span></mat-list-item>
+                                
+                                </mat-list>
+                          </mat-card-content>
+                      </mat-tab>
+                      <mat-tab label="Invoice">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                      <mat-tab label="Estimates">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                      <mat-tab label="Tickets">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                      <mat-tab label="Leads">
+                          <mat-card-content>Content 2</mat-card-content>
+                      </mat-tab>
+                  </mat-tab-group>
+              </mat-expansion-panel>
+
+          </mat-accordion>
+      </mat-card>
+  </div>
+</div>
