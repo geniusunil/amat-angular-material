@@ -31,9 +31,7 @@
                                   <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More Info</a></span></span>
                               </mat-grid-tile>
                             </mat-grid-list>
-                  <mat-list>
-
-                  </mat-list>
+                  
               </mat-card-content>
           </mat-card>
       </div>
@@ -113,8 +111,8 @@
 
                       <mat-tab-group>
                           <mat-tab label="Projects">
-                              <mat-card-content>
-                                  <mat-list role="list">
+                              <mat-card-content class="noPadding">
+                                  <mat-list class="noPadding" role="list">
                                       <mat-list-item role="listitem" class="dashboard-title">
                                           <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
                                           <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
@@ -170,7 +168,7 @@
                           <!-- <span *ngIf="!example.expanded" [innerHTML]="'minus-circle' | feather"></span> -->
                           <!-- <span *ngIf="example.expanded" [innerHTML]="'minus' | feather"></span> -->
                       </mat-expansion-panel-header>
-                      <!-- <p appHighlight>Highlight me!</p> -->
+                      
                       <mat-tab-group id="overdue">
                         <mat-tab label="Opportunities">
                             <mat-card-content>Content 1</mat-card-content>
@@ -188,7 +186,31 @@
                             <mat-card-content>Content 2</mat-card-content>
                         </mat-tab>
                         <mat-tab label="Tasks">
-                          <mat-card-content>Content 2</mat-card-content>
+                            <mat-card-content class="noPadding">
+                                <mat-list class="noPadding" role="list">
+                                    <mat-list-item role="listitem" class="dashboard-title">
+                                        <span fxFlex="25%" class="one font-mobile gray">Task Name</span>
+                                        <span fxFlex="25%" class="two font-mobile gray">Client/Lead</span>
+                                        <span fxFlex="25%" class="two font-mobile gray">Related To</span>
+                                        <span fxFlex="25%" class="two font-mobile gray">Participants</span>
+                                    </mat-list-item>
+                                    <mat-list-item role="listitem" class="project_name_list"><span fxFlex="25%" class="one">
+                                        <mat-list role="list">
+                                            <mat-list-item role="listitem">
+                                                <span class="pro_name font-mobile">WQ</span><span class="status font-mobile">In Progress</span>
+                                            </mat-list-item>
+                                            <mat-list-item role="listitem" class="font-mobile"><mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                            </mat-list-item>
+                                            <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On : </span>2017-05-29</mat-list-item>
+                                          </mat-list>
+                                    </span>
+                                        <span fxFlex="25%" class="two font-mobile">Test Sunita</span>
+                                        <span fxFlex="25%" class="three font-mobile">Dummy</span>
+                                        <span fxFlex="25%" class="three font-mobile">Dummy</span>
+                                    </mat-list-item>
+                                  
+                                  </mat-list>
+                            </mat-card-content>
                       </mat-tab>
                       <mat-tab label="Invoices">
                           <mat-card-content>Content 2</mat-card-content>
@@ -211,39 +233,108 @@
           <div fxFlex.gt-sm="100%" fxFlex="100">
               <mat-card>
                   <mat-accordion>
-                      <mat-expansion-panel expanded="true">
+                      <mat-expansion-panel expanded="true" hideToggle="true">
                           <mat-expansion-panel-header class="dashboard-title"r>
                               <mat-panel-title>
-                                  Overdue
+                                  Statistics
                               </mat-panel-title>
+                              
+                              <!-- <form method="get">
+                                <mat-form-field class="statsSelect">
+                                    <mat-select [(ngModel)]="selectedValue" name="food" disableOptionCentering panelClass="myPanelClass">
+                                        <mat-option >
+                                        All
+                                        </mat-option>
+                                    </mat-select>
+                                    </mat-form-field>
+                                </form> -->
+                                <form method="get">
+                                        <!-- <ng-select class="custom" [items]="cities3"
+                                        bindLabel="name"
+                                        bindValue="name"
+                                        placeholder="Select city"
+                                        [(ngModel)]="selectedCityName"></ng-select> -->
+                                        <mat-form-field class="statsSelect">
+                                            <mat-select [(ngModel)]="selectedValue" name="food" disableOptionCentering panelClass="myPanelClass">
+                                              <mat-option *ngFor="let food of foods" [value]="food.value">
+                                                {{food.viewValue}}
+                                              </mat-option>
+                                            </mat-select>
+                                          </mat-form-field>
+                                          <mat-form-field class="statsSelect">
+                                                <mat-select [(ngModel)]="selectedValue" name="food" disableOptionCentering panelClass="myPanelClass">
+                                                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                                                    {{food.viewValue}}
+                                                  </mat-option>
+                                                </mat-select>
+                                              </mat-form-field>
+                                            <!-- <select name="location">
+                                                    <option value="accounts">accounts</option>
+                                                    
+                                                    <option value="contacts">contacts</option>
+                                                    <option value="dashboard">dashboard</option>
+                                                    <option value="events">events</option>
+                                                  </select> -->
+                                       
+                                    </form>
+                              <span class="xPanelIndicatorSpan"><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z"/></svg></span>
                           </mat-expansion-panel-header>
   
-                          <mat-tab-group>
-                              <mat-tab label="Opportunities">
+                          <mat-tab-group class="labelCenter">
+                              <mat-tab label="All">
                                   <mat-card-content>Content 1</mat-card-content>
                               </mat-tab>
-                              <mat-tab label="Calls">
+                              <mat-tab label="Today">
                                   <mat-card-content>Content 2</mat-card-content>
                               </mat-tab>
-                              <mat-tab label="Meetings">
+                              <mat-tab label="Yesterday">
                                   <mat-card-content>Content 2</mat-card-content>
                               </mat-tab>
-                              <mat-tab label="Deadlines">
+                              <mat-tab label="This Week">
                                   <mat-card-content>Content 2</mat-card-content>
                               </mat-tab>
-                              <mat-tab label="Projects">
+                              <mat-tab label="Last Week">
                                   <mat-card-content>Content 2</mat-card-content>
                               </mat-tab>
-                              <mat-tab label="Tasks">
+                              <mat-tab label="This Month">
+                                <mat-card-content> 
+                                   
+                                    <mat-grid-list cols="3" rowHeight="2:1">
+                                            <mat-grid-tile class="staTile noBorders">
+                                               
+                                                    <span class="custom-green">Won Deal</span>
+                                                    
+                                            </mat-grid-tile>
+                                            
+                                            <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
+                                                <span class="custom-pink">Lost Deal</span>
+                                              </mat-grid-tile>
+                                            
+                                            <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
+                                                <span class="gray">New Deals Started</span>
+                                             </mat-grid-tile>
+                                             <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
+                                                <span class="gray">Activities Completed</span>
+                                             </mat-grid-tile>
+                                             <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
+                                                <span class="gray">Activities Added</span>
+                                             </mat-grid-tile>
+                                             <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
+                                                <span class="gray">Average Time to win</span>
+                                             </mat-grid-tile>
+                                             <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
+                                                <span class="gray">Email Sent</span>
+                                             </mat-grid-tile>
+                                          </mat-grid-list>
+                                </mat-card-content>
+                            </mat-tab>
+                            <mat-tab label="Last Month">
                                 <mat-card-content>Content 2</mat-card-content>
                             </mat-tab>
-                            <mat-tab label="Invoices">
+                            <mat-tab label="This Quarter">
                                 <mat-card-content>Content 2</mat-card-content>
                             </mat-tab>
-                            <mat-tab label="Expired Estimate">
-                                <mat-card-content>Content 2</mat-card-content>
-                            </mat-tab>
-                            <mat-tab label="Unconfirmed Bugs">
+                            <mat-tab label="Last Quarter">
                                 <mat-card-content>Content 2</mat-card-content>
                             </mat-tab>
                           </mat-tab-group>

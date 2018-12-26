@@ -22,8 +22,8 @@ import { SupportComponent } from './support/support.component';
 import { FeatherIconsPipe } from '../feather-pipe';
 import { AppModule } from '../app.module';
 import { SharedModule } from '../shared/shared.module';
-// import { DashboardDirective } from './dashboard.directive';
-// import { HighlightDirective } from './dashboard/highlight.directive';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
@@ -31,7 +31,8 @@ import { SharedModule } from '../shared/shared.module';
     MaterialModule,
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes),
-    SharedModule
+    SharedModule,
+    FormsModule
     // AppModule
   ],
    exports:[
