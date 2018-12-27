@@ -22,17 +22,15 @@ import { SupportComponent } from './support/support.component';
 import { FeatherIconsPipe } from '../feather-pipe';
 import { AppModule } from '../app.module';
 import { SharedModule } from '../shared/shared.module';
-<<<<<<< Updated upstream
 import { FormsModule } from '@angular/forms';
 
-=======
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../../app/app.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 // import { DashboardDirective } from './dashboard.directive';
 // import { HighlightDirective } from './dashboard/highlight.directive';
->>>>>>> Stashed changes
+
 
 @NgModule({
   imports: [
@@ -41,10 +39,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes),
     SharedModule,
-<<<<<<< Updated upstream
-    FormsModule
+
+    FormsModule,
     // AppModule
-=======
+
     NgCircleProgressModule.forRoot({
       // set defaults here 
      
@@ -63,7 +61,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       startFromZero: false
     })
   
->>>>>>> Stashed changes
+
   ],
    exports:[
     DashboardComponent

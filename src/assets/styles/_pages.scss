@@ -145,10 +145,54 @@ html .page-wrapper{
     left:0 !important;
     top:45px;
 }
+#cdk-accordion-child-7 {
+    float: left;
+    width: 20%;
+    margin-left: 24px;
+}
 .head{
     margin:0 auto;
     width:fit-content;
     display:block;
+}
+#cdk-accordion-child-7 {
+   
+    width: 26%;
+    margin-left: 24px;
+    padding-top: 15px !important;
+    top: -3px !important;
+.mat-form-field-flex {
+    height: 27px;
+    border: 1px solid gray;
+   
+    display: block;}
+.mat-form-field-infix
+{
+float:right;
+width:88%;}
+}
+#cdk-accordion-child-7 .mat-form-field-infix {
+    padding: 3px 0px !important;
+    float: right;
+    width: 88%;
+    top: -3px !important;
+}
+.left_value
+{
+    float:left;
+}
+.right_value
+{
+    float:right;
+    .mat-form-field{
+        width: 80%;
+        top: -3px;
+    }
+}
+.box {
+    border: 1px solid;
+    padding: 3px;
+    border-radius:0px;
 }
 .status{
     float:right;
@@ -166,6 +210,14 @@ html .page-wrapper{
 .font-mobile{
     @include mobile(){
         font-size:3vw !important;
+    }
+}
+table {
+    width: 100%;
+  }
+.font-mobiles{
+    @include mobile(){
+        font-size:10px !important;
     }
 }
 .pro_name{

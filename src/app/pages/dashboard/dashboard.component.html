@@ -484,4 +484,36 @@
                               </mat-card>
                           </div>
                       </div>
+
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+            <mat-accordion>
+                <mat-expansion-panel expanded="true" class="custom-header" hideToggle="true" #example>
+                    <mat-expansion-panel-header class="dashboard-title">
+                        <mat-panel-title>
+                            Goal Reports
+
+                        </mat-panel-title>
+                        <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z"/></svg></span>
+                        <!-- <img height="32" width="32" src="@icon/zondicons/icons/adjust.svg" /> -->
+                        <!-- <img height="18" width="18" src="https://unpkg.com/@icon/zondicons/icons/minus-solid.svg" /> -->
+                        <!-- <span *ngIf="!example.expanded" [innerHTML]="'minus-circle' | feather"></span> -->
+                        <!-- <span *ngIf="example.expanded" [innerHTML]="'minus' | feather"></span> -->
+                    </mat-expansion-panel-header>
+                   <div><span class="left_value">Select Month</span>
+                       <span class="right_value"><mat-form-field >
+                        <input matInput [matDatepicker]="picker" placeholder="2018-10">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker touchUi #picker></mat-datepicker>
+                      </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span></span>
+                    </div>
+                </mat-expansion-panel>
+
+            </mat-accordion>
+        </mat-card>
+    </div>
+</div>
+
 </div>

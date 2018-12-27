@@ -23,13 +23,9 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 import { FeatherIconsPipe } from './feather-pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PagesModule } from './pages/pages.module';
-<<<<<<< Updated upstream
-
-=======
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 // import { HighlightDirective } from './highlight.directive';
->>>>>>> Stashed changes
 
 
 @NgModule({
