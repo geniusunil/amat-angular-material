@@ -22,15 +22,13 @@ import { SupportComponent } from './support/support.component';
 import { FeatherIconsPipe } from '../feather-pipe';
 import { AppModule } from '../app.module';
 import { SharedModule } from '../shared/shared.module';
-import { FormsModule } from '@angular/forms';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../../app/app.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FormsModule } from '@angular/forms';
 
 // import { DashboardDirective } from './dashboard.directive';
 // import { HighlightDirective } from './dashboard/highlight.directive';
-
 
 @NgModule({
   imports: [
@@ -39,10 +37,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     FlexLayoutModule,
     RouterModule.forChild(PagesRoutes),
     SharedModule,
-
     FormsModule,
     // AppModule
-
     NgCircleProgressModule.forRoot({
       // set defaults here 
      
@@ -61,7 +57,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       startFromZero: false
     })
   
-
   ],
    exports:[
     DashboardComponent
