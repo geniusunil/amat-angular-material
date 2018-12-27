@@ -107,7 +107,7 @@ html .page-wrapper{
 }
 .mat-tab-label{
     min-width:115px !important;
-    font-size: 1rem !important;
+    // font-size: 1rem !important;
 }
 
 
@@ -303,8 +303,18 @@ table {
         padding-left:15px !important;
         padding-right:15px !important;
         font-size:14px;
+        display:block !important;
         span{
             font-size:14px;
+        }
+        .mat-list-item{
+            border-style:solid;
+            border-width: 1px;
+            width: 100%;
+            border-color:#1797be;
+            margin:4px 0;
+            border-radius:8px;
+            height:40px;
         }
     }
 }
