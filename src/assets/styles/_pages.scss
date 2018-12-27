@@ -186,7 +186,9 @@ width:88%;}
     float:right;
     .mat-form-field{
         width: 80%;
-        top: -3px;
+        top: -6px;
+        height:27px;
+
     }
 }
 .box {
@@ -194,6 +196,7 @@ width:88%;}
     padding: 3px;
     border-radius:0px;
     background-color:$primary;
+    display: inline-flex;
     svg{
         color:white;
     }
