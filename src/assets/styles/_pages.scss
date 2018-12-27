@@ -193,6 +193,10 @@ width:88%;}
     border: 1px solid;
     padding: 3px;
     border-radius:0px;
+    background-color:$primary;
+    svg{
+        color:white;
+    }
 }
 .status{
     float:right;
