@@ -179,6 +179,19 @@ width:88%;}
     float:left !important;
    
 }
+.scrolling_data {
+    overflow-y: scroll !important;
+    height: 404px;
+    padding-top: 0px;
+    .mat-expansion-panel-header {
+        
+        padding: 0px 15px !important;
+        
+    }
+    .project_name_list .one {
+        padding: 0 0px 0 0 !important;
+    }
+}
 .display_prop{
     display:flex !important;
     .mat-list-item-content {
