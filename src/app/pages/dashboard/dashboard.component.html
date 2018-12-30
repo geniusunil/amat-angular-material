@@ -1319,41 +1319,21 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
-                            <mat-panel-title>
-                                My Tasks
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
-                                </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                            </mat-list-item>
-
-                        </mat-list>
-
-                    </mat-expansion-panel>
-
-                </mat-accordion>
+                    <mat-card-title class="flex">
+                            <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+                <div>
+                    <div style="display: block">
+                      <canvas baseChart
+                              [datasets]="barChartData"
+                              [labels]="barChartLabels"
+                              [options]="barChartOptions"
+                              [legend]="barChartLegend"
+                              [chartType]="barChartType"
+                              (chartHover)="chartHovered($event)"
+                              (chartClick)="chartClicked($event)"></canvas>
+                    </div>
+                    <button (click)="randomize()">Update</button>
+                  </div>
             </mat-card>
         </div>
 
@@ -1362,39 +1342,34 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
-                            <mat-panel-title>
-                                My Projects
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
-                                </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                            </mat-list-item>
-
-                        </mat-list>
-                    </mat-expansion-panel>
-
-                </mat-accordion>
+                    <mat-card-title class="flex">
+                            <span class="primary-color symbol">Payments Report</span></mat-card-title>
+                    <div class="row">
+                            <div class="col-md-6">
+                              <div style="display: block;">
+                              <canvas baseChart width="400" height="400"
+                                          [datasets]="lineChartData"
+                                          [labels]="lineChartLabels"
+                                          [options]="lineChartOptions"
+                                          [colors]="lineChartColors"
+                                          [legend]="lineChartLegend"
+                                          [chartType]="lineChartType"
+                                          (chartHover)="chartHovered($event)"
+                                          (chartClick)="chartClicked($event)"></canvas>
+                              </div>
+                            </div>
+                            <div class="col-md-6" style="margin-bottom: 10px">
+                              <table class="table table-responsive table-condensed">
+                                <tr>
+                                  <th *ngFor="let label of lineChartLabels">{{label}}</th>
+                                </tr>
+                                <tr *ngFor="let d of lineChartData">
+                                  <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+                                </tr>
+                              </table>
+                              <button (click)="randomizeLine()">CLICK</button>
+                            </div>
+                          </div>
             </mat-card>
         </div>
 
@@ -1579,443 +1554,4 @@
         </div>
 
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
-        <!-- Card column -->
-        <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
-            
-        </div>
-
-        <!-- Card column -->
-        <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
-            
-        </div>
-
-        <!-- Card column -->
-        <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
-            <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
-                        <mat-expansion-panel-header class="dashboard-title" r>
-                            <mat-panel-title>
-                               Agreements Awaiting Client Signature
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title title_value">
-                                <span fxFlex="38%" class="one font-mobile gray">Client Name</span>
-                                <span fxFlex="31%" class="two font-mobile gray">Type</span>
-                                <span fxFlex="31%" class="two font-mobile gray">Status</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                    <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                            : 14-09-2018</span>
-                                        
-                                    
-                                </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop">
-                                <span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                            : 14-09-2018</span>
-                                                        
-                                 </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                </mat-list-item>
-                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                 <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                                            : 12-04-2018</span>
-                                                                        
-                                                                    
-                                  </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                </mat-list-item>
-                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span class="gray left_value small_value">Date
-                                                                                        : 26-02-2018</span>
-                                                                                    
-                                </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                     <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                </mat-list-item>
-                                                 <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                                     <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span class="gray left_value small_value">Date
-                                                                                                    : 24-01-2018</span>
-                                                                                                
-                                                                                            
-                                                         </span>
-                                                         <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                                         <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                        </mat-list-item>
-                                 
-                                 <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                        <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span class="gray left_value small_value">Date
-                                                               : 04-11-2017</span>
-                                                                                                              
-                                           </span>
-                                        <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & Backup Internet</span></span>
-                                       <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                   </mat-list-item>
-                                   
-                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                        
-                        <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                                : 14-09-2018</span>
-                                            
-                                        
-                                    </span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                </mat-list-item>
-                                <mat-list-item role="listitem" class="project_name_list display_prop">
-                                    <span fxFlex="38%" class="one">
-                                    <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                                : 14-09-2018</span>
-                                                            
-                                     </span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                    </mat-list-item>
-                                    <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                        
-                                     <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                                                : 12-04-2018</span>
-                                                                            
-                                                                        
-                                      </span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                    </mat-list-item>
-                                    <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                        
-                                    <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span class="gray left_value small_value">Date
-                                                                                            : 26-02-2018</span>
-                                                                                        
-                                    </span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                         <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                    </mat-list-item>
-                                                     <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                        
-                                                         <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span class="gray left_value small_value">Date
-                                                                                                        : 24-01-2018</span>
-                                                                                                    
-                                                                                                
-                                                             </span>
-                                                             <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                                             <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                            </mat-list-item>
-                                     
-                                     <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                            <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span class="gray left_value small_value">Date
-                                                                   : 04-11-2017</span>
-                                                                                                                  
-                                               </span>
-                                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & Backup Internet</span></span>
-                                           <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                       </mat-list-item>
-                        </mat-list>
-                    </mat-expansion-panel>
-
-                </mat-accordion>
-            </mat-card>
-        </div>
-        
-</div>
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <!-- Card column -->
-    <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
-        
-    </div>
-
-    <!-- Card column -->
-    <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
-        <mat-card>
-            <mat-accordion>
-                <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
-                    <mat-expansion-panel-header class="dashboard-title" r>
-                        <mat-panel-title>
-                           Agreements Awaiting Client Signature
-                        </mat-panel-title>
-                        <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                    </mat-expansion-panel-header>
-
-                    <mat-list class="noPadding" role="list">
-                        <mat-list-item role="listitem" class="dashboard-title title_value">
-                            <span fxFlex="38%" class="one font-mobile gray">Client Name</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Type</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Status</span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                        : 14-09-2018</span>
-                                    
-                                
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop">
-                            <span fxFlex="38%" class="one">
-                            <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                        : 14-09-2018</span>
-                                                    
-                             </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                             <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                                        : 12-04-2018</span>
-                                                                    
-                                                                
-                              </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                            <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span class="gray left_value small_value">Date
-                                                                                    : 26-02-2018</span>
-                                                                                
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                 <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                            </mat-list-item>
-                                             <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                                                 <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span class="gray left_value small_value">Date
-                                                                                                : 24-01-2018</span>
-                                                                                            
-                                                                                        
-                                                     </span>
-                                                     <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                                     <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                    </mat-list-item>
-                             
-                             <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span class="gray left_value small_value">Date
-                                                           : 04-11-2017</span>
-                                                                                                          
-                                       </span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & Backup Internet</span></span>
-                                   <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                               </mat-list-item>
-                               
-                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                    <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                            : 14-09-2018</span>
-                                        
-                                    
-                                </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop">
-                                <span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                            : 14-09-2018</span>
-                                                        
-                                 </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                </mat-list-item>
-                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                 <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                                            : 12-04-2018</span>
-                                                                        
-                                                                    
-                                  </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                </mat-list-item>
-                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span class="gray left_value small_value">Date
-                                                                                        : 26-02-2018</span>
-                                                                                    
-                                </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                     <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                </mat-list-item>
-                                                 <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                                     <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span class="gray left_value small_value">Date
-                                                                                                    : 24-01-2018</span>
-                                                                                                
-                                                                                            
-                                                         </span>
-                                                         <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                                         <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                        </mat-list-item>
-                                 
-                                 <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                        <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span class="gray left_value small_value">Date
-                                                               : 04-11-2017</span>
-                                                                                                              
-                                           </span>
-                                        <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & Backup Internet</span></span>
-                                       <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                   </mat-list-item>
-                    </mat-list>
-                </mat-expansion-panel>
-
-            </mat-accordion>
-        </mat-card>
-    </div>
-
-    <!-- Card column -->
-    <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
-        <mat-card>
-            <mat-accordion>
-                <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
-                    <mat-expansion-panel-header class="dashboard-title" r>
-                        <mat-panel-title>
-                           Agreements Awaiting Client Signature
-                        </mat-panel-title>
-                        <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                    </mat-expansion-panel-header>
-
-                    <mat-list class="noPadding" role="list">
-                        <mat-list-item role="listitem" class="dashboard-title title_value">
-                            <span fxFlex="38%" class="one font-mobile gray">Client Name</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Type</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Status</span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                        : 14-09-2018</span>
-                                    
-                                
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop">
-                            <span fxFlex="38%" class="one">
-                            <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                        : 14-09-2018</span>
-                                                    
-                             </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                             <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                                        : 12-04-2018</span>
-                                                                    
-                                                                
-                              </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                            <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span class="gray left_value small_value">Date
-                                                                                    : 26-02-2018</span>
-                                                                                
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                 <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                            </mat-list-item>
-                                             <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                
-                                                 <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span class="gray left_value small_value">Date
-                                                                                                : 24-01-2018</span>
-                                                                                            
-                                                                                        
-                                                     </span>
-                                                     <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                                     <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                    </mat-list-item>
-                             
-                             <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span class="gray left_value small_value">Date
-                                                           : 04-11-2017</span>
-                                                                                                          
-                                       </span>
-                                    <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & Backup Internet</span></span>
-                                   <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                               </mat-list-item>
-                               
-                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                    <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                            : 14-09-2018</span>
-                                        
-                                    
-                                </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list display_prop">
-                                <span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                            : 14-09-2018</span>
-                                                        
-                                 </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                </mat-list-item>
-                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                 <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
-                                                                            : 12-04-2018</span>
-                                                                        
-                                                                    
-                                  </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & backup internet</span></span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                </mat-list-item>
-                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span class="gray left_value small_value">Date
-                                                                                        : 26-02-2018</span>
-                                                                                    
-                                </span>
-                                <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                     <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                </mat-list-item>
-                                                 <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                    
-                                                     <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span class="gray left_value small_value">Date
-                                                                                                    : 24-01-2018</span>
-                                                                                                
-                                                                                            
-                                                         </span>
-                                                         <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
-                                                         <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                                        </mat-list-item>
-                                 
-                                 <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                        <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span class="gray left_value small_value">Date
-                                                               : 04-11-2017</span>
-                                                                                                              
-                                           </span>
-                                        <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone Service & Backup Internet</span></span>
-                                       <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                                   </mat-list-item>
-                    </mat-list>
-                </mat-expansion-panel>
-
-            </mat-accordion>
-        </mat-card>
-    </div>
+    
