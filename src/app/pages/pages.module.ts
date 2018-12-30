@@ -19,14 +19,12 @@ import { VendorComponent } from './vendor/vendor.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { SalesComponent } from './sales/sales.component';
 import { SupportComponent } from './support/support.component';
-import { FeatherIconsPipe } from '../feather-pipe';
-import { AppModule } from '../app.module';
+
 import { SharedModule } from '../shared/shared.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from '../../app/app.component';
+
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
-
+import { ChartsModule } from 'ng2-charts';
 // import { DashboardDirective } from './dashboard.directive';
 // import { HighlightDirective } from './dashboard/highlight.directive';
 
@@ -55,7 +53,8 @@ import { FormsModule } from '@angular/forms';
       showBackground: false,
       clockwise: false,
       startFromZero: false
-    })
+    }),
+    ChartsModule
   
   ],
    exports:[
