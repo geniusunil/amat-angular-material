@@ -133,7 +133,7 @@
             <mat-card>
                 <mat-accordion>
                     <mat-expansion-panel expanded="true" class="custom-header" hideToggle="true" #example>
-                        <mat-expansion-panel-header class="custom-green dashboard-title">
+                        <mat-expansion-panel-header class="custom-green dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 All Pinned Details
                             </mat-panel-title>
@@ -196,7 +196,7 @@
             <mat-card>
                 <mat-accordion>
                     <mat-expansion-panel expanded="true" class="custom-header" hideToggle="true" #example>
-                        <mat-expansion-panel-header class="dashboard-title">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 Overdue
 
@@ -306,7 +306,7 @@
             <mat-card>
                 <mat-accordion>
                     <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 Statistics
                             </mat-panel-title>
@@ -518,7 +518,7 @@
         <mat-card>
             <mat-accordion>
                 <mat-expansion-panel expanded="true" class="custom-header" hideToggle="true" #example>
-                    <mat-expansion-panel-header class="dashboard-title">
+                    <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                         <mat-panel-title>
                             Goal Reports
 
@@ -546,9 +546,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
+               
                     <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                Project
                             </mat-panel-title>
@@ -721,57 +721,198 @@
                         </mat-list>
                     </mat-expansion-panel>
     
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data" >
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
-                                My Tasks
+                               My Tasks
                             </mat-panel-title>
                             <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                         </mat-expansion-panel-header>
-
-
+    
                         <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
+                            <mat-list-item role="listitem" class="dashboard-title title_value">
+                                <span fxFlex="80%" class="one font-mobile gray">Task Name</span>
+                                <span fxFlex="20%" class="two font-mobile gray">Client</span>
+                               
                             </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                    <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                    
+                    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                    
+                    <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                               
+                                    
+                     </span>
+                    <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Gaurav</span></span>
+                                
+                            </mat-list-item>
+                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                <span class="pro_name font-mobile left_value">Jadshjkas</span>
+                                
+                                <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                                
+                                <span class="gray left_value small_value">Date  : 02-02-2017</span>
+                                                           
+                                                
+                                            </span>
+                                            <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Gaurav</span></span>
+                                            
                                         </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
+                                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                            <span class="pro_name font-mobile left_value full_value">Kishor test 102  <span class="state right_value font-mobile">Overdue</span></span>
+                                            
+                                            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                                            
+                                            <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                       
+                                                            
+                                                        </span>
+                                                        <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Gaurav</span></span>
+                                                        
+                                                    </mat-list-item>
+                                                    <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                        <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                        
+                                                        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                        
+                                                        <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                   
+                                                                        
+                                                                    </span>
+                                                                    <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                    
+                                                                </mat-list-item>
+                                                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                                    <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                                    
+                                                                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                                    
+                                                                    <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                               
+                                                                                    
+                                                                                </span>
+                                                                                <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                                
+                                                                            </mat-list-item>
+                                                                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                                                <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                                                
+                                                                                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                                                
+                                                                                <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                                           
+                                                                                                
+                                                                                            </span>
+                                                                                            <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                                            
+                                                                                        </mat-list-item>
+                                                                                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                                                            <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                                                            
+                                                                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                                                            
+                                                                                            <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                                                       
+                                                                                                            
+                                                                                                        </span>
+                                                                                                        <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                                                        
+                                                                                                    </mat-list-item>
+                                                                                                    <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                                                                        <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                                                                        
+                                                                                                        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                                                                        
+                                                                                                        <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                                                                   
+                                                                                                                        
+                                                                                                                    </span>
+                                                                                                                    <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                                                                    
+                                                                                                                </mat-list-item>
+                                                                                                                <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                                                                                    <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                                                                                    
+                                                                                                                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                                                                                    
+                                                                                                                    <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                                                                               
+                                                                                                                                    
+                                                                                                                                </span>
+                                                                                                                                <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                                                                                
+                                                                                                                            </mat-list-item>
+                                                                                                                            <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                                                                                                <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                                                                                                
+                                                                                                                                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                                 <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                                                                                           
+                                                                                                                                                
+                                                                                                                                            </span>
+                                                                                                                                            <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                                                                                            
+                                                                                                                                        </mat-list-item>
+                                                                                                                                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                                                                                                                                            <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                                                                                                                                            
+                                                                                                                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                                                                                                                            
+                                                                                                                                            <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                                                                                                                                                       
+                                                                                                                                                            
+                                                                                                                                                        </span>
+                                                                                                                                                        <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                                                                                                                                        
+                                                                                                                                                    </mat-list-item>
+                                     
+                                     <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="80%" class="one">
+                                    
+                    <span class="pro_name font-mobile left_value">Atach create kela me</span>
+                    
+                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                    
+                    <span class="gray left_value small_value">Date  : 18-01-2017</span>
+                                               
+                                    
                                 </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
+                                <span fxFlex="20%" class="two font-mobile"><span class="font-mobiles left_value">Internet Service Agreement</span></span>
+                                
                             </mat-list-item>
-
                         </mat-list>
-
                     </mat-expansion-panel>
-
-                </mat-accordion>
+    
+                
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+               
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 Account Balance
                             </mat-panel-title>
@@ -803,7 +944,7 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+               
             </mat-card>
         </div>
     </div>
@@ -811,9 +952,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
+                
                     <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                Agreements Awaiting Client Signature
                             </mat-panel-title>
@@ -906,7 +1047,7 @@
                                     </mat-list-item>
                                     <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
                                         
-                                     <span class="pro_name font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
+                                     <span class="pro_name <mat-accordion><mat-accordion>font-mobile left_value hight_element">54 street new </span><span class="gray left_value small_value">Date
                                                                                 : 12-04-2018</span>
                                                                             
                                                                         
@@ -945,16 +1086,16 @@
                         </mat-list>
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card> 
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+               
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Tasks
                             </mat-panel-title>
@@ -986,16 +1127,16 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+            
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 Account Balance
                             </mat-panel-title>
@@ -1027,7 +1168,7 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
     </div>
@@ -1036,9 +1177,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Projects
                             </mat-panel-title>
@@ -1068,16 +1209,16 @@
                         </mat-list>
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Tasks
                             </mat-panel-title>
@@ -1109,16 +1250,16 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 Account Balance
                             </mat-panel-title>
@@ -1150,7 +1291,7 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+               
             </mat-card>
         </div>
     </div>
@@ -1158,9 +1299,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Projects
                             </mat-panel-title>
@@ -1190,16 +1331,16 @@
                         </mat-list>
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Tasks
                             </mat-panel-title>
@@ -1231,16 +1372,16 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-                <mat-accordion>
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                
+                    <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 Account Balance
                             </mat-panel-title>
@@ -1272,7 +1413,7 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
     </div>
@@ -1280,9 +1421,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card>
-                <mat-accordion>
+                
                     <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Projects
                             </mat-panel-title>
@@ -1312,7 +1453,7 @@
                         </mat-list>
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
@@ -1376,9 +1517,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card>
-                <mat-accordion>
+                
                     <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Tasks
                             </mat-panel-title>
@@ -1410,7 +1551,7 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
@@ -1419,9 +1560,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card>
-                <mat-accordion>
+                
                     <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Projects
                             </mat-panel-title>
@@ -1451,16 +1592,16 @@
                         </mat-list>
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card>
-                <mat-accordion>
+                
                     <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Tasks
                             </mat-panel-title>
@@ -1492,7 +1633,7 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 
@@ -1515,9 +1656,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card>
-                <mat-accordion>
+                
                     <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" r>
+                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 My Tasks
                             </mat-panel-title>
@@ -1549,7 +1690,7 @@
 
                     </mat-expansion-panel>
 
-                </mat-accordion>
+                
             </mat-card>
         </div>
 

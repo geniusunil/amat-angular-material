@@ -177,17 +177,21 @@ width:88%;}
 }
 .scrolling_data {
     overflow-y: scroll !important;
-    height: 404px;
+   
     padding-top: 0px;
     .mat-expansion-panel-header {
         
         padding: 0px 15px !important;
         
     }
+    .mat-expansion-panel-content{
+        height:400px;
+    }
     .project_name_list .one {
         padding: 0 0px 0 0 !important;
     }
 }
+
 .display_prop{
     display:flex !important;
     .full_value{
@@ -683,7 +687,7 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
 }
 .dashboard-title{
     background-color:$dashboard-title !important;
-    height:44px !important;
+    // height:44px !important;
     display:flex;
     
 }
