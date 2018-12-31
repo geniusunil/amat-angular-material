@@ -185,13 +185,17 @@ width:88%;}
         
     }
     .mat-expansion-panel-content{
-        height:400px;
+        height:500px;
     }
     .project_name_list .one {
         padding: 0 0px 0 0 !important;
     }
 }
-
+.fiftyHeight{
+    .mat-expansion-panel-content{
+        height:500px;
+    }
+}
 .display_prop{
     display:flex !important;
     .full_value{
@@ -718,6 +722,9 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
         border-width: 0 0 1px;
         border-style: solid;
     }
+}
+.fixFH{
+    height: 500px;
 }
 .fiveHundred{
     max-width: 500px;

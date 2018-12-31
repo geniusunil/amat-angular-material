@@ -1420,46 +1420,28 @@
     <div fxLayout="row" fxLayoutWrap="wrap">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
-                
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                            <mat-panel-title>
-                                My Projects
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
-                                </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                            </mat-list-item>
-
-                        </mat-list>
-                    </mat-expansion-panel>
-
-                
+            <mat-card class="fixFH"> 
+                <mat-card-title class="flex">
+                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+        <div>
+            <div style="display: block">
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <button (click)="randomize()">Update</button>
+          </div>
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
+            <mat-card class="fixFH">
                     <mat-card-title class="flex">
                             <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
                 <div>
@@ -1482,7 +1464,7 @@
     <div fxLayout="row" fxLayoutWrap="wrap">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
+            <mat-card class="fixFH">
                     <mat-card-title class="flex">
                             <span class="primary-color symbol">Payments Report</span></mat-card-title>
                     <div class="row">
@@ -1516,41 +1498,22 @@
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
-                
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                            <mat-panel-title>
-                                My Tasks
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
-                                </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                            </mat-list-item>
-
-                        </mat-list>
-
-                    </mat-expansion-panel>
-
+            <mat-card class="fixFH">
+                <mat-card-title class="flex">
+                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+        <div>
+            <div style="display: block">
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <button (click)="randomize()">Update</button>
+          </div>
                 
             </mat-card>
         </div>
@@ -1559,80 +1522,43 @@
     <div fxLayout="row" fxLayoutWrap="wrap">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
-                
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                            <mat-panel-title>
-                                My Projects
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
-                                </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                            </mat-list-item>
-
-                        </mat-list>
-                    </mat-expansion-panel>
-
-                
+            <mat-card class="fixFH">
+                <mat-card-title class="flex">
+                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+        <div>
+            <div style="display: block">
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <button (click)="randomize()">Update</button>
+          </div>
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
-                
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                            <mat-panel-title>
-                                My Tasks
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
-                                </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                            </mat-list-item>
-
-                        </mat-list>
-
-                    </mat-expansion-panel>
-
+            <mat-card class="fixFH">
+                <mat-card-title class="flex">
+                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+        <div>
+            <div style="display: block">
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <button (click)="randomize()">Update</button>
+          </div>
                 
             </mat-card>
         </div>
@@ -1641,7 +1567,7 @@
     <div fxLayout="row" fxLayoutWrap="wrap">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
+            <mat-card class="fixFH">
                 <div style="display: block">
                     <canvas baseChart
                                 [data]="doughnutChartData"
@@ -1655,42 +1581,22 @@
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
-                
-                    <mat-expansion-panel expanded="true" hideToggle="true">
-                        <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                            <mat-panel-title>
-                                My Tasks
-                            </mat-panel-title>
-                            <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                        </mat-expansion-panel-header>
-
-
-                        <mat-list class="noPadding" role="list">
-                            <mat-list-item role="listitem" class="dashboard-title">
-                                <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                            </mat-list-item>
-                            <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
-                                    <mat-list role="list">
-                                        <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                class="status font-mobile">In Progress</span></mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile">
-                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending On
-                                                : </span>2017-05-29</mat-list-item>
-                                    </mat-list>
-                                </span>
-                                <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                            </mat-list-item>
-
-                        </mat-list>
-
-                    </mat-expansion-panel>
-
-                
+            <mat-card class="fixFH">
+                <mat-card-title class="flex">
+                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+        <div>
+            <div style="display: block">
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <button (click)="randomize()">Update</button>
+          </div>
             </mat-card>
         </div>
 

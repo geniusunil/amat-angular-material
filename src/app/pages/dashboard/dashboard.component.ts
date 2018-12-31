@@ -91,6 +91,7 @@ this._renderer2.setStyle(mat,'border','none');
   }
 
   //barchart
+  
   public barChartOptions:any = {
     scaleShowVerticalLines: false,
     responsive: true
@@ -100,8 +101,8 @@ this._renderer2.setStyle(mat,'border','none');
   public barChartLegend:boolean = true;
  
   public barChartData:any[] = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A',type:'line',backgroundColor: "rgba(51,51,51,0.5)",fill: false, lineTension: 0},
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series B'},
   ];
  
   // events
