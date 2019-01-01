@@ -6,6 +6,7 @@ import { FeatherIconsPipe } from '../../feather-pipe';
 
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { inject, TestBed } from '@angular/core/testing';
+import { MatTableDataSource } from '@angular/material';
 //hi
 /* describe('SanitiseHtmlPipe', () => {
   beforeEach(() => {
@@ -76,6 +77,9 @@ this._renderer2.setStyle(mat,'border','none');
     //  console.log(matTabBodyWrapper);
      this._renderer2.setStyle(matTabBodyWrapper,'border','1px solid rgba(0, 0, 0, 0.12)');
    }
+
+   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+   displayedColumns: string[] = ['name', 'weight', 'symbol','position'];
     // Doughnut
   public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData:number[] = [350, 450, 100];
@@ -179,3 +183,17 @@ this._renderer2.setStyle(mat,'border','none');
     this.lineChartData = _lineChartData;
   }
 }
+
+export interface PeriodicElement {
+  name: string;
+  position: string;
+  weight: string;
+  symbol: string;
+  email : string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {name: '54th Street - New Braunfels', weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels', weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+
+];

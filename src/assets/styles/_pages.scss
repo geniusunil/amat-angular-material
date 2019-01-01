@@ -185,7 +185,7 @@ width:88%;}
         
     }
     .mat-expansion-panel-content{
-        height:500px;
+        height:456px;
     }
     .project_name_list .one {
         padding: 0 0px 0 0 !important;
@@ -196,6 +196,14 @@ width:88%;}
     .mat-expansion-panel-content{
         height:500px;
     }
+}
+.heightTF{
+    .mat-expansion-panel-content{
+        height:191px;
+    }
+}
+#half-panel{
+    margin-bottom:30px;
 }
 .display_prop{
     display:flex !important;
@@ -726,6 +734,9 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
 }
 .fixFH{
     height: 500px;
+}
+.fixH235{
+    height:191px;
 }
 .fiveHundred{
     max-width: 500px;
