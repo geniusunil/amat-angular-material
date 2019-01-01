@@ -8,7 +8,7 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 })
 
 export class ClientComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['name', 'weight', 'symbol','position', 'email'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

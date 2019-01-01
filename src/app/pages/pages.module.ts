@@ -25,6 +25,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 // import { DashboardDirective } from './dashboard.directive';
 // import { HighlightDirective } from './dashboard/highlight.directive';
 
@@ -54,7 +55,8 @@ import { ChartsModule } from 'ng2-charts';
       clockwise: false,
       startFromZero: false
     }),
-    ChartsModule
+    ChartsModule,
+    NgScrollbarModule
   
   ],
    exports:[
