@@ -77,7 +77,8 @@ this._renderer2.setStyle(mat,'border','none');
     //  console.log(matTabBodyWrapper);
      this._renderer2.setStyle(matTabBodyWrapper,'border','1px solid rgba(0, 0, 0, 0.12)');
    }
-
+   myDataArray =  new MatTableDataSource<PerElement>(MYPROJECTS_DATA);
+   displayedcolumns:string[] = ['projectname', 'client'];
    dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
    displayedColumns: string[] = ['name', 'weight', 'symbol','position'];
     // Doughnut
@@ -196,4 +197,24 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {name: '54th Street - New Braunfels', weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
   {name: '54th Street - New Braunfels', weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
 
+];
+export interface PerElement {
+  projectname: string;
+  client: string;
+  matvalue: number;
+}
+
+const MYPROJECTS_DATA: PerElement[] = [
+  {projectname: 'Atach Create kela me' ,matvalue: 100, client: 'Gaurav'},
+  {projectname: 'jadshjkas', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'kishor test 102', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'test oppo', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'Atach Create kela me' ,matvalue: 100, client: 'Gaurav'},
+  {projectname: 'jadshjkas', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'kishor test 102', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'test oppo', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'Atach Create kela me' ,matvalue: 100, client: 'Gaurav'},
+  {projectname: 'jadshjkas', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'kishor test 102', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'test oppo', matvalue: 100,client: 'Gaurav'},
 ];

@@ -176,9 +176,7 @@ width:88%;}
    
 }
 .scrolling_data {
-    overflow-y: scroll !important;
-   
-    padding-top: 0px;
+    
     .mat-expansion-panel-header {
         
         padding: 0px 15px !important;
@@ -206,20 +204,11 @@ width:88%;}
     margin-bottom:30px;
 }
 .display_prop{
-    display:flex !important;
-    .full_value{
-        width:93% !important;
-    }
+   
     .mat-progress-bar {
         width: 80%;
     }
-    .mat-list-item-content {
-        padding-top:5px !important;
-        padding-bottom:5px !important;
-        border-bottom: 1px solid #e4e7ea!important;
-        width: 100% !important;
-        
-    }
+    
 }
 .small_value{
     font-size: 10px;
