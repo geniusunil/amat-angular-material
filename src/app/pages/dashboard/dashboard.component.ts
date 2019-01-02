@@ -202,19 +202,27 @@ export interface PerElement {
   projectname: string;
   client: string;
   matvalue: number;
+  projectdate: string;
+  overdue:boolean; 
 }
 
 const MYPROJECTS_DATA: PerElement[] = [
-  {projectname: 'Atach Create kela me' ,matvalue: 100, client: 'Gaurav'},
-  {projectname: 'jadshjkas', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'kishor test 102', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'test oppo', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'Atach Create kela me' ,matvalue: 100, client: 'Gaurav'},
-  {projectname: 'jadshjkas', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'kishor test 102', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'test oppo', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'Atach Create kela me' ,matvalue: 100, client: 'Gaurav'},
-  {projectname: 'jadshjkas', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'kishor test 102', matvalue: 100,client: 'Gaurav'},
-  {projectname: 'test oppo', matvalue: 100,client: 'Gaurav'},
+  {projectname: 'Atach Create kela me' ,matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdue:true} , 
+  {projectname: 'jadshjkas', matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdue:false},
+  {projectname: 'kishor test 102', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'test oppo', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'Atach Create kela me' ,matvalue: 100,projectdate:'18-01-2017', client: 'Gaurav',overdue:true},
+  {projectname: 'jadshjkas', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'kishor test 102', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'test oppo', matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'Atach Create kela me' ,matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav',overdue:false},
+  {projectname: 'jadshjkas', matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav',overdue:false},
+  {projectname: 'kishor test 102', matvalue: 100,projectdate:'18-01-2017', client: 'Gaurav', overdue:false},
+  {projectname: 'test oppo', matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
+  {projectname: 'kishor test 102', matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav',overdue:false},
+  {projectname: 'test oppo', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
+  {projectname: 'Atach Create kela me' ,matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'jadshjkas', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
+  {projectname: 'kishor test 102', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
+  {projectname: 'test oppo', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
 ];

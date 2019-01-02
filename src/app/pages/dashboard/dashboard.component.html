@@ -559,7 +559,7 @@
                                 <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                     </mat-expansion-panel-header>
                     <ng-scrollbar [autoHide] = "true" [overlay]="true">
-                            <mat-list class="noPadding fixH235" role="list">
+                            <div class="noPadding element_high">
                     <table class="display_prop" mat-table [dataSource]="myDataArray">
 
     
@@ -568,8 +568,10 @@
                             <ng-container matColumnDef="projectname">
                               <th mat-header-cell *matHeaderCellDef>Projects Name </th>
                               <td mat-cell *matCellDef="let myprojects"> {{myprojects.projectname}} 
+                                  <span *ngIf="myprojects.overdue">overdue</span>
                             <mat-progress-bar mode="determinate" value="{{ myprojects.matvalue }}"></mat-progress-bar>
-                              </td>
+                           End date: {{ myprojects.projectdate }}
+                         </td>
                             </ng-container>
                         
                             <!-- client Column -->
@@ -582,7 +584,7 @@
                           <tr mat-header-row *matHeaderRowDef="displayedcolumns"></tr>
                             <tr mat-row *matRowDef="let myprojects; columns: displayedcolumns;"></tr>
                           </table>
-                        </mat-list>
+                        </div>
                          </ng-scrollbar>
                     </mat-expansion-panel>
     
