@@ -8,7 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class Cards3Component implements OnInit {
   @Input() titleicon;
   @Input() title;
-  titleicons = 'home';
+  @Input() colorClass;
+  @Input() icon1;
+  @Input() icon2;
+  @Input() icon3;
+  @Input() icon4;
   constructor() { }
 
   ngOnInit() {

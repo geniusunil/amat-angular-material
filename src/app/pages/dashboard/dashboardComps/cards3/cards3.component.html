@@ -1,33 +1,33 @@
 <mat-card>
   <mat-card-content>
       <mat-card-title class="flex">
-          <span class="{{title}} symbol" [innerHTML]="[titleicon] | feather"></span>{{ title }}</mat-card-title>
+          <span class="{{colorClass}} symbol" [innerHTML]="[titleicon] | feather"></span>{{ title }}</mat-card-title>
       <mat-grid-list cols="2" rowHeight="2:1">
           <mat-grid-tile class="one">
 
-              <span class="primary-color mr5">
-                  <mat-icon>add_circle_outline</mat-icon>
+              <span class="{{colorClass}} mr5">
+                  <mat-icon>{{icon1}}</mat-icon>
               </span>
               <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
 
           </mat-grid-tile>
 
-          <mat-grid-tile class="two"><span class="primary-color mr5">
-                  <mat-icon>add_circle_outline</mat-icon>
+          <mat-grid-tile class="two"><span class="{{colorClass}} mr5">
+                  <mat-icon>{{icon2}}</mat-icon>
               </span>
               <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
           </mat-grid-tile>
 
-          <mat-grid-tile class="three"><span class="primary-color mr5">
-                  <mat-icon>add_circle_outline</mat-icon>
+          <mat-grid-tile class="three"><span class="{{colorClass}} mr5">
+                  <mat-icon>{{icon3}}</mat-icon>
               </span>
               <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
           </mat-grid-tile>
-          <mat-grid-tile class="four"><span class="primary-color mr5">
-                  <mat-icon>add_circle_outline</mat-icon>
+          <mat-grid-tile class="four"><span class="{{colorClass}} mr5">
+                  <mat-icon>{{icon4}}</mat-icon>
               </span>
               <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
