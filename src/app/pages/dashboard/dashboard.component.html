@@ -516,11 +516,12 @@
                 <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
                     <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                         <mat-panel-title>
-                            Project
+                           My Project
                         </mat-panel-title>
                         <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                     </mat-expansion-panel-header>
+<<<<<<< HEAD
                     
                    <mat-list class="noPadding fixFH" role="list">
                         <mat-list-item role="listitem" class="dashboard-title title_value">
@@ -696,9 +697,39 @@
                     </mat-list>
                 </mat-expansion-panel>
 
+=======
+                    <ng-scrollbar [autoHide] = "true" [overlay]="true">
+                            <mat-list class="noPadding fixH235" role="list">
+                    <table class="display_prop" mat-table [dataSource]="myDataArray">
 
-            </mat-card>
-        </div>
+    
+>>>>>>> 4cade0de71a718f211b6c11560821375d0908c3b
+
+                            <!--Project Name Column -->
+                            <ng-container matColumnDef="projectname">
+                              <th mat-header-cell *matHeaderCellDef>Projects Name </th>
+                              <td mat-cell *matCellDef="let myprojects"> {{myprojects.projectname}} 
+                            <mat-progress-bar mode="determinate" value="{{ myprojects.matvalue }}"></mat-progress-bar>
+                              </td>
+                            </ng-container>
+                        
+                            <!-- client Column -->
+                            <ng-container matColumnDef="client">
+                              <th mat-header-cell *matHeaderCellDef> Client </th>
+                              <td mat-cell *matCellDef="let myprojects"> {{myprojects.client}} 
+                              
+                              </td>
+                            </ng-container>
+                          <tr mat-header-row *matHeaderRowDef="displayedcolumns"></tr>
+                            <tr mat-row *matRowDef="let myprojects; columns: displayedcolumns;"></tr>
+                          </table>
+                        </mat-list>
+                         </ng-scrollbar>
+                    </mat-expansion-panel>
+    
+    
+                </mat-card>
+            </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
