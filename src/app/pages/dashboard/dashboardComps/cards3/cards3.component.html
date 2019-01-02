@@ -4,10 +4,10 @@
           <span class="{{colorClass}} symbol" [innerHTML]="[titleicon] | feather"></span>{{ title }}</mat-card-title>
       <mat-grid-list cols="2" rowHeight="2:1">
           <mat-grid-tile class="one">
-
-              <span class="{{colorClass}} mr5">
+                <span class="{{colorClass}} mr5" [innerHTML]="[icon1] | feather"></span>
+              <!-- <span class="{{colorClass}} mr5">
                   <mat-icon>{{icon1}}</mat-icon>
-              </span>
+              </span> -->
               <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
 
