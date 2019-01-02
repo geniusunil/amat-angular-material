@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class Cards3Component implements OnInit {
   @Input() titleicon;
+  @Input() title;
   titleicons = 'home';
   constructor() { }
 
