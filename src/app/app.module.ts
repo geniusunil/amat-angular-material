@@ -24,6 +24,7 @@ import { FeatherIconsPipe } from './feather-pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PagesModule } from './pages/pages.module';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+// import { Cards3Component } from './src/app/pages/dashboard/dashboardComps/cards3/cards3.component';
 
 // import { HighlightDirective } from './highlight.directive';
 
@@ -35,6 +36,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     AppHeaderComponent,
     SpinnerComponent,
     AppSidebarComponent,
+    // Cards3Component,
   
     // FeatherIconsPipe
     /* ClientComponent,
