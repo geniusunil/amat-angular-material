@@ -1,12 +1,14 @@
 import { Component, OnInit,AfterContentInit,
   Directive,
   Renderer2,
-SecurityContext } from '@angular/core';
+SecurityContext, 
+ViewChild} from '@angular/core';
 import { FeatherIconsPipe } from '../../feather-pipe';
 
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { inject, TestBed } from '@angular/core/testing';
 import { MatTableDataSource } from '@angular/material';
+import { Cards3Component } from './dashboardComps/cards3/cards3.component'
 //hi
 /* describe('SanitiseHtmlPipe', () => {
   beforeEach(() => {
@@ -38,7 +40,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private _renderer2: Renderer2,
     private sanitizer:DomSanitizer) { }
- 
+    @ViewChild(Cards3Component) child;
     foods: Food[] = [
       {value: 'steak-0', viewValue: 'Select Pipeline'},
       {value: 'pizza-1', viewValue: 'Accounts'},

@@ -8,46 +8,12 @@
 <div class="pading_textdata">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <mat-card>
-                <mat-card-content>
-                    <mat-card-title class="flex">
-                        <span class="primary-color symbol" [innerHTML]="'dollar-sign' | feather"></span>Deposit</mat-card-title>
-                    <mat-grid-list cols="2" rowHeight="2:1">
-                        <mat-grid-tile class="one">
-
-                            <span class="primary-color mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-
-                        </mat-grid-tile>
-
-                        <mat-grid-tile class="two"><span class="primary-color mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-
-                        <mat-grid-tile class="three"><span class="primary-color mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-                        <mat-grid-tile class="four"><span class="primary-color mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-                    </mat-grid-list>
-
-                </mat-card-content>
-            </mat-card>
+            <app-cards3 [titleicon]="'dollar-sign'" [title]="'Deposit'" [colorClass]="'primary-color'" [icon1]="'add_circle_outline'" [icon2]="'remove_circle_outline'" [icon3]="'add_circle_outline'" [icon4]="'remove_circle_outline'"></app-cards3>
         </div>
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
+            <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'"></app-cards3>
+            <!--
+
             <mat-card>
                 <mat-card-content>
                     <mat-card-title class="flex"><span class="custom-green symbol" [innerHTML]="'file-text' | feather"></span>Invoice</mat-card-title>
@@ -85,9 +51,13 @@
 
                 </mat-card-content>
             </mat-card>
+
+            -->
         </div>
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <mat-card>
+            <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'"></app-cards3>
+
+            <!-- <mat-card>
                 <mat-card-content>
                     <mat-card-title class="flex"><span class="custom-pink symbol" [innerHTML]="'check-square' | feather"></span>Task</mat-card-title>
                     <mat-grid-list cols="2" rowHeight="2:1">
@@ -123,7 +93,7 @@
                     </mat-grid-list>
 
                 </mat-card-content>
-            </mat-card>
+            </mat-card> -->
         </div>
 
     </div>

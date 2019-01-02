@@ -26,6 +26,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { Cards3Component } from './dashboard/dashboardComps/cards3/cards3.component';
 // import { DashboardDirective } from './dashboard.directive';
 // import { HighlightDirective } from './dashboard/highlight.directive';
 
@@ -76,7 +77,8 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
          VendorComponent,
          TasksComponent,
          SalesComponent,
-         SupportComponent, 
+         SupportComponent,
+         Cards3Component, 
         
     ],
     providers: [],
