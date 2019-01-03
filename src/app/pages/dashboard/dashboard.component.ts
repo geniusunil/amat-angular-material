@@ -81,6 +81,8 @@ this._renderer2.setStyle(mat,'border','none');
    }
    myDataArray =  new MatTableDataSource<PerElement>(MYPROJECTS_DATA);
    displayedcolumns:string[] = ['projectname', 'client'];
+   myDataArraya= new MatTableDataSource<PrElementss>(PIN_DATA);
+   displayedcolumnss:string[] = ['projectname', 'client'];
    DataArray =  new MatTableDataSource<PrElement>(MYTASKS_DATA);
    displaycolumns:string[] = ['taskname', 'client'];
    Dataarray =  new MatTableDataSource<Prelement>(ACCOUNT_DATA);
@@ -345,5 +347,33 @@ const RECENTLY_DATA: PeriodicElement2[] = [
   {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
   {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Gaurav' ,status:true},
   {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
+  
+];
+export interface  PrElementss {
+  projectname: string;
+  client: string;
+  matvalue: number;
+  projectdate: string;
+  overdue:boolean; 
+}
+
+const PIN_DATA: PrElementss[] = [
+  {projectname: 'Atach Create kela me' ,matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdue:true} , 
+  {projectname: 'new task (pbx)', matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdue:false},
+  {projectname: 'PBX Test 2', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'test 54th', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav ',overdue:true},
+  {projectname: 'Atach Create kela me' ,matvalue: 100,projectdate:'18-01-2017', client: 'Gaurav',overdue:true},
+  {projectname: 'Test mail', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'task issue', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'task2 mileston 2' ,matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdue:true} , 
+  {projectname: 'new task (pbx)', matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdue:false},
+  {projectname: 'PBX Test 2', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'test 54th', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav ',overdue:true},
+  {projectname: 'Atach Create kela me' ,matvalue: 100,projectdate:'18-01-2017', client: 'Gaurav',overdue:true},
+  {projectname: 'Test mail', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'task issue', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  {projectname: 'task2 mileston 2' ,matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdue:true} , 
+  {projectname: 'new task (pbx)', matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdue:false},
+  {projectname: 'PBX Test 2', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
   
 ];

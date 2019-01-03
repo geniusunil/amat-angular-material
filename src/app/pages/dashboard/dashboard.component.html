@@ -8,15 +8,92 @@
 <div class="pading_textdata">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'dollar-sign'" [title]="'Deposit'" [colorClass]="'primary-color'" [icon1]="'plus-circle'" [icon2]="'minus-circle'" [icon3]="'plus-circle'" [icon4]="'minus-circle'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Income Today'" [subs2]="'Expense Today'" [subs3]="'Total Income'" [subs4]="'Total Expense'"></app-cards3>
+            <app-cards3 [titleicon]="'dollar-sign'" [title]="'Deposit'" [colorClass]="'primary-color'" [icon1]="'plus-circle'" [icon2]="'remove_circle_outline'" [icon3]="'add_circle_outline'" [icon4]="'remove_circle_outline'"></app-cards3>
         </div>
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'" [icon1]="'file-text'" [icon2]="'credit-card'" [icon3]="'dollar-sign'" [icon4]="'dollar-sign'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Invoice Today'" [subs2]="'Payment Today'" [subs3]="'Paid Amount'" [subs4]="'Due Amount'"></app-cards3>
-            
-        </div>
-        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'" [icon1]="'check-circle'" [icon2]="'check-circle'" [icon3]="'crosshair'" [icon4]="'file'" [amount1]="'6'" [amount2]="'1'" [amount3]="'4'" [amount4]="'40'" [subs1]="'In Progress Task'" [subs2]="'Open Tickets'" [subs3]="'In Progress Bugs'" [subs4]="'In progress Project'"></app-cards3>
+            <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'"></app-cards3>
+            <!--
 
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title class="flex"><span class="custom-green symbol" [innerHTML]="'file-text' | feather"></span>Invoice</mat-card-title>
+                    <mat-grid-list cols="2" rowHeight="2:1">
+                        <mat-grid-tile class="one">
+
+                            <span class="custom-green mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+
+                        </mat-grid-tile>
+
+                        <mat-grid-tile class="two"><span class="custom-green mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile class="three"><span class="custom-green mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="four"><span class="custom-green mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                </mat-card-content>
+            </mat-card>
+
+            -->
+        </div>
+        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
+            <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'"></app-cards3>
+
+            <!-- <mat-card>
+                <mat-card-content>
+                    <mat-card-title class="flex"><span class="custom-pink symbol" [innerHTML]="'check-square' | feather"></span>Task</mat-card-title>
+                    <mat-grid-list cols="2" rowHeight="2:1">
+                        <mat-grid-tile class="one">
+
+                            <span class="custom-pink mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+
+                        </mat-grid-tile>
+
+                        <mat-grid-tile class="two"><span class="custom-pink mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile class="three"><span class="custom-pink mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="four"><span class="custom-pink mr5">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </span>
+                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+                                        Info</a></span></span>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                </mat-card-content>
+            </mat-card> -->
         </div>
 
     </div>
@@ -37,31 +114,39 @@
 
                         <mat-tab-group>
                             <mat-tab label="Projects">
-                                <mat-card-content class="noPadding">
-                                   <mat-list class="noPadding fixFH" role="list">
-                                        <mat-list-item role="listitem" class="dashboard-title">
-                                            <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                                            <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%"
-                                                class="one">
-                                                <mat-list role="list">
-                                                    <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
-                                                            class="status font-mobile">In Progress</span></mat-list-item>
-                                                    <mat-list-item role="listitem" class="font-mobile">
-                                                        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                                    </mat-list-item>
-                                                    <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending
-                                                            On : </span>2017-05-29</mat-list-item>
-                                                </mat-list>
-                                            </span>
-                                            <span fxFlex="20%" class="two font-mobile">Test Sunita</span>
-                                            <span fxFlex="20%" class="three font-mobile"><svg class="twenty-seven pins"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                    <path d="M11 12h6v-1l-3-1V2l3-1V0H3v1l3 1v8l-3 1v1h6v7l1 1 1-1v-7z" /></svg></span></mat-list-item>
+                                <table class="display_prop" mat-table [dataSource]="myDataArraya">
 
-                                    </mat-list>
-                                </mat-card-content>
+    
+
+                                    <!--Project Name Column -->
+                                    <ng-container matColumnDef="projectname">
+                                        <th mat-header-cell *matHeaderCellDef>Projects Name </th>
+                                        <td mat-cell *matCellDef="let pin"> {{pin.projectname}} 
+                                            <span class="states  font-mobile" *ngIf="pin.overdue">overdue</span>
+                                      <mat-progress-bar mode="determinate" value="{{ pin.matvalue }}"></mat-progress-bar>
+                                     End date: {{ pin.projectdate }}
+                                   </td>
+                                      </ng-container>
+                                
+                                    <!-- client Column -->
+                                    <ng-container matColumnDef="client">
+                                      <th mat-header-cell *matHeaderCellDef> Client </th>
+                                      <td mat-cell *matCellDef="let pin"> {{pin.client}} 
+                                      
+                                      </td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="pinning">
+                                        <th mat-header-cell *matHeaderCellDef> pinning </th>
+                                        <td mat-cell *matCellDef="let pin"> 
+                                            <svg class="twenty-seven pins"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M11 12h6v-1l-3-1V2l3-1V0H3v1l3 1v8l-3 1v1h6v7l1 1 1-1v-7z" /></svg>
+                                        </td>
+                                      </ng-container>
+                                    
+                                  <tr mat-header-row *matHeaderRowDef="displayedcolumnss"></tr>
+                                    <tr mat-row *matRowDef="let pin; columns: displayedcolumnss;"></tr>
+                                  </table>
                             </mat-tab>
                             <mat-tab label="Invoice">
                                 <mat-card-content>Content 2</mat-card-content>
@@ -1971,3 +2056,8 @@
         </div>
 
     </div>
+<div>
+  
+    
+    
+</div>
