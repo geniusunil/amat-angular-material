@@ -81,8 +81,14 @@ this._renderer2.setStyle(mat,'border','none');
    }
    myDataArray =  new MatTableDataSource<PerElement>(MYPROJECTS_DATA);
    displayedcolumns:string[] = ['projectname', 'client'];
+   DataArray =  new MatTableDataSource<PrElement>(MYTASKS_DATA);
+   displaycolumns:string[] = ['taskname', 'client'];
+   Dataarray =  new MatTableDataSource<Prelement>(ACCOUNT_DATA);
+   discolumns:string[] = ['accountname', 'balance'];
    dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
    displayedColumns: string[] = ['name', 'weight', 'symbol','position'];
+   Dataarray1 = new MatTableDataSource<PeriodicElement1>(AGREEMENTS_DATA);
+   discolumns1: string[] = ['clientname', 'type', 'status'];
     // Doughnut
   public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData:number[] = [350, 450, 100];
@@ -227,4 +233,88 @@ const MYPROJECTS_DATA: PerElement[] = [
   {projectname: 'jadshjkas', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
   {projectname: 'kishor test 102', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
   {projectname: 'test oppo', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:false},
+];
+export interface  PrElement {
+  taskname: string;
+  client: string;
+  matvalues: number;
+  projectdate: string;
+  overdues:boolean; 
+}
+
+const MYTASKS_DATA: PrElement[] = [
+  {taskname: 'Atach Create kela me' ,matvalues: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdues:true} , 
+  {taskname: 'new task (pbx)', matvalues: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdues:false},
+  {taskname: 'PBX Test 2', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav',overdues:true},
+  {taskname: 'test 54th', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav ',overdues:true},
+  {taskname: 'Atach Create kela me' ,matvalues: 100,projectdate:'18-01-2017', client: 'Gaurav',overdues:true},
+  {taskname: 'Test mail', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav',overdues:true},
+  {taskname: 'task issue', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav',overdues:true},
+  {taskname: 'task2 mileston 2' ,matvalues: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdues:true} , 
+  {taskname: 'new task (pbx)', matvalues: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdues:false},
+  {taskname: 'PBX Test 2', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav',overdues:true},
+  {taskname: 'test 54th', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav ',overdues:true},
+  {taskname: 'Atach Create kela me' ,matvalues: 100,projectdate:'18-01-2017', client: 'Gaurav',overdues:true},
+  {taskname: 'Test mail', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav',overdues:true},
+  {taskname: 'task issue', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav',overdues:true},
+  {taskname: 'task2 mileston 2' ,matvalues: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdues:true} , 
+  {taskname: 'new task (pbx)', matvalues: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdues:false},
+  {taskname: 'PBX Test 2', matvalues: 100,projectdate:'18-01-2017',client: 'Gaurav',overdues:true},
+  
+];
+export interface Prelement {
+  accountname: string;
+  balance: string;
+  accounts: string;
+  
+}
+
+const ACCOUNT_DATA: Prelement[] = [
+  {accountname: 'Bank Account', accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account', accounts:'bankaccount', balance: '$19660.38' } ,
+  {accountname: 'Bank Account', accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account', accounts:'bankaccount', balance: '$19660.38' } ,
+  {accountname: 'Bank Account', accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } ,
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } ,
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38'} ,
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } ,
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } ,
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38'} ,
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38'} , 
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } ,
+  {accountname: 'Bank Account' , accounts:'bankaccount', balance: '$19660.38' } , 
+];
+export interface  PeriodicElement1 {
+  clientname: string;
+  type: string;
+  date: string;
+  status:boolean; 
+}
+
+const AGREEMENTS_DATA: PeriodicElement1[] = [
+  {clientname: 'Atach Create kela me' , date:'18-01-2017', type: 'Internet Service Agreement' ,status:true} , 
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Internet Service Agreement' ,status:false},
+  {clientname: 'PBX Test 2',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
+  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
+  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
+  {clientname: 'new task (pbx)',date:'18-01-2017',type: 'Gaurav' ,status:false},
+  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
+  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
+  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Gaurav' ,status:false},
+  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
+  
 ];

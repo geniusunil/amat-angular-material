@@ -253,8 +253,24 @@ width:88%;}
     padding:0 6px;
     border-radius:15px;
 }
+.component{
+    .mat-list-item {
+        height: auto !important;
+        padding: 0px 0px !important;
+    }
+    .mat-list-item-content{
+        padding: 0px 0px !important;
+    }
+}
 .state{
     float:left;
+    background-color:#ffe4ec;
+    color:#9a0033;
+    padding:0 6px;
+    border-radius:15px;
+}
+.states{
+    
     background-color:#ffe4ec;
     color:#9a0033;
     padding:0 6px;
