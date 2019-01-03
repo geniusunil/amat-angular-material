@@ -15,7 +15,7 @@
             
         </div>
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'" [icon1]="'check-circle'" [icon2]="'check-circle'" [icon3]="'crosshair'" [icon4]="'file'" [amount1]="'6'" [amount2]="'1'" [amount3]="'4'" [amount4]="'40'" [subs1]="'In Progress Task'" [subs2]="'Open Tickets'" [subs3]="'In Progress Bugs'" [subs4]="'In progress Project'"></app-cards3>
+            <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'" [icon1]="'check-circle'" [icon2]="'check-circle'" [icon3]="'crosshair'" [icon4]="'file'" [amount1]="'6'" [amount2]="'1'" [amount3]="'4'" [amount4]="'40'" [subs1]="'In Progress Task'" [subs2]="'Open Tickets'" [subs3]="'In Progress Bugs'" [subs4]="'In progress'"></app-cards3>
 
         </div>
 
@@ -203,22 +203,6 @@
                             <mat-panel-title>
                                 Statistics
                             </mat-panel-title>
-
-                            <!-- <form method="get">
-                                <mat-form-field class="statsSelect">
-                                    <mat-select [(ngModel)]="selectedValue" name="food" disableOptionCentering panelClass="myPanelClass">
-                                        <mat-option >
-                                        All
-                                        </mat-option>
-                                    </mat-select>
-                                    </mat-form-field>
-                                </form> -->
-
-                            <!-- <ng-select class="custom" [items]="cities3"
-                                        bindLabel="name"
-                                        bindValue="name"
-                                        placeholder="Select city"
-                                        [(ngModel)]="selectedCityName"></ng-select> -->
                             <mat-form-field class="statsSelect">
                                 <mat-select [(ngModel)]="selectedValue" name="food" disableOptionCentering panelClass="myPanelClass">
                                     <mat-option *ngFor="let food of foods" [value]="food.value">
@@ -233,15 +217,7 @@
                                     </mat-option>
                                 </mat-select>
                             </mat-form-field>
-                            <!-- <select name="location">
-                                                    <option value="accounts">accounts</option>
-                                                    
-                                                    <option value="contacts">contacts</option>
-                                                    <option value="dashboard">dashboard</option>
-                                                    <option value="events">events</option>
-                                                  </select> -->
-
-
+                          
                             <span class="xPanelIndicatorSpan"><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20">
                                     <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
