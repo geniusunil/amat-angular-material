@@ -329,9 +329,15 @@ width: 90%;
     margin:auto 24px;
     svg{
         color:black;
+        margin:0;
     }
     *{
         margin:0 23px;
+    }
+    button{
+        background:none;
+        border:0;
+        color:$gray;
     }
     color:$gray;
     
@@ -378,6 +384,25 @@ width: 90%;
 .noBorders{
     border-style:hidden !important;
 }
+.bg-custom-green{
+    background-color: $custom-green;
+}
+.bg-custom-pink{
+    background-color: $custom-pink;
+}
+.bg-custom-blue{
+    background-color:#5b9cec;
+}
+.bg-custom-light-blue{
+    background-color:#23b7e5;
+}
+.bg-custom-orange{
+    background-color:#ff902b;
+}
+.bg-custom-gray{
+    background-color:#d2d6de;
+}
+
 .staTile{
     padding-left:15px !important;
     figure{
@@ -399,6 +424,23 @@ width: 90%;
             height:40px;
         }
     }
+    .mat-list-item-content{
+        display:block !important;
+        .count{
+            float:right;
+            color:white;
+            padding:0 7px;
+            border-radius:2px;
+        }
+        .lunch{
+            color:black;
+        }
+        span{
+            display:inline-block;
+            margin-top:5px;
+        }
+    }
+    
 }
 /*******************
  Login register
