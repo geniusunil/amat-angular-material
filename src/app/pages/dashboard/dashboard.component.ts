@@ -89,6 +89,8 @@ this._renderer2.setStyle(mat,'border','none');
    displayedColumns: string[] = ['name', 'weight', 'symbol','position'];
    Dataarray1 = new MatTableDataSource<PeriodicElement1>(AGREEMENTS_DATA);
    discolumns1: string[] = ['clientname', 'type', 'status'];
+   Dataarray2 = new MatTableDataSource<PeriodicElement2>(RECENTLY_DATA);
+   discolumns2: string[] = ['clientname', 'type', 'status'];
     // Doughnut
   public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData:number[] = [350, 450, 100];
@@ -300,21 +302,48 @@ export interface  PeriodicElement1 {
 
 const AGREEMENTS_DATA: PeriodicElement1[] = [
   {clientname: 'Atach Create kela me' , date:'18-01-2017', type: 'Internet Service Agreement' ,status:true} , 
-  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Internet Service Agreement' ,status:false},
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Internet Service Agreement' ,status:true},
   {clientname: 'PBX Test 2',date:'18-01-2017',type: 'Gaurav',status:true},
   {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
   {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
   {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
   {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
   {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
-  {clientname: 'new task (pbx)',date:'18-01-2017',type: 'Gaurav' ,status:false},
+  {clientname: 'new task (pbx)',date:'18-01-2017',type: 'Gaurav' ,status:true},
   {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
   {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
   {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
   {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
   {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
   {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
-  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Gaurav' ,status:false},
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Gaurav' ,status:true},
+  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
+  
+];
+export interface  PeriodicElement2 {
+  clientname: string;
+  type: string;
+  date: string;
+  status:boolean; 
+}
+
+const RECENTLY_DATA: PeriodicElement2[] = [
+  {clientname: 'Atach Create kela me' , date:'18-01-2017', type: 'Internet Service Agreement' ,status:true} , 
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Internet Service Agreement' ,status:true},
+  {clientname: 'PBX Test 2',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
+  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
+  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
+  {clientname: 'new task (pbx)',date:'18-01-2017',type: 'Gaurav' ,status:true},
+  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
+  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
+  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Gaurav' ,status:true},
   {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
   
 ];

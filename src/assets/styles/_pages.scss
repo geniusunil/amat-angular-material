@@ -252,9 +252,9 @@ width:88%;}
     }
 }
 .state{
-    float:left;
-    background-color:#ffe4ec;
-    color:#9a0033;
+   
+    background-color:#ffefdf;
+    color:#83470d;
     padding:0 6px;
     border-radius:15px;
 }
@@ -273,6 +273,7 @@ width:88%;}
     height:100vh !important;
 }
 .font-mobile{
+    font-size: 12px !important;
     @include mobile(){
         font-size:3vw !important;
     }
@@ -283,9 +284,8 @@ table {
 .font-mobiles{
    font-size:10px !important;
 }
-.hight_element{
-height: 20px;
-overflow:hidden !important;
+.width_element{
+width: 90%;
 }
 .pro_name{
     color:#1582e8;
