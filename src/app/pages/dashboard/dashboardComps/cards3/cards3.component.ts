@@ -13,6 +13,15 @@ export class Cards3Component implements OnInit {
   @Input() icon2;
   @Input() icon3;
   @Input() icon4;
+  @Input() amount1;
+  @Input() amount2;
+  @Input() amount3;
+  @Input() amount4;
+  @Input() subs1;
+  @Input() subs2;
+  @Input() subs3;
+  @Input() subs4;
+  
   constructor() { }
 
   ngOnInit() {

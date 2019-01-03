@@ -8,92 +8,15 @@
 <div class="pading_textdata">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'dollar-sign'" [title]="'Deposit'" [colorClass]="'primary-color'" [icon1]="'plus-circle'" [icon2]="'remove_circle_outline'" [icon3]="'add_circle_outline'" [icon4]="'remove_circle_outline'"></app-cards3>
+            <app-cards3 [titleicon]="'dollar-sign'" [title]="'Deposit'" [colorClass]="'primary-color'" [icon1]="'plus-circle'" [icon2]="'minus-circle'" [icon3]="'plus-circle'" [icon4]="'minus-circle'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Income Today'" [subs2]="'Expense Today'" [subs3]="'Total Income'" [subs4]="'Total Expense'"></app-cards3>
         </div>
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'"></app-cards3>
-            <!--
-
-            <mat-card>
-                <mat-card-content>
-                    <mat-card-title class="flex"><span class="custom-green symbol" [innerHTML]="'file-text' | feather"></span>Invoice</mat-card-title>
-                    <mat-grid-list cols="2" rowHeight="2:1">
-                        <mat-grid-tile class="one">
-
-                            <span class="custom-green mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-
-                        </mat-grid-tile>
-
-                        <mat-grid-tile class="two"><span class="custom-green mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-
-                        <mat-grid-tile class="three"><span class="custom-green mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-                        <mat-grid-tile class="four"><span class="custom-green mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-                    </mat-grid-list>
-
-                </mat-card-content>
-            </mat-card>
-
-            -->
+            <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'" [icon1]="'file-text'" [icon2]="'credit-card'" [icon3]="'dollar-sign'" [icon4]="'dollar-sign'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Invoice Today'" [subs2]="'Payment Today'" [subs3]="'Paid Amount'" [subs4]="'Due Amount'"></app-cards3>
+            
         </div>
         <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'"></app-cards3>
+            <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'" [icon1]="'check-circle'" [icon2]="'check-circle'" [icon3]="'crosshair'" [icon4]="'file'" [amount1]="'6'" [amount2]="'1'" [amount3]="'4'" [amount4]="'40'" [subs1]="'In Progress Task'" [subs2]="'Open Tickets'" [subs3]="'In Progress Bugs'" [subs4]="'In progress Project'"></app-cards3>
 
-            <!-- <mat-card>
-                <mat-card-content>
-                    <mat-card-title class="flex"><span class="custom-pink symbol" [innerHTML]="'check-square' | feather"></span>Task</mat-card-title>
-                    <mat-grid-list cols="2" rowHeight="2:1">
-                        <mat-grid-tile class="one">
-
-                            <span class="custom-pink mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-
-                        </mat-grid-tile>
-
-                        <mat-grid-tile class="two"><span class="custom-pink mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-
-                        <mat-grid-tile class="three"><span class="custom-pink mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-                        <mat-grid-tile class="four"><span class="custom-pink mr5">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </span>
-                            <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
-                                        Info</a></span></span>
-                        </mat-grid-tile>
-                    </mat-grid-list>
-
-                </mat-card-content>
-            </mat-card> -->
         </div>
 
     </div>

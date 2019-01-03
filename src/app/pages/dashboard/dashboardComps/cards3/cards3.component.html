@@ -4,32 +4,31 @@
           <span class="{{colorClass}} symbol" [innerHTML]="[titleicon] | feather"></span>{{ title }}</mat-card-title>
       <mat-grid-list cols="2" rowHeight="2:1">
           <mat-grid-tile class="one">
-                <span class="{{colorClass}} mr5" [innerHTML]="[icon1] | feather"></span>
+                <span class="{{colorClass}} mr5 icons24" [innerHTML]="[icon1] | feather"></span>
               <!-- <span class="{{colorClass}} mr5">
                   <mat-icon>{{icon1}}</mat-icon>
               </span> -->
-              <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+              <span><span class="zero">{{ amount1 }}</span><br>{{subs1}}<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
 
           </mat-grid-tile>
 
-          <mat-grid-tile class="two"><span class="{{colorClass}} mr5">
-                  <mat-icon>{{icon2}}</mat-icon>
+          <mat-grid-tile class="two">
+              <span class="{{colorClass}} mr5 icons24" [innerHTML]="[icon2] | feather">
+                 
               </span>
-              <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+              <span><span class="zero">{{ amount2 }}</span><br>{{subs2}}<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
           </mat-grid-tile>
 
-          <mat-grid-tile class="three"><span class="{{colorClass}} mr5">
-                  <mat-icon>{{icon3}}</mat-icon>
-              </span>
-              <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+          <mat-grid-tile class="three"><span class="{{colorClass}} mr5 icons24" [innerHTML]="[icon3] | feather">
+                </span>
+              <span><span class="zero">{{ amount3 }}</span><br>{{subs3}}<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
           </mat-grid-tile>
-          <mat-grid-tile class="four"><span class="{{colorClass}} mr5">
-                  <mat-icon>{{icon4}}</mat-icon>
-              </span>
-              <span><span class="zero">$0.00</span><br>Invoice Today<br><span class="more_info"><a href="#">More
+          <mat-grid-tile class="four"><span class="{{colorClass}} mr5 icons24" [innerHTML]="[icon4] | feather">
+                </span>
+              <span><span class="zero">{{ amount4 }}</span><br>{{subs4}}<br><span class="more_info"><a href="#">More
                           Info</a></span></span>
           </mat-grid-tile>
       </mat-grid-list>
