@@ -94,7 +94,7 @@ html .page-wrapper{
     border-width:1px 0 0 0;
 }
 .mat-ink-bar{
-    height:45px !important;
+    height:37px !important;
     // margin-bottom:13px;
     z-index: -1;
     background-color:$custom-green;
@@ -105,6 +105,7 @@ html .page-wrapper{
 }
 .mat-tab-label{
     min-width:115px !important;
+    height:37px !important;
     // font-size: 1rem !important;
 }
 
@@ -124,6 +125,9 @@ html .page-wrapper{
 }
 .mat-tab-header{
     padding:15px 24px;
+    .mat-tab-label-container{
+        height:37px;
+    }
 }
 .project_name_list.mat-list-item, .project_name_list .mat-list-item{
     // padding:23px 10px 0 10px !important;
@@ -704,6 +708,9 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
     background-color:$dashboard-title !important;
     // height:44px !important;
     display:flex;
+    mat-panel-title{
+        color:#494949;
+    }
     
 }
 .title_value {
