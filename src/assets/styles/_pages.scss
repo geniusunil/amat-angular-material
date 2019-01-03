@@ -329,9 +329,15 @@ overflow:hidden !important;
     margin:auto 24px;
     svg{
         color:black;
+        margin:0;
     }
     *{
         margin:0 23px;
+    }
+    button{
+        background:none;
+        border:0;
+        color:$gray;
     }
     color:$gray;
     
