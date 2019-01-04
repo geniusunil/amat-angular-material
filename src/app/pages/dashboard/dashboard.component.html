@@ -1705,8 +1705,9 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
-                <mat-card-title class="flex">
-                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+                    <mat-card-title class="flex below">
+                            <span class="">Credit Cards Expiring Soon</span></mat-card-title>
+                
                 <div>
                     <div style="display: block">
                         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
@@ -1721,8 +1722,8 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
-                <mat-card-title class="flex">
-                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+                    <mat-card-title class="flex below">
+                            <span class="">Settlement Summary</span></mat-card-title>
                 <div>
                     <div style="display: block">
                         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
@@ -1739,27 +1740,26 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
-                <mat-card-title class="flex">
-                    <span class="primary-color symbol">Payments Report</span></mat-card-title>
+                    <mat-card-title class="flex below">
+                            <span class="">Payments Report</span></mat-card-title>
                 <div class="row">
                     <div class="col-md-6">
+                            <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+                                <span class="right_value">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="picker9" placeholder="2018-10">
+                                        <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+                                        <mat-datepicker touchUi #picker9></mat-datepicker>
+                                    </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                                </span>
+                            </div>
                         <div style="display: block;">
-                            <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels"
+                            <canvas id="pr" baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels"
                                 [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
                                 [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
                         </div>
                     </div>
-                    <div class="col-md-6" style="margin-bottom: 10px">
-                        <table class="table table-responsive table-condensed">
-                            <tr>
-                                <th *ngFor="let label of lineChartLabels">{{label}}</th>
-                            </tr>
-                            <tr *ngFor="let d of lineChartData">
-                                <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
-                            </tr>
-                        </table>
-                        <button (click)="randomizeLine()">CLICK</button>
-                    </div>
+                    
                 </div>
             </mat-card>
         </div>
@@ -1767,9 +1767,19 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
-                <mat-card-title class="flex">
-                    <span class="primary-color symbol">Income Vs Expense</span></mat-card-title>
+                    <mat-card-title class="flex below">
+                            <span class="">Income Vs Expense</span></mat-card-title>
+       
                 <div>
+                        <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+                            <span class="right_value">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker8" placeholder="2018-10">
+                                    <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #picker8></mat-datepicker>
+                                </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                            </span>
+                        </div>
                     <div style="display: block">
                         <canvas baseChart [datasets]="incomeExpenseData" [labels]="incomeExpenseLabels" [options]="incomeExpenseOptions"
                             [legend]="incomeExpenseLegend" [colors]="incomeExpenseColors" [chartType]="incomeExpenseType" (chartHover)="chartHovered($event)"
@@ -1786,9 +1796,29 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
-                <mat-card-title class="flex">
-                    <span class="primary-color symbol">Previous year Income Comparison Chart</span></mat-card-title>
+                    <mat-card-title class="flex below">
+                            <span class="">Previous year Income Comparison Chart</span></mat-card-title>
+       
                 <div>
+                        <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+                            <span class="right_value">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker4" placeholder="2018-10">
+                                    <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #picker4></mat-datepicker>
+                                </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                            </span>
+                        </div>
+                        <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+
+                        <span class="right_value">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker3" placeholder="2018-10">
+                                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #picker3></mat-datepicker>
+                                </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                            </span>
+                        </div>
                     <div style="display: block">
                         <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
                             [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
@@ -1802,9 +1832,30 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
-                <mat-card-title class="flex">
-                    <span class="primary-color symbol">Previous Year Expense Comparison Chart</span></mat-card-title>
+                    <mat-card-title class="flex below">
+                            <span class="">Previous Year Expense Comparison Chart</span></mat-card-title>
+              
                 <div>
+                        <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+                            <span class="right_value">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker6" placeholder="2018-10">
+                                    <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #picker6></mat-datepicker>
+                                </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                            </span>
+                        </div>
+                        <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+
+                        <span class="right_value">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker7" placeholder="2018-10">
+                                    <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #picker7></mat-datepicker>
+                                </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                            </span>
+                        </div>
+
                     <div style="display: block">
                         <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
                             [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
@@ -1828,11 +1879,12 @@
                     <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
                         <span class="right_value">
                             <mat-form-field>
-                                <input matInput [matDatepicker]="picker3" placeholder="2018-10">
-                                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-                                <mat-datepicker touchUi #picker3></mat-datepicker>
+                                <input matInput [matDatepicker]="picker5" placeholder="2018-10">
+                                <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                                <mat-datepicker touchUi #picker5></mat-datepicker>
                             </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                         </span>
+                        
                     </div>
                 <div style="display: block">
                     <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [colors]="donutColors"

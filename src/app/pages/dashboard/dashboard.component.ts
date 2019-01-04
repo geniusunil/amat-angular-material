@@ -116,8 +116,8 @@ export class DashboardComponent implements OnInit {
   public barChartLegend: boolean = true;
 
   public barChartData: any[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A', type: 'line', backgroundColor: "rgba(51,51,51,0.5)", fill: false, lineTension: 0.3 },
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series B' },
+    { data: [65, 59, 80, 81, 56, 55, 40], label: '# of Payments', type: 'line', backgroundColor: "rgba(51,51,51,0.5)", fill: false, lineTension: 0.3 },
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Payment Amount ($)' },
   ];
   public barChartColors:Array<any> = [
     { // grey
@@ -222,6 +222,7 @@ export class DashboardComponent implements OnInit {
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: any = {
     responsive: true,
+    maintainAspectRatio: false
   };
   public lineChartColors: Array<any> = [
     { // grey
