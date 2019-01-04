@@ -45,10 +45,11 @@
                                     <!--Project Name Column -->
                                     <ng-container matColumnDef="projectname">
                                         <th mat-header-cell *matHeaderCellDef>Projects Name </th>
-                                        <td mat-cell *matCellDef="let pin"><div id="mikk"> {{pin.projectname}} 
-                                            <span class="state colr_pink font-mobile" *ngIf="pin.overdue">overdue</span>
+                                        <td mat-cell *matCellDef="let pin"> {{pin.projectname}} 
+                                            <span class="state colr_pink font-mobile" *ngIf="pin.overdue; else elseBlock">overdue</span>
+                                            <ng-template #elseBlock> <span class="state colr_purple font-mobile">In Progress</span></ng-template>
                                       <mat-progress-bar mode="determinate" value="{{ pin.matvalue }}"></mat-progress-bar>
-                                     End date: {{ pin.projectdate }}</div>
+                                     Ending on: {{ pin.projectdate }}
                                    </td>
                                       </ng-container>
                                 
@@ -56,7 +57,6 @@
                                     <ng-container matColumnDef="client">
                                       <th mat-header-cell *matHeaderCellDef> Client </th>
                                       <td mat-cell *matCellDef="let pin"> {{pin.client}} 
-                                      
                                       </td>
                                     </ng-container>
                                     <ng-container matColumnDef="pinning">
