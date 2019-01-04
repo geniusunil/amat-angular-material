@@ -956,15 +956,15 @@
        
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
-              <mat-panel-title class="dashboard-title cdea">
+              <mat-panel-title class="dashboard-title cdea pad_element1">
                     Lead By Source
                      </mat-panel-title>
                       <mat-list class="noPadding fixH235" role="list">
                       <mat-list-item role="listitem" class="font-mobiles hight_box" *ngFor="let source of typesOfsource">{{source}}</mat-list-item>
                        </mat-list>
                  </mat-card>
-            <mat-card>
-             <mat-panel-title class="dashboard-title cdea">
+            <mat-card  class="heightTFF">
+             <mat-panel-title class="dashboard-title cdea pad_element1">
                 Opportunity By Source
                  </mat-panel-title>
                   <mat-list class="noPadding fixH235" role="list">
@@ -977,47 +977,36 @@
     <div fxLayout="row" fxLayoutWrap="wrap">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card>
-
-                <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
-                    <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                        <mat-panel-title>
-                            Bills to Pay
+            <mat-card class="fixFH">
+                    <mat-panel-title class="dashboard-title cdea pad_element2">
+                           Credit Cards Expiring Soon
                         </mat-panel-title>
-                        <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                    </mat-expansion-panel-header>
-
-                    <ng-scrollbar [autoHide] = "true" [overlay]="true">
                         <div class="noPadding element_high">
-                        <table class="display_prop" mat-table [dataSource]="Dataarray6">
+                        <table class="display_prop" mat-table [dataSource]="Dataarray7">
                          <!--Task Name Column -->
-                        <ng-container matColumnDef="VendorName">
-                        <th mat-header-cell *matHeaderCellDef>Vendor Name</th>
-                        <td mat-cell *matCellDef="let bills"> 
-                        <span class="pro_name width_element font-mobile left_value"> {{bills.VendorName}}</span><span class="gray left_value small_value">
-                        Date: {{ bills.date }}</span>
+                        <ng-container matColumnDef="clientname">
+                        <th mat-header-cell *matHeaderCellDef>Client Name</th>
+                        <td mat-cell *matCellDef="let Credit"> 
+                        {{Credit.clientname}}
                          </td>
                         </ng-container>
                         <!-- client Column -->
-                        <ng-container matColumnDef="PurchaseOrder">
-                        <th mat-header-cell *matHeaderCellDef> Purchase Order </th>
-                        <td mat-cell *matCellDef="let bills"><span class="font-mobiles left_value"> {{bills.PurchaseOrder}} </span>
+                        <ng-container matColumnDef="creditcard">
+                        <th mat-header-cell *matHeaderCellDef>Credit Card</th>
+                        <td mat-cell *matCellDef="let Credit">{{Credit.creditcard}}
                          </td>
                           </ng-container>
-                              <ng-container matColumnDef="Amount">
-                                  <th mat-header-cell *matHeaderCellDef>Amount</th>
-                                    <td mat-cell *matCellDef="let bills"> 
-                                        {{bills.Amount}}
+                              <ng-container matColumnDef="expirydate">
+                                  <th mat-header-cell *matHeaderCellDef>Expiry Date</th>
+                                    <td mat-cell *matCellDef="let Credit"> 
+                                        {{Credit.expirydate}}
                                        </td>
                                       </ng-container>
-                              <tr mat-header-row *matHeaderRowDef="discolumns6"></tr>
-                                <tr mat-row *matRowDef="let bills; columns: discolumns6;"></tr>
+                              <tr mat-header-row *matHeaderRowDef="discolumns7"></tr>
+                                <tr mat-row *matRowDef="let Credit; columns: discolumns7;"></tr>
                               </table>
                             </div>
-                            </ng-scrollbar>
-                </mat-expansion-panel>
-
+                        
             </mat-card>
         </div>
 

@@ -90,6 +90,8 @@ export class DashboardComponent implements OnInit {
    discolumns5: string[] = ['proposalno', 'ClientLeadName', 'status'];
    Dataarray6 = new MatTableDataSource<PeriodicElement6>(BILLS_DATA);
    discolumns6: string[] = ['VendorName', 'PurchaseOrder', 'Amount'];
+   Dataarray7 = new MatTableDataSource<PeriodicElement7>(CREDIT_DATA);
+   discolumns7: string[] = ['clientname', 'creditcard', 'expirydate'];
     // Doughnut
   public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData:number[] = [350, 450, 100];
@@ -477,4 +479,17 @@ export interface  PeriodicElement6 {
     {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
     {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
     
+  ];
+  export interface  PeriodicElement7{
+    clientname: string;
+    creditcard: string;
+    expirydate: string;
+    
+  }
+  const CREDIT_DATA: PeriodicElement7[] = [
+    {clientname: 'EST0039' , expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
+    {clientname: 'new task (pbx)', expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
+    {clientname: 'EST0039' , expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
+    {clientname: 'new task (pbx)', expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
+    {clientname: 'EST0039' , expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'}  
   ];

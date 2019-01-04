@@ -291,6 +291,9 @@ color:#9a0033 !important;
         font-size:3vw !important;
     }
 }
+.heightTFF {
+margin: 30px 15px;
+}
 .hight_box.mat-list-item {
     height: 35px !important;
     border-top: 1px solid #eeeeee;
@@ -779,12 +782,16 @@ color:#494949;
  }
 .cdea{
 height: 44px;
-margin-right: 0px;
-padding: 10px 15px;
+margin-right: 0px !important;
 color:rgba(0, 0, 0, 0.87);
 font-weight: 400;
 font-size: 15px;
 }
+.pad_element1{
+padding: 10px 15px;
+}
+.pad_element2{
+    padding: 10px 24px;}
 .title_value {
     font-size: 12px !important;
 }
