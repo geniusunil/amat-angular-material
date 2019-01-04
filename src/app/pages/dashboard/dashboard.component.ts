@@ -23,8 +23,8 @@ export interface Food {
 })
 
 export class DashboardComponent implements OnInit {
-  htmlToAdd;
-  constructor(
+    htmlToAdd;
+    constructor(
     private _renderer2: Renderer2,
     private sanitizer: DomSanitizer) { }
   @ViewChild(Cards3Component) child;
@@ -99,6 +99,11 @@ export class DashboardComponent implements OnInit {
    discolumns6: string[] = ['VendorName', 'PurchaseOrder', 'Amount'];
    Dataarray7 = new MatTableDataSource<PeriodicElement7>(CREDIT_DATA);
    discolumns7: string[] = ['clientname', 'creditcard', 'expirydate'];
+   discolumns8: string[] = ['taskname', 'clientLead', 'relatedto','Participants','pinning'];
+   Dataarray8 = new MatTableDataSource<PeriodicElement8>(OVERDUE_DATA);
+   
+  
+
     // Doughnut
   public doughnutChartLabels:string[] = ['Cost of goods sold', 'sales'];
   public doughnutChartData:number[] = [350, 450];
@@ -108,7 +113,6 @@ export class DashboardComponent implements OnInit {
     backgroundColor: [
     '#6356ae',
     '#27c24c',
-    
     ]
     }
     ];
@@ -571,4 +575,24 @@ export interface  PeriodicElement6 {
     {clientname: 'EST0039' , expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
     {clientname: 'new task (pbx)', expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
     {clientname: 'EST0039' , expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'}  
+  ];
+  export interface  PeriodicElement8{
+    taskname: string;
+    clientLead:string;
+    creditcard: string;
+    expirydate: string;
+    
+    
+  }
+  const OVERDUE_DATA: PeriodicElement8[] = [
+    {taskname: 'EST0039' ,clientLead:'company name', expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
+    {taskname: 'new task (pbx)', clientLead:'Test', expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
+    {taskname: 'EST0039' , clientLead:'Test', expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
+    {taskname: 'new task (pbx)', clientLead:'Test',expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
+    {taskname: 'EST0039' ,  clientLead:'Test',expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'}  ,
+    {taskname: 'EST0039' ,clientLead:'company name', expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
+    {taskname: 'new task (pbx)', clientLead:'Test', expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
+    {taskname: 'EST0039' , clientLead:'Test', expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
+    {taskname: 'new task (pbx)', clientLead:'Test',expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
+    {taskname: 'EST0039' ,  clientLead:'Test',expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'}  
   ];

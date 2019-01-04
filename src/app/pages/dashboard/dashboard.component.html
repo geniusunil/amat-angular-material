@@ -105,43 +105,49 @@
                             </mat-panel-title>
                             <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                            <!-- <img height="32" width="32" src="@icon/zondicons/icons/adjust.svg" /> -->
-                            <!-- <img height="18" width="18" src="https://unpkg.com/@icon/zondicons/icons/minus-solid.svg" /> -->
-                            <!-- <span *ngIf="!example.expanded" [innerHTML]="'minus-circle' | feather"></span> -->
-                            <!-- <span *ngIf="example.expanded" [innerHTML]="'minus' | feather"></span> -->
-                        </mat-expansion-panel-header>
+                      </mat-expansion-panel-header>
 
                         <mat-tab-group id="overdue">
                             <mat-tab label="Opportunities">
-                                <mat-card-content class="noPadding">
-                                   <mat-list class="noPadding fixFH" role="list">
-                                        <mat-list-item role="listitem" class="dashboard-title">
-                                            <span fxFlex="25%" class="one font-mobile gray">Task Name</span>
-                                            <span fxFlex="25%" class="two font-mobile gray">Client/Lead</span>
-                                            <span fxFlex="25%" class="two font-mobile gray">Related To</span>
-                                            <span fxFlex="25%" class="two font-mobile gray">Participants</span>
-                                        </mat-list-item>
-                                        <mat-list-item role="listitem" class="project_name_list"><span fxFlex="25%"
-                                                class="one">
-                                                <mat-list role="list">
-                                                    <mat-list-item role="listitem">
-                                                        <span class="pro_name font-mobile">WQ</span><span class="status font-mobile">In
-                                                            Progress</span>
-                                                    </mat-list-item>
-                                                    <mat-list-item role="listitem" class="font-mobile">
-                                                        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-                                                    </mat-list-item>
-                                                    <mat-list-item role="listitem" class="font-mobile"><span class="gray">Ending
-                                                            On : </span>2017-05-29</mat-list-item>
-                                                </mat-list>
-                                            </span>
-                                            <span fxFlex="25%" class="two font-mobile">Test Sunita</span>
-                                            <span fxFlex="25%" class="three font-mobile">Dummy</span>
-                                            <span fxFlex="25%" class="three font-mobile">Dummy</span>
-                                        </mat-list-item>
-
-                                    </mat-list>
-                                </mat-card-content>
+                                    <table class="display_prop" mat-table [dataSource]="Dataarray8">
+                                       <ng-container matColumnDef="taskname">
+                                                <th mat-header-cell *matHeaderCellDef>Task Name </th>
+                                                <td mat-cell *matCellDef="let Overdue"> 
+                                                    <span>{{Overdue.taskname}} </span>
+                                                    <span class="state colr_pink font-mobile" *ngIf="Overdue.overdue; else elseBlock">overdue</span>
+                                                 <mat-progress-bar mode="determinate" value="{{ Overdue.matvalue }}"></mat-progress-bar>
+                                             Ending on: {{ Overdue.projectdate }}
+                                           </td>
+                                              </ng-container>
+                                            <ng-container matColumnDef="clientLead">
+                                                    <th mat-header-cell *matHeaderCellDef> Client/Lead </th>
+                                                    <td mat-cell *matCellDef="let Overdue"> {{Overdue.clientLead}} 
+                                                    </td>
+                                                  </ng-container>
+                                            <ng-container matColumnDef="relatedto">
+                                                <th mat-header-cell *matHeaderCellDef>Related to</th>
+                                                <td mat-cell *matCellDef="let Overdue"> 
+                                                        
+                                                </td>
+                                              </ng-container>
+                                              <ng-container matColumnDef="Participants">
+                                                    <th mat-header-cell *matHeaderCellDef>Participants </th>
+                                                    <td mat-cell *matCellDef="let Overdue"> 
+                                                            {{Overdue.Participants}} 
+                                                    </td>
+                                                  </ng-container>
+                                                  <ng-container matColumnDef="pinning">
+                                                        <th mat-header-cell *matHeaderCellDef> </th>
+                                                        <td mat-cell *matCellDef="let pin"> 
+                                                            <svg class="twenty-seven pins"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                            <path d="M11 12h6v-1l-3-1V2l3-1V0H3v1l3 1v8l-3 1v1h6v7l1 1 1-1v-7z" /></svg>
+                                                        </td>
+                                                      </ng-container>
+                                          <tr mat-header-row *matHeaderRowDef="discolumns8"></tr>
+                                            <tr mat-row *matRowDef="let pin; columns: discolumns8;"></tr>
+                                          </table>
+                                          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                             </mat-tab>
                             <mat-tab label="Calls">
                                 <mat-card-content>Content 2</mat-card-content>
