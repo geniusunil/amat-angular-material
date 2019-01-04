@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
    myDataArray =  new MatTableDataSource<PerElement>(MYPROJECTS_DATA);
    displayedcolumns:string[] = ['projectname', 'client'];
    myDataArraya= new MatTableDataSource<PrElementss>(PIN_DATA);
-   displayedcolumnss:string[] = ['projectname', 'client'];
+   displayedcolumnss:string[] = ['projectname', 'client','pinning'];
    DataArray =  new MatTableDataSource<PrElement>(MYTASKS_DATA);
    displaycolumns:string[] = ['taskname', 'client'];
    Dataarray =  new MatTableDataSource<Prelement>(ACCOUNT_DATA);
@@ -80,6 +80,8 @@ export class DashboardComponent implements OnInit {
    discolumns1: string[] = ['clientname', 'type', 'status'];
    Dataarray2 = new MatTableDataSource<PeriodicElement2>(RECENTLY_DATA);
    discolumns2: string[] = ['clientname', 'type', 'status'];
+   Dataarray3 = new MatTableDataSource<PeriodicElement3>(RECEN_DATA);
+   discolumns3: string[] = ['clientname', 'type', 'status'];
     // Doughnut
   public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData:number[] = [350, 450, 100];
@@ -362,5 +364,32 @@ const PIN_DATA: PrElementss[] = [
   {projectname: 'task2 mileston 2' ,matvalue: 100, projectdate:'18-01-2017', client: 'Gaurav' ,overdue:true} , 
   {projectname: 'new task (pbx)', matvalue: 100, projectdate:'18-01-2017',client: 'Gaurav' ,overdue:false},
   {projectname: 'PBX Test 2', matvalue: 100,projectdate:'18-01-2017',client: 'Gaurav',overdue:true},
+  
+];
+export interface  PeriodicElement3 {
+  clientname: string;
+  type: string;
+  date: string;
+  status:boolean; 
+}
+
+const RECEN_DATA: PeriodicElement3[] = [
+  {clientname: 'EST0039' , date:'18-01-2017', type: 'Internet Service Agreement' ,status:true} , 
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Internet Service Agreement' ,status:true},
+  {clientname: 'PBX Test 2',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
+  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
+  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
+  {clientname: 'new task (pbx)',date:'18-01-2017',type: 'Gaurav' ,status:true},
+  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
+  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
+  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
+  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
+  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Gaurav' ,status:true},
+  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
   
 ];
