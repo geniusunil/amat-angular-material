@@ -83,10 +83,18 @@ export class DashboardComponent implements OnInit {
    Dataarray3 = new MatTableDataSource<PeriodicElement3>(RECEN_DATA);
    discolumns3: string[] = ['clientname', 'type', 'status'];
     // Doughnut
-  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartLabels:string[] = ['Cost of goods sold', 'sales'];
+  public doughnutChartData:number[] = [350, 450];
   public doughnutChartType:string = 'doughnut';
- 
+  private donutColors=[
+    {
+    backgroundColor: [
+    '#6356ae',
+    '#27c24c',
+    
+    ]
+    }
+    ];
   // events
   public chartClicked(e: any): void {
     console.log(e);
@@ -153,20 +161,72 @@ export class DashboardComponent implements OnInit {
      */
   }
 
+
+  //incomeExpense
+
+  public incomeExpenseOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true,
+    // bezierCurve:true
+  };
+  public incomeExpenseLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public incomeExpenseType: string = 'bar';
+  public incomeExpenseLegend: boolean = true;
+
+  public incomeExpenseData: any[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series B' }
+  ];
+  public incomeExpenseColors:Array<any> = [
+    { // grey
+      backgroundColor: '#27c24c',
+      borderColor: '#27c24c',
+      pointBackgroundColor: '#eb942d',
+      pointBorderColor: '#eb942d',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    },
+   
+  ];
+
+  //prevIncome
+
+  public prevIncomeOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true,
+    // bezierCurve:true
+  };
+  public prevIncomeLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public prevIncomeType: string = 'bar';
+  public prevIncomeLegend: boolean = true;
+
+  public prevIncomeData: any[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series B' }
+  ];
+  public prevIncomeColors:Array<any> = [
+    { // grey
+      backgroundColor: '#f44242',
+      borderColor: '#f44242',
+      pointBackgroundColor: '#eb942d',
+      pointBorderColor: '#eb942d',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    },
+   
+  ];
+
   // lineChart
   public lineChartData: Array<any> = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' },
-    { data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C' }
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A',lineTension: 0 },
+    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B',lineTension: 0 },
   ];
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: any = {
-    responsive: true
+    responsive: true,
   };
   public lineChartColors: Array<any> = [
     { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
+      backgroundColor: 'rgba(98,86,172,0.2)',
+      borderColor: '#6256ac',
       pointBackgroundColor: 'rgba(148,159,177,1)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
@@ -174,20 +234,13 @@ export class DashboardComponent implements OnInit {
     },
     { // dark grey
       backgroundColor: 'rgba(77,83,96,0.2)',
-      borderColor: 'rgba(77,83,96,1)',
+      borderColor: '#6256ac',
       pointBackgroundColor: 'rgba(77,83,96,1)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(77,83,96,1)'
-    },
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     }
+    
   ];
   public lineChartLegend: boolean = true;
   public lineChartType: string = 'line';

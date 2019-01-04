@@ -1768,14 +1768,14 @@
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
                 <mat-card-title class="flex">
-                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+                    <span class="primary-color symbol">Income Vs Expense</span></mat-card-title>
                 <div>
                     <div style="display: block">
-                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                        <canvas baseChart [datasets]="incomeExpenseData" [labels]="incomeExpenseLabels" [options]="incomeExpenseOptions"
+                            [legend]="incomeExpenseLegend" [colors]="incomeExpenseColors" [chartType]="incomeExpenseType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
-                    <button (click)="randomize()">Update</button>
+                    <!-- <button (click)="randomize()">Update</button> -->
                 </div>
 
             </mat-card>
@@ -1787,14 +1787,14 @@
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
                 <mat-card-title class="flex">
-                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+                    <span class="primary-color symbol">Previous year Income Comparison Chart</span></mat-card-title>
                 <div>
                     <div style="display: block">
-                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                        <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
+                            [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
-                    <button (click)="randomize()">Update</button>
+                    
                 </div>
             </mat-card>
         </div>
@@ -1803,14 +1803,14 @@
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
                 <mat-card-title class="flex">
-                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
+                    <span class="primary-color symbol">Previous Year Expense Comparison Chart</span></mat-card-title>
                 <div>
                     <div style="display: block">
-                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                        <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
+                            [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
-                    <button (click)="randomize()">Update</button>
+                    
                 </div>
 
             </mat-card>
@@ -1821,29 +1821,54 @@
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
+                    <mat-card-title class="flex below">
+                            <span class="">Income Breakdown</span></mat-card-title>
+                        <div class="containChart">
+        
+                    <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+                        <span class="right_value">
+                            <mat-form-field>
+                                <input matInput [matDatepicker]="picker3" placeholder="2018-10">
+                                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                <mat-datepicker touchUi #picker3></mat-datepicker>
+                            </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                        </span>
+                    </div>
                 <div style="display: block">
-                    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+                    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [colors]="donutColors"
                         (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
-                </div>
+                </div></div>
             </mat-card>
         </div>
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
-                <mat-card-title class="flex">
-                    <span class="primary-color symbol">Settlement Summary</span></mat-card-title>
-                <div>
+                <mat-card-title class="flex below">
+                    <span class="">Expense Breakdown</span></mat-card-title>
+                <div class="containChart">
+                        <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
+                            <span class="right_value">
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker2" placeholder="2018-10">
+                                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #picker2></mat-datepicker>
+                                </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
+                            </span>
+                        </div>
                     <div style="display: block">
                         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
                             [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
-                    <button (click)="randomize()">Update</button>
+                    <!-- <button (click)="randomize()">Update</button> -->
                 </div>
             </mat-card>
         </div>
 
     </div>
 <div>
+
+    <hr>
+    &copy; <span class="primary-color">Vivant Corporation.</span><span> All rights reserved.</span>
  
