@@ -35,6 +35,13 @@ export class DashboardComponent implements OnInit {
     { value: 'tacos-3', viewValue: 'Dashboard' }
   ];
   selectedValue: string = this.foods[0].value;
+  foods2: Food[] = [
+    { value: 'steak-0', viewValue: 'Select Pipeline' },
+    { value: 'pizza-1', viewValue: 'Accounts' },
+    { value: 'tacos-2', viewValue: 'Contacts' },
+    { value: 'tacos-3', viewValue: 'Dashboard' }
+  ];
+  selectedValue2: string = this.foods2[0].value;
   ngOnInit() {
 
   }
