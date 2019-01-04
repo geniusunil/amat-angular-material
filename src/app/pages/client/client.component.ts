@@ -35,5 +35,13 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
   {name: '54th Street - New Braunfels' ,  matvalue: 0 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
   {name: '54th Street - New Braunfels', matvalue: 100 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels' ,  matvalue: 0 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels', matvalue: 100 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels' ,  matvalue: 0 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels', matvalue: 100 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels' ,  matvalue: 0 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels', matvalue: 100 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels' ,  matvalue: 0 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
+  {name: '54th Street - New Braunfels', matvalue: 100 , weight: 'kasdasd', symbol: 'www.website.com',position : '(180) 123-4567', email : 'kartik@techspawn.com'},
 
 ];
