@@ -776,7 +776,7 @@
                         <table class="display_prop" mat-table [dataSource]="Dataarray5">
                          <!--Task Name Column -->
                         <ng-container matColumnDef="proposalno">
-                        <th mat-header-cell *matHeaderCellDef>Proposal No</th>
+                        <th mat-header-cell  *matHeaderCellDef>Proposal No</th>
                         <td mat-cell *matCellDef="let Approval"> 
                         <span class="pro_name width_element font-mobile left_value"> {{Approval.proposalno}}</span><span class="gray left_value small_value">
                         Date: {{ Approval.date }}</span>
@@ -1152,24 +1152,14 @@
                 
             </mat-card>
             <mat-card>
-                 
-                <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data heightTF">
+             <mat-panel-title class="dashboard-title cdea">
+                Lead by Source
+                 </mat-panel-title>
                         
-                    <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                        <mat-panel-title>
-                            Lead by Source
-                        </mat-panel-title>
-                        <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
-                    </mat-expansion-panel-header>
-
                     <ng-scrollbar [autoHide] = "true" [overlay]="true">
                    <mat-list class="noPadding fixH235" role="list">
                            
-                        <mat-list-item role="listitem" class="dashboard-title">
-                            <span fxFlex="60%" class="one font-mobile gray">Project Name</span>
-                            <span fxFlex="20%" class="two font-mobile gray">Client Name</span>
-                        </mat-list-item>
+                        
                         <mat-list-item role="listitem" class="project_name_list"><span fxFlex="60%" class="one">
                                 <mat-list role="list">
                                     <mat-list-item role="listitem"><span class="pro_name font-mobile">WQ</span><span
@@ -1342,7 +1332,7 @@
                    
                     </mat-list>
                 </ng-scrollbar>
-                </mat-expansion-panel>
+               
 
             </mat-card>
         
