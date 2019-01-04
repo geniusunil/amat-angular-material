@@ -84,6 +84,10 @@ export class DashboardComponent implements OnInit {
    discolumns3: string[] = ['Estimate', 'ClientLeadName', 'status'];
    Dataarray4 = new MatTableDataSource<PeriodicElement4>(PROPOSAL_DATA);
    discolumns4: string[] = ['proposalno', 'ClientLeadName', 'status'];
+   Dataarray5 = new MatTableDataSource<PeriodicElement5>(APPROVAL_DATA);
+   discolumns5: string[] = ['proposalno', 'ClientLeadName', 'status'];
+   Dataarray6 = new MatTableDataSource<PeriodicElement6>(BILLS_DATA);
+   discolumns6: string[] = ['VendorName', 'PurchaseOrder', 'Amount'];
     // Doughnut
   public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData:number[] = [350, 450, 100];
@@ -421,3 +425,54 @@ const PROPOSAL_DATA: PeriodicElement4[] = [
   {proposalno: 'PBX Test 2', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
   
 ];
+export interface  PeriodicElement5 {
+    proposalno: string;
+    ClientLeadName: string;
+    date: string;
+   
+  }
+  const APPROVAL_DATA: PeriodicElement5[] = [
+    {proposalno: 'EST0039' , date:'18-01-2017', ClientLeadName: 'Internet Service Agreement' } , 
+    {proposalno: 'new task (pbx)', date:'18-01-2017',ClientLeadName: 'Internet Service Agreement' },
+    {proposalno: 'PBX Test 2',date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'test 54th', date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'Atach Create kela me' ,date:'18-01-2017', ClientLeadName:'Gaurav'},
+    {proposalno: 'Test mail',date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'task issue', date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'task2 mileston 2' , date:'18-01-2017', ClientLeadName: 'Gaurav'} , 
+    {proposalno: 'new task (pbx)',date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'PBX Test 2', date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'test 54th', date:'18-01-2017',ClientLeadName: 'Gaurav '},
+    {proposalno: 'Atach Create kela me' ,date:'18-01-2017', ClientLeadName: 'Gaurav'},
+    {proposalno: 'Test mail',date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'task issue', date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'task2 mileston 2' , date:'18-01-2017', ClientLeadName: 'Gaurav'} , 
+    {proposalno: 'new task (pbx)', date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    {proposalno: 'PBX Test 2', date:'18-01-2017',ClientLeadName: 'Gaurav'},
+    
+  ];
+export interface  PeriodicElement6 {
+    VendorName: string;
+    PurchaseOrder: string;
+    date: string;
+    Amount:string;
+  }
+  const BILLS_DATA: PeriodicElement6[] = [
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    {VendorName: 'EST0039' , date:'18-01-2017', PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'} , 
+    {VendorName: 'new task (pbx)', date:'18-01-2017',PurchaseOrder: 'Internet Service Agreement' ,Amount:'$56.13'},
+    
+  ];
