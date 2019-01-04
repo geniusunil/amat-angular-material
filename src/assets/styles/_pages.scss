@@ -307,6 +307,7 @@ width:88%;}
 .state{
    padding:0 6px;
    border-radius:15px;
+   float:right;
 }
 .colr_yellow{
  background-color:#ffefdf !important;
@@ -375,6 +376,12 @@ width: 90%;
     fill:#fff;
     background: #ff3c3c;
     padding:5px;
+    float:right;
+}
+.display_prop{
+    td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type{
+        padding:0 24px;
+    }
 }
 .overdueMeetingsInsert{
     height: 60px;
