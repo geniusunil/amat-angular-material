@@ -100,17 +100,35 @@ export class DashboardComponent implements OnInit {
 
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
-    responsive: true
+    responsive: true,
+    // bezierCurve:true
   };
   public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   public barChartType: string = 'bar';
   public barChartLegend: boolean = true;
 
   public barChartData: any[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A', type: 'line', backgroundColor: "rgba(51,51,51,0.5)", fill: false, lineTension: 0 },
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A', type: 'line', backgroundColor: "rgba(51,51,51,0.5)", fill: false, lineTension: 0.3 },
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series B' },
   ];
-
+  public barChartColors:Array<any> = [
+    { // grey
+      backgroundColor: '#eb942d',
+      borderColor: '#eb942d',
+      pointBackgroundColor: '#eb942d',
+      pointBorderColor: '#eb942d',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    },
+    { // dark grey
+      backgroundColor: '#1e90ff',
+      borderColor: '#1e90ff',
+      pointBackgroundColor: '#1e90ff',
+      pointBorderColor: '#1e90ff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(77,83,96,1)'
+    }
+  ];
   // events
 
 

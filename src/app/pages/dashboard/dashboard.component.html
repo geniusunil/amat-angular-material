@@ -1713,7 +1713,7 @@
                             [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
-                    <button (click)="randomize()">Update</button>
+                    <!-- <button (click)="randomize()">Update</button> -->
                 </div>
             </mat-card>
         </div>
@@ -1726,10 +1726,10 @@
                 <div>
                     <div style="display: block">
                         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" [colors]="barChartColors"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
-                    <button (click)="randomize()">Update</button>
+                    <!-- <button (click)="randomize()">Update</button> -->
                 </div>
             </mat-card>
         </div>
