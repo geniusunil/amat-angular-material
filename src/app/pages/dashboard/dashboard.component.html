@@ -46,7 +46,7 @@
                                     <ng-container matColumnDef="projectname">
                                         <th mat-header-cell *matHeaderCellDef>Projects Name </th>
                                         <td mat-cell *matCellDef="let pin"><div id="mikk"> {{pin.projectname}} 
-                                            <span class="states  font-mobile" *ngIf="pin.overdue">overdue</span>
+                                            <span class="state colr_pink font-mobile" *ngIf="pin.overdue">overdue</span>
                                       <mat-progress-bar mode="determinate" value="{{ pin.matvalue }}"></mat-progress-bar>
                                      End date: {{ pin.projectdate }}</div>
                                    </td>
@@ -449,7 +449,7 @@
                             <ng-container matColumnDef="projectname">
                                 <th mat-header-cell *matHeaderCellDef>Projects Name </th>
                                 <td mat-cell *matCellDef="let myprojects"> {{myprojects.projectname}} 
-                                    <span class="states  font-mobile" *ngIf="myprojects.overdue">overdue</span>
+                                    <span class="state colr_pink font-mobile" *ngIf="myprojects.overdue">overdue</span>
                               <mat-progress-bar mode="determinate" value="{{ myprojects.matvalue }}"></mat-progress-bar>
                              End date: {{ myprojects.projectdate }}
                            </td>
@@ -493,7 +493,7 @@
                         <ng-container matColumnDef="taskname">
                           <th mat-header-cell *matHeaderCellDef>Task Name </th>
                           <td mat-cell *matCellDef="let mytasks"> {{mytasks.taskname}} 
-                              <span class="states  font-mobile" *ngIf="mytasks.overdues">overdue</span>
+                              <span class="state colr_pink font-mobile" *ngIf="mytasks.overdues">overdue</span>
                         <mat-progress-bar mode="determinate" value="{{ mytasks.matvalues }}"></mat-progress-bar>
                        End date: {{ mytasks.projectdate }}
                      </td>
@@ -601,7 +601,7 @@
                         <ng-container matColumnDef="status">
                                 <th mat-header-cell *matHeaderCellDef>Status </th>
                                 <td mat-cell *matCellDef="let Agreements"> 
-                                        <span class="states  font-mobile" *ngIf="Agreements.status">Pending</span> 
+                                        <span class="state colr_pink font-mobile" *ngIf="Agreements.status">Pending</span> 
                                 </td>
                               </ng-container>
                       <tr mat-header-row *matHeaderRowDef="discolumns1"></tr>
@@ -650,7 +650,7 @@
                         <ng-container matColumnDef="status">
                                 <th mat-header-cell *matHeaderCellDef>Status </th>
                                 <td mat-cell *matCellDef="let Recently"> 
-                                        <span class="state  font-mobile" *ngIf="Recently.status">Client Signed</span> 
+                                        <span class="state colr_yellow font-mobile" *ngIf="Recently.status">Client Signed</span> 
                                 </td>
                               </ng-container>
                       <tr mat-header-row *matHeaderRowDef="discolumns2"></tr>
@@ -677,28 +677,28 @@
                     </mat-expansion-panel-header>
 
                     <ng-scrollbar [autoHide] = "true" [overlay]="true">
-                        <div class="noPadding element_high">
+                <div class="noPadding element_high">
                 <table class="display_prop" mat-table [dataSource]="Dataarray3">
                  <!--Task Name Column -->
-                <ng-container matColumnDef="clientname">
+                <ng-container matColumnDef="Estimate">
                 <th mat-header-cell *matHeaderCellDef>Estimate </th>
                 <td mat-cell *matCellDef="let Accepted"> 
                                
-               <span class="pro_name width_element font-mobile left_value"> {{Accepted.clientname}}</span><span class="gray left_value small_value">
+               <span class="pro_name width_element font-mobile left_value"> {{Accepted.Estimate}}</span><span class="gray left_value small_value">
                                          Date: {{ Accepted.date }}</span>
                  </td>
                 </ng-container>
                 <!-- client Column -->
-                <ng-container matColumnDef="type">
+                <ng-container matColumnDef="ClientLeadName">
                 <th mat-header-cell *matHeaderCellDef> Client/Lead Name</th>
-                <td mat-cell *matCellDef="let Accepted"><span class="font-mobiles left_value"> {{Accepted.type}} </span>
+                <td mat-cell *matCellDef="let Accepted"><span class="font-mobiles left_value"> {{Accepted.ClientLeadName}} </span>
                  </td>
                   </ng-container>
                         <!--Task Name Column -->
                         <ng-container matColumnDef="status">
                                 <th mat-header-cell *matHeaderCellDef>Status </th>
                                 <td mat-cell *matCellDef="let Accepted"> 
-                                        <span class="state  font-mobile" *ngIf="Accepted.status">Client Signed</span> 
+                                        <span class="state colr_yellow font-mobile" *ngIf="Accepted.status">Client Signed</span> 
                                 </td>
                               </ng-container>
                       <tr mat-header-row *matHeaderRowDef="discolumns3"></tr>
@@ -707,10 +707,7 @@
                     </div>
                      </ng-scrollbar>
                 </mat-expansion-panel>
-
-
-
-            </mat-card>
+             </mat-card>
         </div>
     </div>
 
@@ -722,156 +719,41 @@
                 <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
                     <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                         <mat-panel-title>
-                            Agreements Awaiting Client Signature
+                            Recently Accepted Proposals
                         </mat-panel-title>
                         <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                     </mat-expansion-panel-header>
-
-                   <mat-list class="noPadding fixFH" role="list">
-                        <mat-list-item role="listitem" class="dashboard-title title_value">
-                            <span fxFlex="38%" class="one font-mobile gray">Client Name</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Type</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Status</span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop">
-                            <span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span
-                                    class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span
-                                    class="gray left_value small_value">Date
-                                    : 12-04-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span
-                                    class="gray left_value small_value">Date
-                                    : 26-02-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span
-                                    class="gray left_value small_value">Date
-                                    : 24-01-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span
-                                    class="gray left_value small_value">Date
-                                    : 04-11-2017</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & Backup Internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop">
-                            <span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span
-                                    class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name <mat-accordion><mat-accordion>font-mobile left_value hight_element">54
-                                    street new </span><span class="gray left_value small_value">Date
-                                    : 12-04-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span
-                                    class="gray left_value small_value">Date
-                                    : 26-02-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span
-                                    class="gray left_value small_value">Date
-                                    : 24-01-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span
-                                    class="gray left_value small_value">Date
-                                    : 04-11-2017</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & Backup Internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                    </mat-list>
+                    <ng-scrollbar [autoHide] = "true" [overlay]="true">
+                        <div class="noPadding element_high">
+                        <table class="display_prop" mat-table [dataSource]="Dataarray4">
+                         <!--Task Name Column -->
+                        <ng-container matColumnDef="proposalno">
+                        <th mat-header-cell *matHeaderCellDef>Proposal No</th>
+                        <td mat-cell *matCellDef="let proposal"> 
+                        <span class="pro_name width_element font-mobile left_value"> {{proposal.proposalno}}</span><span class="gray left_value small_value">
+                        Date: {{ proposal.date }}</span>
+                         </td>
+                        </ng-container>
+                        <!-- client Column -->
+                        <ng-container matColumnDef="ClientLeadName">
+                        <th mat-header-cell *matHeaderCellDef> Client/Lead Name</th>
+                        <td mat-cell *matCellDef="let proposal"><span class="font-mobiles left_value"> {{proposal.ClientLeadName}} </span>
+                         </td>
+                          </ng-container>
+                                <!--Task Name Column -->
+                                <ng-container matColumnDef="status">
+                                        <th mat-header-cell *matHeaderCellDef>Status </th>
+                                        <td mat-cell *matCellDef="let proposal"> 
+                                                <span class="state colr_green font-mobile" *ngIf="proposal.status">Accepted</span> 
+                                        </td>
+                                      </ng-container>
+                              <tr mat-header-row *matHeaderRowDef="discolumns4"></tr>
+                                <tr mat-row *matRowDef="let proposal; columns: discolumns4;"></tr>
+                              </table>
+                            </div>
+                            </ng-scrollbar>
+                   
                 </mat-expansion-panel>
 
             </mat-card>
@@ -884,158 +766,40 @@
                 <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
                     <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                         <mat-panel-title>
-                            Agreements Awaiting Client Signature
+                            Proposals Awaiting Approval
                         </mat-panel-title>
                         <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                     </mat-expansion-panel-header>
-
-                   <mat-list class="noPadding fixFH" role="list">
-                        <mat-list-item role="listitem" class="dashboard-title title_value">
-                            <span fxFlex="38%" class="one font-mobile gray">Client Name</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Type</span>
-                            <span fxFlex="31%" class="two font-mobile gray">Status</span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop">
-                            <span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span
-                                    class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span
-                                    class="gray left_value small_value">Date
-                                    : 12-04-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span
-                                    class="gray left_value small_value">Date
-                                    : 26-02-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span
-                                    class="gray left_value small_value">Date
-                                    : 24-01-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span
-                                    class="gray left_value small_value">Date
-                                    : 04-11-2017</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & Backup Internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value">captest</span><span class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop">
-                            <span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">54 street new </span><span
-                                    class="gray left_value small_value">Date
-                                    : 14-09-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name <mat-accordion><mat-accordion>font-mobile left_value hight_element">54
-                                    street new </span><span class="gray left_value small_value">Date
-                                    : 12-04-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & backup internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Test Gaurav </span><span
-                                    class="gray left_value small_value">Date
-                                    : 26-02-2018</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-
-                                <span class="pro_name font-mobile left_value hight_element">Client Test 1000 </span><span
-                                    class="gray left_value small_value">Date
-                                    : 24-01-2018</span>
-
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Internet
-                                    Service Agreement</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-
-                        <mat-list-item role="listitem" class="project_name_list display_prop"><span fxFlex="38%" class="one">
-                                <span class="pro_name font-mobile left_value hight_element">Hamed Mazrousel </span><span
-                                    class="gray left_value small_value">Date
-                                    : 04-11-2017</span>
-
-                            </span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="font-mobiles left_value">Phone
-                                    Service & Backup Internet</span></span>
-                            <span fxFlex="31%" class="two font-mobile"><span class="state left_value font-mobile">Pending</span></span>
-                        </mat-list-item>
-                    </mat-list>
+                    <ng-scrollbar [autoHide] = "true" [overlay]="true">
+                        <div class="noPadding element_high">
+                        <table class="display_prop" mat-table [dataSource]="Dataarray4">
+                         <!--Task Name Column -->
+                        <ng-container matColumnDef="proposalno">
+                        <th mat-header-cell *matHeaderCellDef>Proposal No</th>
+                        <td mat-cell *matCellDef="let proposal"> 
+                        <span class="pro_name width_element font-mobile left_value"> {{proposal.proposalno}}</span><span class="gray left_value small_value">
+                        Date: {{ proposal.date }}</span>
+                         </td>
+                        </ng-container>
+                        <!-- client Column -->
+                        <ng-container matColumnDef="ClientLeadName">
+                        <th mat-header-cell *matHeaderCellDef> Client/Lead Name</th>
+                        <td mat-cell *matCellDef="let proposal"><span class="font-mobiles left_value"> {{proposal.ClientLeadName}} </span>
+                         </td>
+                          </ng-container>
+                              <ng-container matColumnDef="status">
+                                  <th mat-header-cell *matHeaderCellDef>Status </th>
+                                    <td mat-cell *matCellDef="let proposal"> 
+                                      <span class="state colr_pink font-mobile" *ngIf="proposal.status">Panding</span> 
+                                       </td>
+                                      </ng-container>
+                              <tr mat-header-row *matHeaderRowDef="discolumns4"></tr>
+                                <tr mat-row *matRowDef="let proposal; columns: discolumns4;"></tr>
+                              </table>
+                            </div>
+                            </ng-scrollbar>
                 </mat-expansion-panel>
-
             </mat-card>
         </div>
 

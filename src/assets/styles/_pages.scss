@@ -263,19 +263,21 @@ width:88%;}
     }
 }
 .state{
-   
-    background-color:#ffefdf;
-    color:#83470d;
-    padding:0 6px;
-    border-radius:15px;
+   padding:0 6px;
+   border-radius:15px;
 }
-.states{
-    
-    background-color:#ffe4ec;
-    color:#9a0033;
-    padding:0 6px;
-    border-radius:15px;
-}
+.colr_yellow{
+ background-color:#ffefdf !important;
+ color:#83470d !important;
+  }
+.colr_pink{
+ background-color:#ffe4ec !important;
+color:#9a0033 !important;
+ }
+ .colr_green{
+ background-color:#ccf4d5 !important;
+ color:#1c5b2c !important;
+ }
 .mat-list-item .one .mat-list-item-content{
     display:inline !important;
     // padding:0 10px;

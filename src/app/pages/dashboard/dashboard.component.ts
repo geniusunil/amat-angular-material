@@ -81,7 +81,9 @@ export class DashboardComponent implements OnInit {
    Dataarray2 = new MatTableDataSource<PeriodicElement2>(RECENTLY_DATA);
    discolumns2: string[] = ['clientname', 'type', 'status'];
    Dataarray3 = new MatTableDataSource<PeriodicElement3>(RECEN_DATA);
-   discolumns3: string[] = ['clientname', 'type', 'status'];
+   discolumns3: string[] = ['Estimate', 'ClientLeadName', 'status'];
+   Dataarray4 = new MatTableDataSource<PeriodicElement4>(PROPOSAL_DATA);
+   discolumns4: string[] = ['proposalno', 'ClientLeadName', 'status'];
     // Doughnut
   public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData:number[] = [350, 450, 100];
@@ -367,29 +369,55 @@ const PIN_DATA: PrElementss[] = [
   
 ];
 export interface  PeriodicElement3 {
-  clientname: string;
-  type: string;
+  Estimate: string;
+  ClientLeadName: string;
   date: string;
   status:boolean; 
 }
 
 const RECEN_DATA: PeriodicElement3[] = [
-  {clientname: 'EST0039' , date:'18-01-2017', type: 'Internet Service Agreement' ,status:true} , 
-  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Internet Service Agreement' ,status:true},
-  {clientname: 'PBX Test 2',date:'18-01-2017',type: 'Gaurav',status:true},
-  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
-  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
-  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
-  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
-  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
-  {clientname: 'new task (pbx)',date:'18-01-2017',type: 'Gaurav' ,status:true},
-  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
-  {clientname: 'test 54th', date:'18-01-2017',type: 'Gaurav ',status:true},
-  {clientname: 'Atach Create kela me' ,date:'18-01-2017', type: 'Gaurav',status:true},
-  {clientname: 'Test mail',date:'18-01-2017',type: 'Gaurav',status:true},
-  {clientname: 'task issue', date:'18-01-2017',type: 'Gaurav',status:true},
-  {clientname: 'task2 mileston 2' , date:'18-01-2017', type: 'Gaurav' ,status:true} , 
-  {clientname: 'new task (pbx)', date:'18-01-2017',type: 'Gaurav' ,status:true},
-  {clientname: 'PBX Test 2', date:'18-01-2017',type: 'Gaurav',status:true},
+  {Estimate: 'EST0039' , date:'18-01-2017', ClientLeadName: 'Internet Service Agreement' ,status:true} , 
+  {Estimate: 'new task (pbx)', date:'18-01-2017',ClientLeadName: 'Internet Service Agreement' ,status:true},
+  {Estimate: 'PBX Test 2',date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'test 54th', date:'18-01-2017',ClientLeadName: 'Gaurav ',status:true},
+  {Estimate: 'Atach Create kela me' ,date:'18-01-2017', ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'Test mail',date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'task issue', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'task2 mileston 2' , date:'18-01-2017', ClientLeadName: 'Gaurav' ,status:true} , 
+  {Estimate: 'new task (pbx)',date:'18-01-2017',ClientLeadName: 'Gaurav' ,status:true},
+  {Estimate: 'PBX Test 2', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'test 54th', date:'18-01-2017',ClientLeadName: 'Gaurav ',status:true},
+  {Estimate: 'Atach Create kela me' ,date:'18-01-2017', ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'Test mail',date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'task issue', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {Estimate: 'task2 mileston 2' , date:'18-01-2017', ClientLeadName: 'Gaurav' ,status:true} , 
+  {Estimate: 'new task (pbx)', date:'18-01-2017',ClientLeadName: 'Gaurav' ,status:true},
+  {Estimate: 'PBX Test 2', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  
+];
+export interface  PeriodicElement4 {
+  proposalno: string;
+  ClientLeadName: string;
+  date: string;
+  status:boolean; 
+}
+const PROPOSAL_DATA: PeriodicElement4[] = [
+  {proposalno: 'EST0039' , date:'18-01-2017', ClientLeadName: 'Internet Service Agreement' ,status:true} , 
+  {proposalno: 'new task (pbx)', date:'18-01-2017',ClientLeadName: 'Internet Service Agreement' ,status:true},
+  {proposalno: 'PBX Test 2',date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'test 54th', date:'18-01-2017',ClientLeadName: 'Gaurav ',status:true},
+  {proposalno: 'Atach Create kela me' ,date:'18-01-2017', ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'Test mail',date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'task issue', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'task2 mileston 2' , date:'18-01-2017', ClientLeadName: 'Gaurav' ,status:true} , 
+  {proposalno: 'new task (pbx)',date:'18-01-2017',ClientLeadName: 'Gaurav' ,status:true},
+  {proposalno: 'PBX Test 2', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'test 54th', date:'18-01-2017',ClientLeadName: 'Gaurav ',status:true},
+  {proposalno: 'Atach Create kela me' ,date:'18-01-2017', ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'Test mail',date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'task issue', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
+  {proposalno: 'task2 mileston 2' , date:'18-01-2017', ClientLeadName: 'Gaurav' ,status:true} , 
+  {proposalno: 'new task (pbx)', date:'18-01-2017',ClientLeadName: 'Gaurav' ,status:true},
+  {proposalno: 'PBX Test 2', date:'18-01-2017',ClientLeadName: 'Gaurav',status:true},
   
 ];
