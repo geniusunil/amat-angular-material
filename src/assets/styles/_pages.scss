@@ -127,7 +127,11 @@ html .page-wrapper{
 }
 
 .mat-list-item svg{
-    float:right;
+    position:relative;
+    top:3px;
+    height:16px;
+    width:16px;
+    margin-right:5px;
 }
 .mat-expansion-panel-body{
     padding:0 0 16px 0 !important
