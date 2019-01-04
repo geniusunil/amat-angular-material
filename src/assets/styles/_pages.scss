@@ -58,12 +58,24 @@ html .page-wrapper{
     padding: 24px 19px;
     }
 
-
+.mat-card-title{
+    font-size:14px !important;
+}
 .mat-card-title.flex{
     width:fit-content;
     margin: 0 auto 10px auto;
     display:flex;
     font-weight:600;
+}
+.mat-card-title.below{
+    width:fit-content;
+    margin: 0;
+    display:flex;
+    font-weight:600;
+    span{
+        margin:20px;
+        color:#505050;
+    }
 }
 .mat-grid-tile{
     padding:5px;
@@ -169,11 +181,21 @@ html .page-wrapper{
 float:right;
 width:88%;}
 }
-#cdk-accordion-child-3 .mat-form-field-infix {
+.width65{
+    width:52%;
+}
+.goalsBox.below{
+    font-size:12px;
+}
+.goalsBox .mat-form-field-infix {
     padding: 3px 0px !important;
     float: right;
     width: 88%;
     top: -3px !important;
+    height:27px;
+}
+.mat-datepicker-toggle-default-icon{
+    fill:black;
 }
 .left_value{
     float:left !important;
@@ -227,7 +249,23 @@ width:88%;}
 
     }
 }
+.topMinus5{
+    .mat-form-field{
+       
+        top: -5px;
+      
 
+    }
+}
+#pr{
+    height:300px !important;
+    width:500px !important;
+    margin:0 auto;
+}
+.containChart{
+    padding-bottom:15px;
+    border-bottom: solid 1px #eeeeee;
+}
 .icons24{
     svg{
         height:24px;
