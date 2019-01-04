@@ -66,6 +66,8 @@ export class DashboardComponent implements OnInit {
     //  console.log(matTabBodyWrapper);
      this._renderer2.setStyle(matTabBodyWrapper,'border','1px solid rgba(0, 0, 0, 0.12)');
    }
+   typesOfsources: string[] = ['Opportunity Sources', 'Internet', 'Website', 'Cold Call'];
+   typesOfsource: string[] = ['Lead Source', 'Internet', 'Website', 'Cold Call'];
    myDataArray =  new MatTableDataSource<PerElement>(MYPROJECTS_DATA);
    displayedcolumns:string[] = ['projectname', 'client'];
    myDataArraya= new MatTableDataSource<PrElementss>(PIN_DATA);
