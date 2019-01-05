@@ -25,11 +25,11 @@ export class Cards3Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("hi "+this.titleicon);
+    // console.log("hi "+this.titleicon);
   }
   ngOnChanges() {
     if(this.titleicon) {
-      console.log(this.titleicon)
+      // console.log(this.titleicon)
     }
   }
 }

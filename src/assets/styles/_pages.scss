@@ -133,6 +133,7 @@ html .page-wrapper{
     height:16px;
     width:16px;
     margin-right:5px;
+   
 }
 .mat-expansion-panel-body{
     padding:0 0 16px 0 !important
@@ -191,6 +192,10 @@ html .page-wrapper{
     }
 }
 
+}
+.chartDiv{
+    display: block;
+    padding:70px 30px;
 }
 .width65{
     width:70%;
@@ -506,6 +511,9 @@ width: 90%;
         display:block !important;
         span{
             font-size:14px;
+            @include mobile {
+                font-size:9px;
+            }
         }
         .mat-list-item{
             border-style:solid;
@@ -534,6 +542,12 @@ width: 90%;
         }
     }
     
+}
+.hidemobile{
+    // display:none;
+    @include mobile{
+        display: none !important;
+    }
 }
 /*******************
  Login register
