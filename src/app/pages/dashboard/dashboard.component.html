@@ -40,9 +40,7 @@
                             <mat-tab label="Projects">
                                 <table class="display_prop" mat-table [dataSource]="myDataArraya">
 
-    
-
-                                    <!--Project Name Column -->
+     <!--Project Name Column -->
                                     <ng-container matColumnDef="projectname">
                                         <th mat-header-cell *matHeaderCellDef>Projects Name </th>
                                         <td mat-cell *matCellDef="let pin"> {{pin.projectname}} 
@@ -116,7 +114,7 @@
                                                     <span>{{Overdue.taskname}} </span>
                                                     <span class="state colr_pink font-mobile" *ngIf="Overdue.overdue; else elseBlock">overdue</span>
                                                  <mat-progress-bar mode="determinate" value="{{ Overdue.matvalue }}"></mat-progress-bar>
-                                             Ending on: {{ Overdue.projectdate }}
+                                             Ending on: {{ Overdue.expirydate }}
                                            </td>
                                               </ng-container>
                                             <ng-container matColumnDef="clientLead">
