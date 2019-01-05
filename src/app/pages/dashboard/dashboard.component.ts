@@ -56,6 +56,9 @@ export class DashboardComponent implements OnInit {
   applyFilter(filterValue: string) {
     this.dataSource10.filter = filterValue.trim().toLowerCase();
   }
+  applyFilter2(filterValue: string) {
+    this.Dataarray8.filter = filterValue.trim().toLowerCase();
+  }
 htmlToAdd;
 constructor(
 private _renderer2: Renderer2,
@@ -84,17 +87,25 @@ ngOnInit() {
     let pipe;
     const div = this._renderer2.createElement('div');
     const span = this._renderer2.createElement('span');
-   
+    
     // console.log(this.sanitizer);
     pipe = new FeatherIconsPipe(this.sanitizer);
     let name = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('printer'));
     let fileMinus = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('file-minus'));
     let pdf = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('file-minus'));
-   
+    // let input="<div class=\"mat-form-field-infix\"><input _ngcontent-c14=\"\" class=\"mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored\" matinput=\"\" placeholder=\"Filter\" ng-reflect-placeholder=\"Filter\" id=\"mat-input-1\" aria-invalid=\"false\" aria-required=\"false\"><span class=\"mat-form-field-label-wrapper\"><!--bindings={  \"ng-reflect-ng-if\": \"true\"}--><label class=\"mat-form-field-label ng-tns-c11-12 mat-empty mat-form-field-empty ng-star-inserted\" ng-reflect-ng-switch=\"false\" ng-reflect-disabled=\"true\" id=\"mat-form-field-label-5\" for=\"mat-input-1\" aria-owns=\"mat-input-1\"><!--bindings={\"ng-reflect-ng-switch-case\": \"false\"}--><!---->Filter<!--bindings={\"ng-reflect-ng-switch-case\": \"true\"}--><!--bindings={\"ng-reflect-ng-if\": \"false\"}--></label></span></div>";
+  //  let input =  "<mat-form-field> <input matInput (keyup)=\"applyFilter2($event.target.value)\" placeholder=\"Filter\"> </mat-form-field>";
+  // const matFormField = this._renderer2.createElement('mat-form-field');
+   const input = this._renderer2.createElement('input');
+  let simple = this._renderer2.listen(input, 'keyup', (evt) => {
+    console.log('Clicking the button', evt);
+    this.applyFilter2(evt.target.value)
+  });
+  // this._renderer2.appendChild(matFormField,input);
     // console.log(name);
-    let final = ' <input _ngcontent-c14="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored" matinput="" placeholder="Filter" ng-reflect-placeholder="Filter" id="mat-input-10" aria-invalid="false" aria-required="false">' +"|<button>"+name + "</button> | <button>" + name + "</button> Selected &nbsp;&nbsp; | <button>" + fileMinus + "</button> | <button>" + fileMinus + "</button> |  &nbsp;&nbsp; <button>Visibility</button>";
+    let final ="<button>"+name + "</button> | <button>" + name + "</button> Selected &nbsp;&nbsp; | <button>" + fileMinus + "</button> | <button>" + fileMinus + "</button> |  &nbsp;&nbsp; <button>Visibility</button>";
     this._renderer2.setProperty(span, 'innerHTML', final);
-    
+    this._renderer2.appendChild(span,input);
     // const matTabBodyWrapper = this._el.nativeElement.parentNode.querySelector('.mat-tab-body-wrapper');
     const matTabBodyWrapper = (document.getElementById('overdue')).getElementsByClassName('mat-tab-body-wrapper')[0];
     const mat = (document.getElementById('overdue')).getElementsByClassName('mat-tab-header')[0];
