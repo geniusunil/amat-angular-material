@@ -255,8 +255,8 @@ ngOnInit() {
   ];
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: any = {
-    responsive: true,
-    maintainAspectRatio: false
+    responsive: true
+  
   };
   public lineChartColors: Array<any> = [
     { // grey

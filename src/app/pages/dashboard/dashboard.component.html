@@ -245,7 +245,7 @@
                             <mat-tab label="All">
                                 <mat-card-content>
 
-                                    <mat-grid-list cols="3" rowHeight="2:1">
+                                    <mat-grid-list cols="3" rowHeight="160px">
                                         <mat-grid-tile class="staTile noBorders">
 
                                             <span class="custom-green">Won Deal</span>
@@ -1017,7 +1017,7 @@
             </mat-card>
         </div>
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
@@ -1153,7 +1153,7 @@
             </mat-card>
         </div>
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
@@ -1302,7 +1302,7 @@
         </div>
     </div>
 
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
@@ -1440,7 +1440,7 @@
             </mat-card>
         </div>
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="33.33%" fxFlex="33.33%">
             <mat-card>
@@ -1565,7 +1565,7 @@
         </div>
     
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
@@ -1618,7 +1618,7 @@
         </div>
 
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
@@ -1636,7 +1636,7 @@
                                 </span>
                             </div>
                         <div style="display: block;">
-                            <canvas id="pr" baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels"
+                            <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
                                 [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
                                 [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
                         </div>
@@ -1674,7 +1674,7 @@
         </div>
 
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
@@ -1750,7 +1750,7 @@
         </div>
 
     </div>
-    <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
             <mat-card class="fixFH">
