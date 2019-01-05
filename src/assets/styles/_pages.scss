@@ -183,24 +183,33 @@ html .page-wrapper{
     height: $searchHeight;
     border: 1px solid gray;
    
-    display: flex;}
-.mat-form-field-infix
-{
-float:right;
-width:88%;}
+    display: block;
+    .mat-datepicker-toggle{
+        button{
+            margin:9px;
+        }
+    }
+}
+
 }
 .width65{
     width:70%;
 }
 .goalsBox.below{
     font-size:12px;
+    .mat-form-field-label{
+        margin:5px 0;
+    }
 }
 .goalsBox .mat-form-field-infix {
     padding: 3px 0px !important;
     float: right;
-    width: 88%;
+    width: 80%;
     top: -3px !important;
-    height:27px;
+    height:$searchHeight;
+    input{
+        height:$searchHeight;
+    }
 }
 .mat-datepicker-toggle-default-icon{
     fill:black;
@@ -260,6 +269,15 @@ width:88%;}
         // top: -6px;
         height:$searchHeight;
 
+    }
+    .mat-form-field-label{
+        height:36px;
+        font-size:14px;
+        margin:8px 0;
+    }
+    svg{
+        height:18px !important;
+        width:18px !important;
     }
 }
 .topMinus5{
