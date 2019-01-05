@@ -132,7 +132,7 @@ ngOnInit() {
   public doughnutChartLabels:string[] = ['Cost of goods sold', 'sales'];
   public doughnutChartData:number[] = [350, 450];
   public doughnutChartType:string = 'doughnut';
-  private donutColors=[
+  public donutColors=[
     {
     backgroundColor: [
     '#6356ae',
