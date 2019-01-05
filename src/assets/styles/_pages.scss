@@ -31,6 +31,7 @@ $mobile : 767px;
         @content;
     }
 }
+$searchHeight:36px;
 .main-container {
   display: flex;
   flex-direction: column;
@@ -127,7 +128,11 @@ html .page-wrapper{
 }
 
 .mat-list-item svg{
-    float:right;
+    position:relative;
+    top:3px;
+    height:16px;
+    width:16px;
+    margin-right:5px;
 }
 .mat-expansion-panel-body{
     padding:0 0 16px 0 !important
@@ -171,18 +176,21 @@ html .page-wrapper{
     margin-left: 24px;
     padding-top: 15px !important;
     top: -3px !important;
+    height:51px;
+    display:flex;
+    justify-content: space-between;
 .mat-form-field-flex {
-    height: 27px;
+    height: $searchHeight;
     border: 1px solid gray;
    
-    display: block;}
+    display: flex;}
 .mat-form-field-infix
 {
 float:right;
 width:88%;}
 }
 .width65{
-    width:52%;
+    width:70%;
 }
 .goalsBox.below{
     font-size:12px;
@@ -199,6 +207,8 @@ width:88%;}
 }
 .left_value{
     float:left !important;
+    margin:auto 0;
+    // margin:10px 0;
    
 }
 .scrolling_data {
@@ -242,10 +252,13 @@ width:88%;}
 .right_value
 {
     float:right !important;
+    width:70%;
+    display:flex;
+    justify-content: flex-end;
     .mat-form-field{
         width: 80%;
-        top: -6px;
-        height:27px;
+        // top: -6px;
+        height:$searchHeight;
 
     }
 }
@@ -281,6 +294,8 @@ width:88%;}
     svg{
         color:white;
     }
+    height:36px;
+    width:38px;
 }
 .element_high{
     height: 456px !important;
@@ -303,6 +318,7 @@ width:88%;}
 .state{
    padding:0 6px;
    border-radius:15px;
+   float:right;
 }
 .colr_yellow{
  background-color:#ffefdf !important;
@@ -371,6 +387,12 @@ width: 90%;
     fill:#fff;
     background: #ff3c3c;
     padding:5px;
+    float:right;
+}
+.display_prop{
+    td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type{
+        padding:10px 24px;
+    }
 }
 .overdueMeetingsInsert{
     height: 60px;
