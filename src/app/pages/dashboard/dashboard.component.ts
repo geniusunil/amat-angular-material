@@ -9,7 +9,7 @@ import { FeatherIconsPipe } from '../../feather-pipe';
 
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { inject, TestBed } from '@angular/core/testing';
-import { MatTableDataSource } from '@angular/material';
+import { MatPaginator,MatTableDataSource } from '@angular/material';
 import { Cards3Component } from './dashboardComps/cards3/cards3.component'
 
 export interface Food {
@@ -23,14 +23,47 @@ export interface Food {
 })
 
 export class DashboardComponent implements OnInit {
-    htmlToAdd;
-    constructor(
-    private _renderer2: Renderer2,
-    private sanitizer: DomSanitizer) { }
-    
-  ngOnInit() {
-    
+  typesOfsources: string[] = ['Opportunity Sources', 'Internet', 'Website', 'Cold Call'];
+  typesOfsource: string[] = ['Lead Source', 'Internet', 'Website', 'Cold Call'];
+  myDataArray =  new MatTableDataSource<PerElement>(MYPROJECTS_DATA);
+  displayedcolumns:string[] = ['projectname', 'client'];
+  myDataArraya= new MatTableDataSource<PrElementss>(PIN_DATA);
+  displayedcolumnss:string[] = ['projectname', 'client','pinning'];
+  DataArray =  new MatTableDataSource<PrElement>(MYTASKS_DATA);
+  displaycolumns:string[] = ['taskname', 'client'];
+  Dataarray =  new MatTableDataSource<Prelement>(ACCOUNT_DATA);
+  discolumns:string[] = ['accountname', 'balance'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['name', 'weight', 'symbol','position'];
+  Dataarray1 = new MatTableDataSource<PeriodicElement1>(AGREEMENTS_DATA);
+  discolumns1: string[] = ['clientname', 'type', 'status'];
+  Dataarray2 = new MatTableDataSource<PeriodicElement2>(RECENTLY_DATA);
+  discolumns2: string[] = ['clientname', 'type', 'status'];
+  Dataarray3 = new MatTableDataSource<PeriodicElement3>(RECEN_DATA);
+  discolumns3: string[] = ['Estimate', 'ClientLeadName', 'status'];
+  Dataarray4 = new MatTableDataSource<PeriodicElement4>(PROPOSAL_DATA);
+  discolumns4: string[] = ['proposalno', 'ClientLeadName', 'status'];
+  Dataarray5 = new MatTableDataSource<PeriodicElement5>(APPROVAL_DATA);
+  discolumns5: string[] = ['proposalno', 'ClientLeadName', 'status'];
+  Dataarray6 = new MatTableDataSource<PeriodicElement6>(BILLS_DATA);
+  discolumns6: string[] = ['VendorName', 'PurchaseOrder', 'Amount'];
+  Dataarray7 = new MatTableDataSource<PeriodicElement7>(CREDIT_DATA);
+  discolumns7: string[] = ['clientname', 'creditcard', 'expirydate'];
+  discolumns8: string[] = ['taskname', 'clientLead', 'relatedto','Participants','pinning'];
+  Dataarray8 = new MatTableDataSource<PeriodicElement8>(OVERDUE_DATA);
+  displayedColumns10: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource10 = new MatTableDataSource(ELEMENTSS_DATA);
+  applyFilter(filterValue: string) {
+    this.dataSource10.filter = filterValue.trim().toLowerCase();
   }
+htmlToAdd;
+constructor(
+private _renderer2: Renderer2,
+private sanitizer: DomSanitizer) { }
+ngOnInit() {
+  this.Dataarray8.paginator = this.paginator;
+ } 
+ @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(Cards3Component) child;
   foods: Food[] = [
     { value: 'steak-0', viewValue: 'Select Pipeline' },
@@ -41,20 +74,20 @@ export class DashboardComponent implements OnInit {
   selectedValue: string = this.foods[0].value;
   
   ngAfterViewInit() {
-
-  }
-  ngAfterContentInit() {
     let pipe;
     const div = this._renderer2.createElement('div');
     const span = this._renderer2.createElement('span');
+   
     // console.log(this.sanitizer);
     pipe = new FeatherIconsPipe(this.sanitizer);
     let name = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('printer'));
     let fileMinus = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('file-minus'));
     let pdf = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('file-minus'));
+   
     // console.log(name);
-    let final = "<button>"+name + "</button> | <button>" + name + "</button> Selected &nbsp;&nbsp; | <button>" + fileMinus + "</button> | <button>" + fileMinus + "</button> |  &nbsp;&nbsp; <button>Visibility</button>";
+    let final = ' <input _ngcontent-c14="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored" matinput="" placeholder="Filter" ng-reflect-placeholder="Filter" id="mat-input-10" aria-invalid="false" aria-required="false">' +"|<button>"+name + "</button> | <button>" + name + "</button> Selected &nbsp;&nbsp; | <button>" + fileMinus + "</button> | <button>" + fileMinus + "</button> |  &nbsp;&nbsp; <button>Visibility</button>";
     this._renderer2.setProperty(span, 'innerHTML', final);
+    
     // const matTabBodyWrapper = this._el.nativeElement.parentNode.querySelector('.mat-tab-body-wrapper');
     const matTabBodyWrapper = (document.getElementById('overdue')).getElementsByClassName('mat-tab-body-wrapper')[0];
     const mat = (document.getElementById('overdue')).getElementsByClassName('mat-tab-header')[0];
@@ -62,41 +95,18 @@ export class DashboardComponent implements OnInit {
     const paramText = this._renderer2.createText("");
 
     this._renderer2.appendChild(div, span);
+    
     this._renderer2.addClass(div, 'overdueMeetingsInsert');
     this._renderer2.addClass(span, 'overdueMeetingsInsertSpan');
+    
     this._renderer2.insertBefore(matTabBodyWrapper.parentNode, div, matTabBodyWrapper);
     //  console.log(matTabBodyWrapper);
      this._renderer2.setStyle(matTabBodyWrapper,'border','1px solid rgba(0, 0, 0, 0.12)');
+  }
+  ngAfterContentInit() {
+    
    }
-   typesOfsources: string[] = ['Opportunity Sources', 'Internet', 'Website', 'Cold Call'];
-   typesOfsource: string[] = ['Lead Source', 'Internet', 'Website', 'Cold Call'];
-   myDataArray =  new MatTableDataSource<PerElement>(MYPROJECTS_DATA);
-   displayedcolumns:string[] = ['projectname', 'client'];
-   myDataArraya= new MatTableDataSource<PrElementss>(PIN_DATA);
-   displayedcolumnss:string[] = ['projectname', 'client','pinning'];
-   DataArray =  new MatTableDataSource<PrElement>(MYTASKS_DATA);
-   displaycolumns:string[] = ['taskname', 'client'];
-   Dataarray =  new MatTableDataSource<Prelement>(ACCOUNT_DATA);
-   discolumns:string[] = ['accountname', 'balance'];
-   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-   displayedColumns: string[] = ['name', 'weight', 'symbol','position'];
-   Dataarray1 = new MatTableDataSource<PeriodicElement1>(AGREEMENTS_DATA);
-   discolumns1: string[] = ['clientname', 'type', 'status'];
-   Dataarray2 = new MatTableDataSource<PeriodicElement2>(RECENTLY_DATA);
-   discolumns2: string[] = ['clientname', 'type', 'status'];
-   Dataarray3 = new MatTableDataSource<PeriodicElement3>(RECEN_DATA);
-   discolumns3: string[] = ['Estimate', 'ClientLeadName', 'status'];
-   Dataarray4 = new MatTableDataSource<PeriodicElement4>(PROPOSAL_DATA);
-   discolumns4: string[] = ['proposalno', 'ClientLeadName', 'status'];
-   Dataarray5 = new MatTableDataSource<PeriodicElement5>(APPROVAL_DATA);
-   discolumns5: string[] = ['proposalno', 'ClientLeadName', 'status'];
-   Dataarray6 = new MatTableDataSource<PeriodicElement6>(BILLS_DATA);
-   discolumns6: string[] = ['VendorName', 'PurchaseOrder', 'Amount'];
-   Dataarray7 = new MatTableDataSource<PeriodicElement7>(CREDIT_DATA);
-   discolumns7: string[] = ['clientname', 'creditcard', 'expirydate'];
-   discolumns8: string[] = ['taskname', 'clientLead', 'relatedto','Participants','pinning'];
-   Dataarray8 = new MatTableDataSource<PeriodicElement8>(OVERDUE_DATA);
-   
+  
    
   
 
@@ -578,16 +588,36 @@ export interface  PeriodicElement6 {
     creditcard: string;
     expirydate: string;
     matvalue:number;
+    overdue: boolean;
     }
   const OVERDUE_DATA: PeriodicElement8[] = [
-    {taskname: 'EST0039' ,clientLead:'company name',matvalue:100, expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
-    {taskname: 'new task (pbx)', clientLead:'Test', matvalue:100,expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
-    {taskname: 'EST0039' , clientLead:'Test', matvalue:100,expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
-    {taskname: 'new task (pbx)', clientLead:'Test',matvalue:100,expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
-    {taskname: 'EST0039' ,  clientLead:'Test',matvalue:100,expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'}  
-    {taskname: 'EST0039' ,clientLead:'company name',matvalue:100, expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
-    {taskname: 'new task (pbx)', clientLead:'Test',matvalue:100, expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
-    {taskname: 'EST0039' , clientLead:'Test',matvalue:100, expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'} , 
-    {taskname: 'new task (pbx)', clientLead:'Test',matvalue:100,expirydate:'18-01-2017',creditcard: 'Internet Service Agreement'},
-    {taskname: 'EST0039' ,  clientLead:'Test',matvalue:100,expirydate:'18-01-2017', creditcard: 'Internet Service Agreement'}  
+    {taskname: 'EST0039' ,clientLead:'company name',matvalue:100, expirydate:'18-01-2017', creditcard: 'Internet Service Agreement',overdue:true} , 
+    {taskname: 'new task (pbx)', clientLead:'Test', matvalue:100,expirydate:'18-01-2017',creditcard: 'Internet Service Agreement',overdue:true},
+    {taskname: 'EST0039' , clientLead:'Test', matvalue:100,expirydate:'18-01-2017', creditcard: 'Internet Service Agreement',overdue:true} , 
+    {taskname: 'new task (pbx)', clientLead:'Test',matvalue:100,expirydate:'18-01-2017',creditcard: 'Internet Service Agreement',overdue:true},
+    {taskname: 'EST0039' ,  clientLead:'Test',matvalue:100,expirydate:'18-01-2017', creditcard: 'Internet Service Agreement',overdue:true}  
+    {taskname: 'EST0039' ,clientLead:'company name',matvalue:100, expirydate:'18-01-2017', creditcard: 'Internet Service Agreement',overdue:true} , 
+    {taskname: 'new task (pbx)', clientLead:'Test',matvalue:100, expirydate:'18-01-2017',creditcard: 'Internet Service Agreement',overdue:true},
+    {taskname: 'EST0039' , clientLead:'Test',matvalue:100, expirydate:'18-01-2017', creditcard: 'Internet Service Agreement',overdue:true} , 
+    {taskname: 'new task (pbx)', clientLead:'Test',matvalue:100,expirydate:'18-01-2017',creditcard: 'Internet Service Agreement',overdue:true},
+    {taskname: 'EST0039' ,  clientLead:'Test',matvalue:100,expirydate:'18-01-2017', creditcard: 'Internet Service Agreement',overdue:true}  
+  ];
+  export interface PeriodicElement10 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+  }
+  
+  const ELEMENTSS_DATA: PeriodicElement10[] = [
+    {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+    {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
+    {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+    {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+    {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
+    {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+    {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+    {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+    {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+    {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
   ];
