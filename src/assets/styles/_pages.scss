@@ -873,8 +873,10 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
 background-color:$dashboard-title !important;
 color:#494949;
 }
+
 .dashboard-title{
  display:flex;
+ background-color:$dashboard-title !important;
  }
 .cdea{
 height: 44px;
