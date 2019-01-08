@@ -253,10 +253,11 @@ html .page-wrapper{
 #half-panel{
     margin-bottom:30px;
 }
+
 .display_prop{
    
     .mat-progress-bar {
-        width: 80%;
+        width: 95%;
     }
     
 }
@@ -339,7 +340,7 @@ html .page-wrapper{
     }
 }
 .state{
-   padding:0 6px;
+   padding:0 10px;
    border-radius:15px;
    float:right;
 }
@@ -380,19 +381,34 @@ margin: 30px 15px;
     border-top: 1px solid #eeeeee;
 
 }
-table {
+table , .full_width {
     width: 100%;
   }
 .font-mobiles{
 font-size:10px !important;
 }
+.title_element{
+  font-weight: 500;
+}
+.padding_element{
+    padding: 4px 0px;
+}
 
+.width_value {
+    width: 33.33%;
+}
+
+.bold_element{
+ font-weight: 600;
+;}
 .width_element{
 width: 90%;
 }
 .pro_name{
-    color:#1582e8;
-    
+ color:#1582e8;
+}
+.bolding_element{
+    font-weight: bold;
 }
 .xPanelIndicator{
     height:18px;

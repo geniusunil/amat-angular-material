@@ -42,24 +42,30 @@
 
      <!--Project Name Column -->
                                     <ng-container matColumnDef="projectname">
-                                        <th mat-header-cell *matHeaderCellDef>Projects Name </th>
-                                        <td mat-cell *matCellDef="let pin"> {{pin.projectname}} 
+                                        <th mat-header-cell *matHeaderCellDef  class="width_value">Projects Name </th>
+                                        <td mat-cell *matCellDef="let pin" class="width_value"> 
+                                            <span class="width_element padding_element  left_value">
+                                            <span class="pro_name title_element">{{pin.projectname}}</span> 
                                             <span class="state colr_pink font-mobile" *ngIf="pin.overdue; else elseBlock">overdue</span>
+                                            </span>
                                             <ng-template #elseBlock> <span class="state colr_purple font-mobile">In Progress</span></ng-template>
-                                      <mat-progress-bar mode="determinate" value="{{ pin.matvalue }}"></mat-progress-bar>
-                                     Ending on: {{ pin.projectdate }}
+                                            <mat-progress-bar mode="determinate" value="{{ pin.matvalue }}"></mat-progress-bar>
+                                     <span class="width_element padding_element  left_value">
+                                         <span class="title_element font-mobile">Ending on:</span>
+                                         <span class="font-mobile date_element"> {{ pin.projectdate }}</span>
+                                        </span>
                                    </td>
                                       </ng-container>
                                 
                                     <!-- client Column -->
                                     <ng-container matColumnDef="client">
-                                      <th mat-header-cell *matHeaderCellDef> Client </th>
-                                      <td mat-cell *matCellDef="let pin"> {{pin.client}} 
+                                      <th mat-header-cell *matHeaderCellDef  class="width_value"> Client </th>
+                                      <td mat-cell *matCellDef="let pin" class="width_value"><span class="title_element"> {{pin.client}} </span>
                                       </td>
                                     </ng-container>
                                     <ng-container matColumnDef="pinning">
-                                        <th mat-header-cell *matHeaderCellDef> </th>
-                                        <td mat-cell *matCellDef="let pin"> 
+                                        <th mat-header-cell *matHeaderCellDef class="width_value"> </th>
+                                        <td mat-cell *matCellDef="let pin" class="width_value"> 
                                             <svg class="twenty-seven pins"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                             <path d="M11 12h6v-1l-3-1V2l3-1V0H3v1l3 1v8l-3 1v1h6v7l1 1 1-1v-7z" /></svg>
@@ -109,19 +115,20 @@
                         <mat-tab-group id="overdue">
                            
                             <mat-tab label="Opportunities">
-                                    <table class="display_prop" mat-table [dataSource]="Dataarray8">
-                                       <ng-container matColumnDef="taskname">
-                                                <th mat-header-cell *matHeaderCellDef>Task Name </th>
-                                                <td mat-cell *matCellDef="let Overdue"> 
-                                                    <span>{{Overdue.taskname}} </span>
-                                                    <span class="state colr_pink font-mobile" *ngIf="Overdue.overdue; else elseBlock">overdue</span>
-                                                 <mat-progress-bar mode="determinate" value="{{ Overdue.matvalue }}"></mat-progress-bar>
-                                             Ending on: {{ Overdue.expirydate }}
-                                           </td>
-                                              </ng-container>
-                                            <ng-container matColumnDef="clientLead">
-                                                    <th mat-header-cell *matHeaderCellDef> Client/Lead </th>
-                                                    <td mat-cell *matCellDef="let Overdue"> {{Overdue.clientLead}} 
+                          <table class="display_prop" mat-table [dataSource]="Dataarray8">
+                         <ng-container matColumnDef="taskname">
+                           <th mat-header-cell *matHeaderCellDef>Task Name </th>
+                             <td mat-cell *matCellDef="let Overdue"> 
+                             <span class=" width_element padding_element left_value">
+                               <span class="pro_name title_element">{{Overdue.taskname}} </span>
+                                <span class="state colr_pink font-mobile" *ngIf="Overdue.overdue; else elseBlock">Overdue</span>
+                                 <mat-progress-bar mode="determinate" value="{{ Overdue.matvalue }}"></mat-progress-bar>
+                                 <span class="title_element font-mobile"> End date: </span><span class="date_element">{{ Overdue.expirydate }}</span></span>
+                                  </td>
+                                   </ng-container>
+                                     <ng-container matColumnDef="clientLead">
+                                        <th mat-header-cell *matHeaderCellDef> Client/Lead </th>
+                                       <td mat-cell *matCellDef="let Overdue"> {{Overdue.clientLead}} 
                                                     </td>
                                                   </ng-container>
                                             <ng-container matColumnDef="relatedto">
@@ -1030,16 +1037,15 @@
                     <ng-scrollbar [autoHide] = "true" [overlay]="true">
                             <div class="noPadding element_high">
                     <table class="display_prop" mat-table [dataSource]="myDataArray">
-
-    
-
-                            <!--Project Name Column -->
+                       <!--Project Name Column -->
                             <ng-container matColumnDef="projectname">
-                                <th mat-header-cell *matHeaderCellDef>Projects Name </th>
-                                <td mat-cell *matCellDef="let myprojects"> {{myprojects.projectname}} 
-                                    <span class="state colr_pink font-mobile" *ngIf="myprojects.overdue">overdue</span>
+                              <th mat-header-cell *matHeaderCellDef>Projects Name </th>
+                              <td mat-cell *matCellDef="let myprojects">
+                                  <span class="full_width padding_element left_value">
+                                    <span class="pro_name title_element">{{myprojects.projectname}} </span>
+                             <span class="state colr_pink font-mobile" *ngIf="myprojects.overdue">overdue</span></span>
                               <mat-progress-bar mode="determinate" value="{{ myprojects.matvalue }}"></mat-progress-bar>
-                             End date: {{ myprojects.projectdate }}
+                              <span class=" full_width padding_element  left_value"><span class="title_element font-mobile">End date:  </span><span class="date_element"> {{ myprojects.projectdate }}</span></span>
                            </td>
                               </ng-container>
                         
@@ -1080,10 +1086,12 @@
                  <!--Task Name Column -->
                         <ng-container matColumnDef="taskname">
                           <th mat-header-cell *matHeaderCellDef>Task Name </th>
-                          <td mat-cell *matCellDef="let mytasks"> {{mytasks.taskname}} 
-                              <span class="state colr_pink font-mobile" *ngIf="mytasks.overdues">overdue</span>
+                          <td mat-cell *matCellDef="let mytasks">
+                         <span class="full_width padding_element left_value">
+                        <span class="pro_name title_element"> {{mytasks.taskname}} </span>
+                              <span class="state colr_pink font-mobile" *ngIf="mytasks.overdues">overdue</span></span>
                         <mat-progress-bar mode="determinate" value="{{ mytasks.matvalues }}"></mat-progress-bar>
-                       End date: {{ mytasks.projectdate }}
+                        <span class=" full_width padding_element  left_value"><span class="title_element font-mobile"> End date: </span><span class="font-mobile bold_element">{{ mytasks.projectdate }}</span></span>
                      </td>
                         </ng-container>
                     
@@ -1125,17 +1133,17 @@
                         <ng-container matColumnDef="accountname">
                           <th mat-header-cell *matHeaderCellDef>Account Name </th>
                           <td mat-cell *matCellDef="let account"> 
-                                <mat-list role="list" class="component">
-                                        <mat-list-item role="listitem"> {{account.accountname}} </mat-list-item>
-                                        <mat-list-item role="listitem"> Accounts: {{ account.accounts }}</mat-list-item>
-                                    </mat-list>
+                                <span class="full_width padding_element left_value">
+                                 <span class="bold_element title_element"> {{account.accountname}}</span></span>
+                                 <span class=" full_width padding_element  left_value"><span class="title_element font-mobile"> Accounts:</span><span class="font-mobile bold_element"> {{ account.accounts }}</span></span>
                      </td>
                         </ng-container>
                     
                         <!-- client Column -->
                         <ng-container matColumnDef="balance">
                           <th mat-header-cell *matHeaderCellDef> Balance </th>
-                          <td mat-cell *matCellDef="let account"> {{account.balance}} 
+                          <td mat-cell *matCellDef="let account"> 
+                              <span class="bolding_element">{{account.balance}} </span>
                           
                           </td>
                         </ng-container>
@@ -1157,38 +1165,39 @@
 
                 <mat-expansion-panel expanded="true" hideToggle="true" class="scrolling_data">
                     <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
-                        <mat-panel-title>
-                            Agreements Awaiting Client Signature
+                     <mat-panel-title>
+                    Agreements Awaiting Client Signature
                         </mat-panel-title>
                         <span><svg class="xPanelIndicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
+                         <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                     </mat-expansion-panel-header>
 
                     <ng-scrollbar [autoHide] = "true" [overlay]="true">
                         <div class="noPadding element_high">
-                <table class="display_prop" mat-table [dataSource]="Dataarray1">
+                <table class="display_prop table_element" mat-table [dataSource]="Dataarray1">
                  <!--Task Name Column -->
-                        <ng-container matColumnDef="clientname">
-                          <th mat-header-cell *matHeaderCellDef>Client Name </th>
-                          <td mat-cell *matCellDef="let Agreements"> 
-                               
-                            <span class="pro_name width_element font-mobile left_value"> {{Agreements.clientname}}</span><span class="gray left_value small_value">
-                                         Date: {{ Agreements.date }}</span>
+                   <ng-container matColumnDef="clientname">
+                   <th mat-header-cell *matHeaderCellDef class="width_value">Client Name </th>
+                   <td mat-cell *matCellDef="let Agreements" class="width_value padding_dataelement"> 
+                        <span class="full_width  left_value">
+                                <span class="pro_name title_element"> {{Agreements.clientname}}</span></span>
+                                <span class="full_width padding_element left_value"> <span class="title_element  font-mobile">
+                           Date: </span><span class="font-mobile bold_element">{{ Agreements.date }}</span></span>
                                     
                      </td>
                         </ng-container>
                     
                         <!-- client Column -->
                         <ng-container matColumnDef="type">
-                          <th mat-header-cell *matHeaderCellDef> Type </th>
-                          <td mat-cell *matCellDef="let Agreements"><span class="font-mobiles left_value"> {{Agreements.type}} </span>
+                          <th mat-header-cell *matHeaderCellDef class="width_value"> Type </th>
+                          <td mat-cell *matCellDef="let Agreements" class="width_value"><span class="font-mobiles left_value"> {{Agreements.type}} </span>
                           
                           </td>
                         </ng-container>
                         <!--Task Name Column -->
                         <ng-container matColumnDef="status">
-                                <th mat-header-cell *matHeaderCellDef>Status </th>
-                                <td mat-cell *matCellDef="let Agreements"> 
+                                <th mat-header-cell *matHeaderCellDef class="width_value">Status </th>
+                                <td mat-cell *matCellDef="let Agreements" class="width_value"> 
                                         <span class="state colr_pink font-mobile" *ngIf="Agreements.status">Pending</span> 
                                 </td>
                               </ng-container>
