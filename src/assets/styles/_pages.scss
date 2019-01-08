@@ -240,6 +240,11 @@ html .page-wrapper{
     }
     
 }
+.custom-header{
+    .mat-expansion-panel-content{
+        height:456px;
+    }
+}
 .fiftyHeight{
     .mat-expansion-panel-content{
         height:500px;
@@ -441,6 +446,7 @@ width: 90%;
     vertical-align:middle;
     display:flex;
     margin:auto 24px;
+    width:100%;
     svg{
         color:black;
         margin:0;
@@ -455,6 +461,19 @@ width: 90%;
     }
     color:$gray;
     
+}
+.overdueSearchBtn{
+    svg{
+        color:$gray;
+    }
+}
+.overdueSearchSpan{
+   display:flex;
+   justify-self: right;
+   margin-left: auto;
+}
+.overdueSearchInput{
+   margin:0;
 }
 .noPadding{
     padding:0 !important;
@@ -889,8 +908,10 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
 background-color:$dashboard-title !important;
 color:#494949;
 }
+
 .dashboard-title{
  display:flex;
+ background-color:$dashboard-title !important;
  }
 .cdea{
 height: 44px;

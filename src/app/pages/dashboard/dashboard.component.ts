@@ -11,6 +11,7 @@ import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { inject, TestBed } from '@angular/core/testing';
 import { MatPaginator,MatTableDataSource } from '@angular/material';
 import { Cards3Component } from './dashboardComps/cards3/cards3.component'
+import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 
 export interface Food {
   value: string;
@@ -97,6 +98,7 @@ ngOnInit() {
   //  let input =  "<mat-form-field> <input matInput (keyup)=\"applyFilter2($event.target.value)\" placeholder=\"Filter\"> </mat-form-field>";
   // const matFormField = this._renderer2.createElement('mat-form-field');
    const input = this._renderer2.createElement('input');
+  this._renderer2.setAttribute(input,"placeholder","Search All Columns");
   let simple = this._renderer2.listen(input, 'keyup', (evt) => {
     console.log('Clicking the button', evt);
     this.applyFilter2(evt.target.value)
@@ -105,7 +107,17 @@ ngOnInit() {
     // console.log(name);
     let final ="<button>"+name + "</button> | <button>" + name + "</button> Selected &nbsp;&nbsp; | <button>" + fileMinus + "</button> | <button>" + fileMinus + "</button> |  &nbsp;&nbsp; <button>Visibility</button>";
     this._renderer2.setProperty(span, 'innerHTML', final);
-    this._renderer2.appendChild(span,input);
+
+    const searchSpan=this._renderer2.createElement('span');
+    this._renderer2.appendChild(searchSpan,input);
+    const btn=this._renderer2.createElement('button');
+    this._renderer2.addClass(searchSpan, 'overdueSearchSpan');
+    this._renderer2.addClass(input, 'overdueSearchInput');
+    this._renderer2.addClass(btn, 'overdueSearchBtn');
+    let search = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('search'));
+    this._renderer2.setProperty(btn, 'innerHTML', search);
+    this._renderer2.appendChild(searchSpan,btn );
+    this._renderer2.appendChild(span,searchSpan );
     // const matTabBodyWrapper = this._el.nativeElement.parentNode.querySelector('.mat-tab-body-wrapper');
     const matTabBodyWrapper = (document.getElementById('overdue')).getElementsByClassName('mat-tab-body-wrapper')[0];
     const mat = (document.getElementById('overdue')).getElementsByClassName('mat-tab-header')[0];
