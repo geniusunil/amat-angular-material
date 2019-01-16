@@ -166,6 +166,14 @@ ngOnInit() {
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true,
+    legend: {
+
+      labels: {
+      usePointStyle:true,
+      fillStyle: '#ffffff',
+      fontSize: 18,
+      }
+      }
     // bezierCurve:true
   };
   public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
@@ -278,7 +286,15 @@ ngOnInit() {
   ];
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: any = {
-    responsive: true
+    responsive: true,
+    legend: {
+
+      labels: {
+      usePointStyle:true,
+      fillStyle: '#ffffff',
+      fontSize: 18,
+      }
+      }
   
   };
   public lineChartColors: Array<any> = [
