@@ -5,13 +5,12 @@ import {
   SecurityContext,
   ViewChild
 } from '@angular/core';
-import { FeatherIconsPipe } from '../../feather-pipe';
 
-import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
-import { inject, TestBed } from '@angular/core/testing';
+import { FeatherIconsPipe } from '../../feather-pipe';
+import {  DomSanitizer } from '@angular/platform-browser';
 import { MatPaginator,MatTableDataSource } from '@angular/material';
 import { Cards3Component } from './dashboardComps/cards3/cards3.component'
-import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
+
 
 export interface Food {
   value: string;
@@ -60,10 +59,10 @@ export class DashboardComponent implements OnInit {
   applyFilter2(filterValue: string) {
     this.Dataarray8.filter = filterValue.trim().toLowerCase();
   }
-htmlToAdd;
+
 constructor(
-private _renderer2: Renderer2,
-private sanitizer: DomSanitizer) { }
+      private _renderer2: Renderer2,
+      private sanitizer: DomSanitizer) { }
 ngOnInit() {
   this.Dataarray8.paginator = this.paginator;
  } 
@@ -121,6 +120,7 @@ ngOnInit() {
     // const matTabBodyWrapper = this._el.nativeElement.parentNode.querySelector('.mat-tab-body-wrapper');
     const matTabBodyWrapper = (document.getElementById('overdue')).getElementsByClassName('mat-tab-body-wrapper')[0];
     const mat = (document.getElementById('overdue')).getElementsByClassName('mat-tab-header')[0];
+    console.log(document.getElementById('overdue'));
     this._renderer2.setStyle(mat, 'border', 'none');
     const paramText = this._renderer2.createText("");
 
