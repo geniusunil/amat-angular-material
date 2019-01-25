@@ -7,14 +7,14 @@
 </div>
 <div class="pading_textdata">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
-        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
+        <div fxFlex.gt-sm="33.33%" class="fiveHundred matcard_content">
             <app-cards3 [titleicon]="'dollar-sign'" [title]="'Deposit'" [colorClass]="'primary-color'" [icon1]="'plus-circle'" [icon2]="'minus-circle'" [icon3]="'plus-circle'" [icon4]="'minus-circle'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Income Today'" [subs2]="'Expense Today'" [subs3]="'Total Income'" [subs4]="'Total Expense'"></app-cards3>
         </div>
-        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
+        <div fxFlex.gt-sm="33.33%" class="fiveHundred matcard_content">
             <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'" [icon1]="'file-text'" [icon2]="'credit-card'" [icon3]="'dollar-sign'" [icon4]="'dollar-sign'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Invoice Today'" [subs2]="'Payment Today'" [subs3]="'Paid Amount'" [subs4]="'Due Amount'"></app-cards3>
             
         </div>
-        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
+        <div fxFlex.gt-sm="33.33%" class="fiveHundred matcard_content">
             <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'" [icon1]="'check-circle'" [icon2]="'check-circle'" [icon3]="'crosshair'" [icon4]="'file'" [amount1]="'6'" [amount2]="'1'" [amount3]="'4'" [amount4]="'40'" [subs1]="'In Progress Task'" [subs2]="'Open Tickets'" [subs3]="'In Progress Bugs'" [subs4]="'In progress'"></app-cards3>
 
                 
@@ -1615,6 +1615,7 @@
                     <mat-card-title class="flex below">
                             <span class="">Settlement Summary</span></mat-card-title>
                 <div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
                         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
                             [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" [colors]="barChartColors"
@@ -1643,8 +1644,9 @@
                                     </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                                 </span>
                             </div>
+                            <mat-divider></mat-divider>
                         <div class="chartDiv" >
-                            <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+                            <canvas class= "barchart_element" baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
                                 [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
                                 [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
                         </div>
@@ -1670,8 +1672,9 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="incomeExpenseData" [labels]="incomeExpenseLabels" [options]="incomeExpenseOptions"
+                        <canvas class= "barchart_element" baseChart [datasets]="incomeExpenseData" [labels]="incomeExpenseLabels" [options]="incomeExpenseOptions"
                             [legend]="incomeExpenseLegend" [colors]="incomeExpenseColors" [chartType]="incomeExpenseType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
@@ -1685,11 +1688,12 @@
     <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card class="fixFH">
+            <mat-card class="fixFH21">
                     <mat-card-title class="flex below">
                             <span class="">Previous year Income Comparison Chart</span></mat-card-title>
        
                 <div>
+                        <mat-divider></mat-divider>
                         <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
                             <span class="right_value">
                                 <mat-form-field>
@@ -1709,8 +1713,9 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
+                        <canvas class= "barchart_element" baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
                             [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
@@ -1721,7 +1726,7 @@
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card class="fixFH">
+            <mat-card class="fixFH21">
                     <mat-card-title class="flex below">
                             <span class="">Previous Year Expense Comparison Chart</span></mat-card-title>
               
@@ -1745,9 +1750,9 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
-
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
+                        <canvas class= "barchart_element" baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
                             [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>
@@ -1776,8 +1781,9 @@
                         </span>
                         
                     </div>
+                    <mat-divider></mat-divider>
                 <div class="chartDiv">
-                    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [colors]="donutColors"
+                    <canvas class= "barchart_element" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [colors]="donutColors"
                         (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
                 </div></div>
             </mat-card>
@@ -1798,8 +1804,9 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                        <canvas class= "barchart_element" baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
                             [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
                             (chartClick)="chartClicked($event)"></canvas>
                     </div>

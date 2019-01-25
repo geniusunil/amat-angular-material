@@ -259,6 +259,8 @@ isMatMenu2Open = false;
         this.stateChange(newState);
         this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-focused');
     this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
+    var elements = <HTMLElement>document.getElementsByClassName("cdk-overlay-container")[0];
+          elements.style.marginLeft = '5.5vw';
       }
       else if (!this.isMatMenuOpen) {
         this.enteredButton = true;
@@ -267,6 +269,9 @@ isMatMenu2Open = false;
         this.stateChange(newState);
         this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-focused');
     this.ren.addClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
+    var elements = <HTMLElement>document.getElementsByClassName("cdk-overlay-container")[0];
+    elements.style.marginLeft = '5.5vw';
+    elements.style.display = 'block';
       }
       else {
         this.enteredButton = true;
@@ -298,12 +303,13 @@ isMatMenu2Open = false;
         // console.log("closementu from buttonleave1");
        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
         this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
-      } else if (!this.isMatMenuOpen) {
-        trigger.closeMenu();
-        // console.log("closementu from buttonleave2");
-        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
-        this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-mouse-focused');
-      } else {
+        var elements = <HTMLElement>document.getElementsByClassName("cdk-overlay-container")[0];
+        elements.style.display = 'none';
+        elements.style.marginLeft = '0';
+        setTimeout(() => {
+          elements.style.display = 'block';
+        }, 150)
+        } else {
         this.enteredButton = false;
       }
     }, 100)

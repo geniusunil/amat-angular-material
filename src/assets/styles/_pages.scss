@@ -60,6 +60,7 @@ html .page-wrapper{
     }
 
 .mat-card-title{
+    width:100%;
     font-size:14px !important;
 }
 .mat-card-title.flex{
@@ -74,7 +75,7 @@ html .page-wrapper{
     display:flex;
     font-weight:600;
     span{
-        margin:20px;
+        margin:15px 20px;
         color:#505050;
     }
 }
@@ -126,14 +127,26 @@ html .page-wrapper{
 .gray{
     color:$gray;
 }
-
-.mat-list-item svg{
+.mat-small{
+svg{
+    position:relative;
+   height:16px;
+    width:16px;
+   margin-bottom:6px;
+   margin-right:0px !important;
+}
+}
+.mat-list-item {
+    svg{
     position:relative;
     top:3px;
     height:16px;
     width:16px;
-    margin-right:5px;
-   
+   margin-right:3px;
+}
+}
+.mat-header-row {
+height: 40px !important;
 }
 .mat-expansion-panel-body{
     padding:0 0 16px 0 !important
@@ -154,16 +167,47 @@ html .page-wrapper{
    
     
 }
+.matcard_content{
+    .mat-grid-tile .mat-figure{
+    justify-content: end;}
+    .mat-card-content{ 
+        padding-left: 0px !important;
+         padding-right: 0px !important;
+     }
+     .mat-figure {
+        padding-left: 12px !important;
+        padding-top: 4px !important;
+    }
+    }
+.mat-header-cell {
+border-bottom: none !important;
+}
 .project_name_list .one{
     padding:0 30px 0 0 !important;
 }
-
-.cdk-overlay-container{
-    left:$sidebar-width-collapsed;
+.searchbutton{
+    display: inline-flex;
+    align-self: center;
+    margin: 0px !important;
+}
+.overdueSearchInput {
+    border: none;
+    margin: 0;
+}
+.overdueSearchSpan{
+    border: 1px solid;
+    padding: 0px 4px;
 }
 .cdk-overlay-connected-position-bounding-box{
-    left:0 !important;
-    top:45px;
+    //  left:10px !important;
+    // top:45px;
+    .cdk-overlay-pane{
+        margin-left:-15px;
+        // left:0px !important;
+        .mat-menu-panel{
+            margin-top:-45px !important;
+    }
+    }
 }
 
 .head{
@@ -195,7 +239,7 @@ html .page-wrapper{
 }
 .chartDiv{
     display: block;
-    padding:70px 30px;
+    padding: 30px 30px;
 }
 .width65{
     width:70%;
@@ -953,8 +997,14 @@ padding: 10px 15px;
         border-style: solid;
     }
 }
+.barchart_element{
+    padding-top:25px;
+    }
+.fixFH21{
+    height:420px;
+    }
 .fixFH{
-    height: 500px;
+    height: 392px;
 }
 .fixH235{
     height:191px;

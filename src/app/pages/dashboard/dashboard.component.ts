@@ -113,7 +113,7 @@ ngOnInit() {
     const btn=this._renderer2.createElement('button');
     this._renderer2.addClass(searchSpan, 'overdueSearchSpan');
     this._renderer2.addClass(input, 'overdueSearchInput');
-    this._renderer2.addClass(btn, 'overdueSearchBtn');
+    this._renderer2.addClass(btn, 'searchbutton');
     let search = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('search'));
     this._renderer2.setProperty(btn, 'innerHTML', search);
     this._renderer2.appendChild(searchSpan,btn );
@@ -166,6 +166,61 @@ ngOnInit() {
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true,
+    scales: {
+      xAxes: [{
+        scaleLabel: {
+          display: true,
+         
+        },
+        pointLabels: {
+          fontSize: 18,
+          fontColor: "green"
+        },
+      ticks: {
+        
+        padding:10,
+        fontColor: "#343434", 
+        fontSize: 14,
+      
+  
+      
+      },
+      angleLines: {
+        display: false,
+        lineWidth: 2,
+        color :'#998fd2',
+        
+        
+        },
+      gridLines: {
+        
+      display: false,
+      lineWidth: 2,
+      color :"#b9b9b9",
+      
+      
+      }
+     
+      }],
+      yAxes: [{
+      scaleLabel: {
+          display: true,
+         
+        },
+      ticks: {
+      padding:20,
+      beginAtZero: true,
+      fontColor: "#343434",
+      fontSize: 14,
+     },
+      gridLines: {
+      drawTicks:false,
+      display: false,
+      color :"#b9b9b9",
+      lineWidth: 1.5,
+      }
+      }]
+      },
     // bezierCurve:true
   };
   public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
@@ -278,23 +333,50 @@ ngOnInit() {
   ];
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: any = {
-    responsive: true
+    responsive: true,
+    scales: {
+      xAxes: [{
+        categoryPercentage:0.5,
+        barPercentage:1,
+          gridLines: {
+            
+            display: false,
+            lineWidth: 2,
+           },
+         ticks: {
+          fontColor: "#343434", 
+          fontSize: 16,
+         },
+      }],
+      yAxes: [{
+        scaleLabel :{
+          display: false,
+        },
+       gridLines: {
+        drawBorder: false,
+        display: false,
+        lineWidth: 2,
+        },
+        ticks: {
+         },
+     }],
+},
   
   };
   public lineChartColors: Array<any> = [
     { // grey
       backgroundColor: 'rgba(98,86,172,0.2)',
       borderColor: '#6256ac',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
+      pointBackgroundColor: '#6256ac',
+      pointBorderColor: '#6256ac',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     },
     { // dark grey
       backgroundColor: 'rgba(77,83,96,0.2)',
       borderColor: '#6256ac',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
-      pointBorderColor: '#fff',
+      pointBackgroundColor: '#6256ac',
+      pointBorderColor: '#6256ac',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(77,83,96,1)'
     }
