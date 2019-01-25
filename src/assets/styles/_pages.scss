@@ -190,12 +190,16 @@ border-bottom: none !important;
     align-self: center;
     margin: 0px !important;
 }
+.matlist{
+    .mat-list-item-content {
+        padding: 6px 16px !important;
+    }}
 .overdueSearchInput {
     border: none;
     margin: 0;
 }
 .overdueSearchSpan{
-    border: 1px solid;
+    border: 1px solid #d1d1d1;
     padding: 0px 4px;
 }
 .cdk-overlay-connected-position-bounding-box{
@@ -226,8 +230,7 @@ border-bottom: none !important;
     justify-content: space-between;
 .mat-form-field-flex {
     height: $searchHeight;
-    border: 1px solid gray;
-   
+    border:1px solid #d7d7d7;
     display: block;
     .mat-datepicker-toggle{
         button{
@@ -350,7 +353,7 @@ border-bottom: none !important;
 }
 .containChart{
     padding-bottom:15px;
-    border-bottom: solid 1px #eeeeee;
+  
 }
 .icons24{
     svg{
@@ -359,12 +362,14 @@ border-bottom: none !important;
     }
 }
 .box {
-   
+    align-self: center;
     border-radius: 0px 2px 2px 0px;
     padding: 4.5px;
     background-color:$primary;
     display: inline-flex;
     svg{
+        align-self: center;
+    margin: 0px auto;
         color:white;
     }
     height:36px;
@@ -617,7 +622,7 @@ width: 90%;
         }
         span{
             display:inline-block;
-            margin-top:5px;
+    padding-top:0px !important;
         }
     }
     
@@ -1001,7 +1006,7 @@ padding: 10px 15px;
     padding-top:25px;
     }
 .fixFH21{
-    height:420px;
+    height:444px;
     }
 .fixFH{
     height: 392px;
