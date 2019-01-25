@@ -1618,8 +1618,8 @@
                         <mat-divider></mat-divider>
                     <div class="chartDiv">
                         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" [colors]="barChartColors"
-                            (chartClick)="chartClicked($event)"></canvas>
+                            [legend]="barChartLegend" [chartType]="barChartType"  [colors]="barChartColors"
+                           ></canvas>
                     </div>
                     <!-- <button (click)="randomize()">Update</button> -->
                 </div>
@@ -1648,7 +1648,7 @@
                         <div class="chartDiv" >
                             <canvas class= "barchart_element" baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
                                 [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
-                                [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                                [chartType]="lineChartType" ></canvas>
                         </div>
                     </div>
                     
@@ -1675,8 +1675,8 @@
                         <mat-divider></mat-divider>
                     <div class="chartDiv">
                         <canvas class= "barchart_element" baseChart [datasets]="incomeExpenseData" [labels]="incomeExpenseLabels" [options]="incomeExpenseOptions"
-                            [legend]="incomeExpenseLegend" [colors]="incomeExpenseColors" [chartType]="incomeExpenseType" (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                            [legend]="incomeExpenseLegend" [colors]="incomeExpenseColors" [chartType]="incomeExpenseType" 
+                            ></canvas>
                     </div>
                     <!-- <button (click)="randomize()">Update</button> -->
                 </div>
@@ -1757,8 +1757,8 @@
                         <mat-divider></mat-divider>
                     <div class="chartDiv">
                         <canvas class= "barchart_element" baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
-                            [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                            [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" 
+                            ></canvas>
                     </div>
                     
                 </div>
@@ -1788,7 +1788,7 @@
                     <mat-divider></mat-divider>
                 <div class="chartDiv">
                     <canvas class= "barchart_element" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [colors]="donutColors"
-                        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                         ></canvas>
                 </div></div>
             </mat-card>
         </div>
@@ -1811,8 +1811,8 @@
                         <mat-divider></mat-divider>
                     <div class="chartDiv">
                         <canvas class= "barchart_element" baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                            [legend]="barChartLegend" [chartType]="barChartType" 
+                            ></canvas>
                     </div>
                     <!-- <button (click)="randomize()">Update</button> -->
                 </div>
