@@ -194,6 +194,12 @@ isMatMenu2Open = false;
         // console.log("closemenu from menuleave");
         this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-focused');
         this.ren.removeClass(button['_elementRef'].nativeElement, 'cdk-program-focused');
+        var elements = <HTMLElement>document.getElementsByClassName("cdk-overlay-container")[0];
+        elements.style.display = 'none';
+        elements.style.marginLeft = '0';
+        setTimeout(() => {
+          elements.style.display = 'block';
+        }, 150)
       } else {
         this.isMatMenuOpen = false;
       }
