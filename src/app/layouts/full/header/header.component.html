@@ -33,15 +33,15 @@
 <span> Create New</span>
 </button>
 <button mat-icon-button class="m-r-10">
-<mat-icon matBadge="15" matBadgeColor="warn" class="m-r-20" >notifications_none</mat-icon>
+<mat-icon matBadge="15" matBadgeColor="warn" class="" >notifications_none</mat-icon>
 </button>
 <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5"> <img src="assets/images/users/1.jpg" alt="user" class="profile-pic"> </button>
-<button mat-button   [matMenuTriggerFor]="profile" class="m-r-10 p-l-0">
+<button mat-button [matMenuTriggerFor]="profile" class="m-r-10 p-l-0">
         <span>Shetty k</span> <mat-icon>keyboard_arrow_down</mat-icon> 
 </button>
  
 
-<mat-menu #profile="matMenu" class="mymegamenu">
+<mat-menu #profile="matMenu" class="mymegamenu" yPosition="below">
     <button mat-menu-item>
         <mat-icon>settings</mat-icon> Settings </button>
     <button mat-menu-item>
