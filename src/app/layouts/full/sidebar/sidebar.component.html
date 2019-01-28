@@ -42,7 +42,7 @@
     
 </mat-nav-list>
 
-<mat-menu #menu="matMenu" xPosition="after" yPosition="above">
+<mat-menu #menu="matMenu" xPosition="after" yPosition="below">
         <span (mouseenter)="menuenter()" >
             <span class="head">{{ state }}</span> <hr>
   <ng-container *ngFor="let submenuitem of menuItems.getSubMenuitem([state])" routerLinkActive="selected"> 

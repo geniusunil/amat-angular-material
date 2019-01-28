@@ -112,7 +112,7 @@ ngOnInit() {
     const btn=this._renderer2.createElement('button');
     this._renderer2.addClass(searchSpan, 'overdueSearchSpan');
     this._renderer2.addClass(input, 'overdueSearchInput');
-    this._renderer2.addClass(btn, 'overdueSearchBtn');
+    this._renderer2.addClass(btn, 'searchbutton');
     let search = this.sanitizer.sanitize(SecurityContext.HTML, pipe.transform('search'));
     this._renderer2.setProperty(btn, 'innerHTML', search);
     this._renderer2.appendChild(searchSpan,btn );
@@ -152,28 +152,56 @@ ngOnInit() {
     ]
     }
     ];
-  // events
-  public chartClicked(e: any): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any): void {
-    console.log(e);
-  }
-
+ 
   //barchart
 
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true,
-    legend: {
-
-      labels: {
-      usePointStyle:true,
-      fillStyle: '#ffffff',
-      fontSize: 18,
+    scales: {
+      xAxes: [{
+        scaleLabel: {
+          display: true,
+         
+        },
+        pointLabels: {
+          fontSize: 18,
+          fontColor: "green"
+        },
+      ticks: {
+         padding:10,
+        fontColor: "#343434", 
+        fontSize: 14,
+      },
+      angleLines: {
+        display: false,
+        lineWidth: 2,
+        color :'#998fd2',
+        },
+      gridLines: {
+      display: false,
+      lineWidth: 2,
+      color :"#b9b9b9",
       }
+     }],
+      yAxes: [{
+      scaleLabel: {
+       display: true,
+        },
+      ticks: {
+      padding:20,
+      beginAtZero: true,
+      fontColor: "#343434",
+      fontSize: 14,
+     },
+      gridLines: {
+      drawTicks:false,
+      display: false,
+      color :"#b9b9b9",
+      lineWidth: 1.5,
       }
+      }]
+      },
     // bezierCurve:true
   };
   public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
@@ -181,7 +209,7 @@ ngOnInit() {
   public barChartLegend: boolean = true;
 
   public barChartData: any[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: '# of Payments', type: 'line', backgroundColor: "rgba(51,51,51,0.5)", fill: false, lineTension: 0.3 },
+    { data: [65, 59, 80, 81, 56, 55, 40], label: '# of Payments', type: 'line', backgroundColor: "rgba(251,251,251,0.5)", fill: false, lineTension: 0.3 },
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Payment Amount ($)' },
   ];
   public barChartColors:Array<any> = [
@@ -229,9 +257,82 @@ ngOnInit() {
 
   //incomeExpense
 
+  public barChartOptions1:any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels1:string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartType1:string = 'bar';
+  public barChartLegend1:boolean = true;
+ 
+  public barChartData1:any[] = [
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
+    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+  ];
   public incomeExpenseOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true,
+    
+    tooltips: {
+      position:'nearest',
+      mode: 'index',
+      backgroundColor:"rgb(255,255,255,0.8)",
+      borderColor:"#f3f3f3",
+      borderWidth:2,
+      bodyFontColor:"black",
+      titleFontColor:"black",
+    },
+    scales: {
+      xAxes: [{
+        barThickness:12,
+        scaleLabel: {
+          display: true,
+         
+        },
+        pointLabels: {
+          fontSize: 18,
+          fontColor: "green"
+        },
+      ticks: {
+        
+        padding:10,
+        fontColor: "#343434", 
+        fontSize: 14,
+      
+  
+      
+      },
+      angleLines: {
+        display: false,
+        lineWidth: 2,
+        color :'#998fd2',
+        
+        
+        },
+      gridLines: {
+      display: false,
+      lineWidth: 1,
+      color :"#b9b9b9",
+      }
+     }],
+      yAxes: [{
+      scaleLabel: {
+          display: true,
+         
+        },
+      ticks: {
+      padding:20,
+      beginAtZero: true,
+      fontColor: "#343434",
+      fontSize: 14,
+     },
+      gridLines: {
+        drawBorder: false,
+        display: false,
+        lineWidth: 2,
+      }
+      }]
+      },
     // bezierCurve:true
   };
   public incomeExpenseLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
@@ -258,6 +359,46 @@ ngOnInit() {
   public prevIncomeOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true,
+    scales: {
+      xAxes: [{
+       pointLabels: {
+          fontSize: 18,
+          fontColor: "green"
+        },
+      ticks: {
+        padding:10,
+        fontColor: "#343434", 
+        fontSize: 14,
+      },
+      angleLines: {
+        display: false,
+        lineWidth: 2,
+        color :'#998fd2',
+       },
+      gridLines: {
+      display: false,
+      lineWidth: 1,
+      color :"#b9b9b9",
+      }
+     }],
+      yAxes: [{
+      scaleLabel: {
+          display: true,
+         
+        },
+      ticks: {
+      padding:20,
+      beginAtZero: true,
+      fontColor: "#343434",
+      fontSize: 14,
+     },
+      gridLines: {
+      
+        lineWidth: 1,
+      }
+      }]
+      },
+
     // bezierCurve:true
   };
   public prevIncomeLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
@@ -287,30 +428,58 @@ ngOnInit() {
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: any = {
     responsive: true,
-    legend: {
-
-      labels: {
-      usePointStyle:true,
-      fillStyle: '#ffffff',
-      fontSize: 18,
-      }
-      }
+    tooltips: {
+      position:'nearest',
+      mode: 'index',
+      backgroundColor:"#ffffff",
+      borderColor:"#f3f3f3",
+      borderWidth:2,
+      bodyFontColor:"black",
+      titleFontColor:"black",
+    },
+    scales: {
+      xAxes: [{
+        categoryPercentage:0.5,
+        barPercentage:1,
+          gridLines: {
+            color :"#6255ad",
+            display: false,
+            lineWidth: 2,
+           },
+         ticks: {
+          fontColor: "#343434", 
+          fontSize: 16,
+         },
+      }],
+      yAxes: [{
+        scaleLabel :{
+          display: false,
+        },
+       gridLines: {
+        drawBorder: false,
+        display: false,
+        lineWidth: 2,
+        },
+        ticks: {
+         },
+     }],
+},
   
   };
   public lineChartColors: Array<any> = [
     { // grey
       backgroundColor: 'rgba(98,86,172,0.2)',
       borderColor: '#6256ac',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
+      pointBackgroundColor: '#6256ac',
+      pointBorderColor: '#6256ac',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     },
     { // dark grey
       backgroundColor: 'rgba(77,83,96,0.2)',
       borderColor: '#6256ac',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
-      pointBorderColor: '#fff',
+      pointBackgroundColor: '#6256ac',
+      pointBorderColor: '#6256ac',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(77,83,96,1)'
     }

@@ -7,14 +7,14 @@
 </div>
 <div class="pading_textdata">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
-        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
+        <div fxFlex.gt-sm="33.33%" class="fiveHundred matcard_content">
             <app-cards3 [titleicon]="'dollar-sign'" [title]="'Deposit'" [colorClass]="'primary-color'" [icon1]="'plus-circle'" [icon2]="'minus-circle'" [icon3]="'plus-circle'" [icon4]="'minus-circle'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Income Today'" [subs2]="'Expense Today'" [subs3]="'Total Income'" [subs4]="'Total Expense'"></app-cards3>
         </div>
-        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
-            <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'" [icon1]="'file-text'" [icon2]="'credit-card'" [icon3]="'dollar-sign'" [icon4]="'dollar-sign'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 28,506'" [amount4]="'$ 6169.77'" [subs1]="'Invoice Today'" [subs2]="'Payment Today'" [subs3]="'Paid Amount'" [subs4]="'Due Amount'"></app-cards3>
+        <div fxFlex.gt-sm="33.33%" class="fiveHundred matcard_content">
+            <app-cards3 [titleicon]="'file-text'" [title]="'Invoice'" [colorClass]="'custom-green'" [icon1]="'file-text'" [icon2]="'credit-card'" [icon3]="'dollar-sign'" [icon4]="'dollar-sign'" [amount1]="'$ 0.00'" [amount2]="'$ 0.00'" [amount3]="'$ 22561458,506'" [amount4]="'$ 6169.77'" [subs1]="'Invoice Today'" [subs2]="'Payment Today'" [subs3]="'Paid Amount'" [subs4]="'Due Amount'"></app-cards3>
             
         </div>
-        <div fxFlex.gt-sm="33.33%" class="fiveHundred">
+        <div fxFlex.gt-sm="33.33%" class="fiveHundred matcard_content">
             <app-cards3 [titleicon]="'check-square'" [title]="'Task'" [colorClass]="'custom-pink'" [icon1]="'check-circle'" [icon2]="'check-circle'" [icon3]="'crosshair'" [icon4]="'file'" [amount1]="'6'" [amount2]="'1'" [amount3]="'4'" [amount4]="'40'" [subs1]="'In Progress Task'" [subs2]="'Open Tickets'" [subs3]="'In Progress Bugs'" [subs4]="'In progress'"></app-cards3>
 
                 
@@ -255,7 +255,7 @@
                                         <mat-grid-tile class="staTile noBorders">
 
                                             <span class="custom-green">Won Deal</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                 <mat-list-item role="listitem"><span class="">Deals</span><span class="count bg-custom-green">0</span></mat-list-item>
                                                 <mat-list-item role="listitem" class="font-mobile"><span class="">$0.00</span>
                                                 </mat-list-item>
@@ -265,7 +265,7 @@
 
                                         <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
                                             <span class="custom-pink">Lost Deal</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                 <mat-list-item role="listitem"><span class="">Deals</span><span class="count bg-custom-pink">0</span></mat-list-item>
                                                 <mat-list-item role="listitem" class="font-mobile"><span class="">$0.00</span>
                                                 </mat-list-item>
@@ -275,7 +275,7 @@
 
                                         <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
                                             <span class="gray">New Deals Started</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                 <mat-list-item role="listitem"><span class="">Deals</span><span class="count bg-custom-blue">0</span></mat-list-item>
                                                 <mat-list-item role="listitem" class="font-mobile"><span class="">$0.00</span>
                                                 </mat-list-item>
@@ -284,7 +284,7 @@
                                         </mat-grid-tile>
                                         <mat-grid-tile class="staTile noBorders" [rowspan]="1.5"><span class="primary-color mr5"></span>
                                             <span class="gray">Activities Completed</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                 <mat-list-item role="listitem"><span class="">
                                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                     width="348.077px" height="348.077px" viewBox="0 0 348.077 348.077" style="enable-background:new 0 0 348.077 348.077;"
@@ -510,7 +510,7 @@
                                         </mat-grid-tile>
                                         <mat-grid-tile class="staTile noBorders" [rowspan]="1.5"><span class="primary-color mr5"></span>
                                             <span class="gray">Activities Added</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                     <mat-list-item role="listitem"><span class="">
                                                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                             width="348.077px" height="348.077px" viewBox="0 0 348.077 348.077" style="enable-background:new 0 0 348.077 348.077;"
@@ -736,7 +736,7 @@
                                         </mat-grid-tile>
                                         <mat-grid-tile class="staTile noBorders" [rowspan]="1"><span class="primary-color mr5"></span>
                                             <span class="gray">Average Time to win</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                 <mat-list-item role="listitem"><span class=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                     width="475.084px" height="475.084px" viewBox="0 0 475.084 475.084" style="enable-background:new 0 0 475.084 475.084;"
                                                     xml:space="preserve">
@@ -796,7 +796,7 @@
                                         </mat-grid-tile>
                                         <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
                                             <span class="gray">Win Ratio</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                 <mat-list-item role="listitem"><span class=""><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                                                <g>
@@ -842,7 +842,7 @@
                                         </mat-grid-tile>
                                         <mat-grid-tile class="staTile noBorders"><span class="primary-color mr5"></span>
                                             <span class="gray">Email Sent</span>
-                                            <mat-list role="list">
+                                            <mat-list role="list" class="matlist">
                                                 <mat-list-item role="listitem"><span class=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                     viewBox="0 0 334.5 334.5" style="enable-background:new 0 0 334.5 334.5;" xml:space="preserve">
                                                <path d="M332.797,13.699c-1.489-1.306-3.608-1.609-5.404-0.776L2.893,163.695c-1.747,0.812-2.872,2.555-2.893,4.481
@@ -1615,10 +1615,11 @@
                     <mat-card-title class="flex below">
                             <span class="">Settlement Summary</span></mat-card-title>
                 <div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
                         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" [colors]="barChartColors"
-                            (chartClick)="chartClicked($event)"></canvas>
+                            [legend]="barChartLegend" [chartType]="barChartType"  [colors]="barChartColors"
+                           ></canvas>
                     </div>
                     <!-- <button (click)="randomize()">Update</button> -->
                 </div>
@@ -1643,10 +1644,11 @@
                                     </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                                 </span>
                             </div>
+                            <mat-divider></mat-divider>
                         <div class="chartDiv" >
-                            <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+                            <canvas class= "barchart_element" baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
                                 [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
-                                [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                                [chartType]="lineChartType" ></canvas>
                         </div>
                     </div>
                     
@@ -1670,10 +1672,11 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="incomeExpenseData" [labels]="incomeExpenseLabels" [options]="incomeExpenseOptions"
-                            [legend]="incomeExpenseLegend" [colors]="incomeExpenseColors" [chartType]="incomeExpenseType" (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                        <canvas class= "barchart_element" baseChart [datasets]="incomeExpenseData" [labels]="incomeExpenseLabels" [options]="incomeExpenseOptions"
+                            [legend]="incomeExpenseLegend" [colors]="incomeExpenseColors" [chartType]="incomeExpenseType" 
+                            ></canvas>
                     </div>
                     <!-- <button (click)="randomize()">Update</button> -->
                 </div>
@@ -1685,11 +1688,12 @@
     <div fxLayout="row" fxLayoutWrap="wrap"  fxLayout.xs="column" fxLayout.sm="column">
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card class="fixFH">
+            <mat-card class="fixFH21">
                     <mat-card-title class="flex below">
                             <span class="">Previous year Income Comparison Chart</span></mat-card-title>
        
                 <div>
+                        <mat-divider></mat-divider>
                         <div class="goalsBox width65 below"><span class="left_value"><b>Select Year (1)</b></span>
                             <span class="right_value">
                                 <mat-form-field>
@@ -1709,10 +1713,15 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
-                            [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                            <canvas baseChart  class= "barchart_element"
+                            [datasets]="barChartData1"
+                            [labels]="barChartLabels1"
+                            [options]="barChartOptions1"
+                            [legend]="barChartLegend1"
+                            [chartType]="barChartType1">
+                            </canvas>
                     </div>
                     
                 </div>
@@ -1721,7 +1730,7 @@
 
         <!-- Card column -->
         <div fxFlex.gt-sm="50%" fxFlex="50%">
-            <mat-card class="fixFH">
+            <mat-card class="fixFH21">
                     <mat-card-title class="flex below">
                             <span class="">Previous Year Expense Comparison Chart</span></mat-card-title>
               
@@ -1745,11 +1754,11 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
-
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
-                            [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                        <canvas class= "barchart_element" baseChart [datasets]="prevIncomeData" [labels]="prevIncomeLabels" [options]="prevIncomeOptions"
+                            [legend]="prevIncomeLegend" [colors]="prevIncomeColors" [chartType]="prevIncomeType" 
+                            ></canvas>
                     </div>
                     
                 </div>
@@ -1776,9 +1785,10 @@
                         </span>
                         
                     </div>
+                    <mat-divider></mat-divider>
                 <div class="chartDiv">
-                    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [colors]="donutColors"
-                        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    <canvas class= "barchart_element" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [colors]="donutColors"
+                         ></canvas>
                 </div></div>
             </mat-card>
         </div>
@@ -1798,10 +1808,11 @@
                                 </mat-form-field><span class="box" [innerHTML]="'search' | feather"></span>
                             </span>
                         </div>
+                        <mat-divider></mat-divider>
                     <div class="chartDiv">
-                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                        <canvas class= "barchart_element" baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                            [legend]="barChartLegend" [chartType]="barChartType" 
+                            ></canvas>
                     </div>
                     <!-- <button (click)="randomize()">Update</button> -->
                 </div>
