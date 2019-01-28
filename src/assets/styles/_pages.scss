@@ -947,7 +947,9 @@ div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::aft
 background-color:$dashboard-title !important;
 color:#494949;
 }
-
+.cdk-overlay-pane{
+    margin-left:-15px;
+}
 .dashboard-title{
  display:flex;
  background-color:$dashboard-title !important;
