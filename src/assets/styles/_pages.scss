@@ -872,7 +872,22 @@ Chartistt chart css
         stroke:$warning
     }
 }
-
+.myPoint{
+    text-align:center;
+    li{
+        display:inline-block;
+        border:2px solid rgba(0,0,0,0.55);
+        border-radius:50%;
+        margin:0 3px;
+        padding:4px;
+        transition-timing-function:cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        transition:0.5s;
+        &.active{
+            background:#6b6b6b;
+            transform:scale(1.2);
+        }
+    }
+}
 
 /*******************
 Pricing scss

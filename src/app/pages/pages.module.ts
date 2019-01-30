@@ -27,6 +27,7 @@ import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { Cards3Component } from './dashboard/dashboardComps/cards3/cards3.component';
+import { NguCarouselModule } from '@ngu/carousel';
 // import { DashboardDirective } from './dashboard.directive';
 // import { HighlightDirective } from './dashboard/highlight.directive';
 
@@ -57,7 +58,8 @@ import { Cards3Component } from './dashboard/dashboardComps/cards3/cards3.compon
       startFromZero: false
     }),
     ChartsModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    NguCarouselModule
   
   ],
    exports:[

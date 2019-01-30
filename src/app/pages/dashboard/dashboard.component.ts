@@ -11,6 +11,7 @@ import {  DomSanitizer } from '@angular/platform-browser';
 import { MatPaginator,MatTableDataSource } from '@angular/material';
 import { Cards3Component } from './dashboardComps/cards3/cards3.component'
 
+import { NguCarouselConfig } from '@ngu/carousel';
 
 export interface Food {
   value: string;
@@ -59,12 +60,15 @@ export class DashboardComponent implements OnInit {
   applyFilter2(filterValue: string) {
     this.Dataarray8.filter = filterValue.trim().toLowerCase();
   }
-
+carouselBanner;
 constructor(
       private _renderer2: Renderer2,
       private sanitizer: DomSanitizer) { }
 ngOnInit() {
   this.Dataarray8.paginator = this.paginator;
+  this.carouselTileItems.forEach(el => {
+    this.carouselTileLoad(el);
+  });
  } 
  @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(Cards3Component) child;
@@ -83,7 +87,7 @@ ngOnInit() {
   ];
   selectedValue2: string = this.foods2[0].value;
   
-  ngAfterViewInit() {
+  ngAfterContentInit() {
     let pipe;
     const div = this._renderer2.createElement('div');
     const span = this._renderer2.createElement('span');
@@ -133,9 +137,7 @@ ngOnInit() {
     //  console.log(matTabBodyWrapper);
      this._renderer2.setStyle(matTabBodyWrapper,'border','1px solid rgba(0, 0, 0, 0.12)');
   }
-  ngAfterContentInit() {
-    
-   }
+
   
    
   
@@ -497,6 +499,49 @@ ngOnInit() {
       }
     }
     this.lineChartData = _lineChartData;
+  }
+
+  //carousel
+  imgags = [
+    'assets/bg.jpg',
+    'assets/car.png',
+    'assets/canberra.jpg',
+    'assets/holi.jpg'
+  ];
+  public carouselTileItems: Array<any> = ["Angular 7", "Angular Material Design",
+   "Angular Flex-Layout", "Chart.js/Canvas manipulation",
+    "REST API", "Angular dynamic menu",
+    "Custom scrollbars","Angular Material Forms"];
+  public carouselTiles = {
+    0: [],
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: []
+  };
+  public carouselTile: NguCarouselConfig = {
+    grid: { xs: 1, sm: 1, md: 3, lg: 3, all: 0 },
+    slide: 3,
+    speed: 250,
+    point: {
+      visible: true
+    },
+    load: 2,
+    velocity: 0,
+    touch: true,
+    easing: 'cubic-bezier(0, 0, 0.2, 1)'
+  };
+  public carouselTileLoad(j) {
+    // console.log(this.carouselTiles[j]);
+    const len = this.carouselTiles[j].length;
+    if (len <= 30) {
+      for (let i = len; i < len + 15; i++) {
+        this.carouselTiles[j].push(
+          this.imgags[Math.floor(Math.random() * this.imgags.length)]
+        );
+      }
+    }
   }
 }
 

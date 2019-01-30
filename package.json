@@ -28,6 +28,7 @@
     "@angular/router": "7.0.1",
     "@icon/zondicons": "0.0.5",
     "@ng-select/ng-select": "^2.13.1",
+    "@ngu/carousel": "^1.5.5",
     "@swimlane/ngx-charts": "^9.0.0",
     "@swimlane/ngx-datatable": "^13.1.0",
     "core-js": "^2.4.1",
