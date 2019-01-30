@@ -13,24 +13,7 @@ File: scss
 /*******************
  Main container
 *******************/
-$desktop : 1100px;
-$mobile : 767px;
 
-@mixin mobile{
-    @media(max-width:#{$mobile}){
-        @content;
-    }
-}
-@mixin desktop{
-    @media(min-width:#{$desktop}){
-        @content;
-    }
-}
-@mixin belowDesktop{
-    @media(max-width:#{$desktop}){
-        @content;
-    }
-}
 $searchHeight:36px;
 .main-container {
   display: flex;
@@ -887,6 +870,26 @@ Chartistt chart css
             transform:scale(1.2);
         }
     }
+}
+.myCarousel{
+    ngu-tile{
+        div{
+            height:200px;
+            background-image:url("../../assets/images/logo/angular.png");
+            background-repeat: no-repeat;
+            display:flex;
+            .feature{
+                display:flex;
+                height:fit-content;
+                margin:auto;
+                font-size: large;
+                color:#5b4fa7;
+                font-weight: 800;
+            }
+        }
+        
+    }
+    
 }
 
 /*******************

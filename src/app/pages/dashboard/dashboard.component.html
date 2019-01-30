@@ -22,14 +22,17 @@ High resolution
     </div>
 
 </div>
-<mat-card>
+
+<div class="pading_textdata">
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+<mat-card >
     <mat-card-content>
         <mat-card-title class="flex">
-            Features
+            Key Features
         </mat-card-title>
-        <ngu-carousel #myCarousel [inputs]="carouselTile" [dataSource]="carouselTileItems">
+        <ngu-carousel class="myCarousel" #myCarousel [inputs]="carouselTile" [dataSource]="carouselTileItems">
             <ngu-tile *nguCarouselDef="let item; let i = index">
-           {{ carouselTileItems[i] }}
+           <span class="feature">{{ carouselTileItems[i] }}</span>
               <!-- <ngu-carousel #myCarousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad(i)" [dataSource]="carouselTiles[i]">
                 <ngu-tile *nguCarouselDef="let item; let j = index">
                   <div class="tile" [style.background]="'url(' + item + ')'" style="min-height: 200px">
@@ -52,6 +55,7 @@ High resolution
           </ngu-carousel>
     </mat-card-content>
 </mat-card>
+</div></div>
 
 <div class="pading_textdata">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
