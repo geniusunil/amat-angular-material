@@ -866,7 +866,7 @@ Chartistt chart css
         transition-timing-function:cubic-bezier(0.17, 0.67, 0.83, 0.67);
         transition:0.5s;
         &.active{
-            background:#6b6b6b;
+            background:#cccccc;
             transform:scale(1.2);
         }
     }
