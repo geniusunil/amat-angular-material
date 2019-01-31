@@ -530,6 +530,9 @@ ngOnInit() {
     load: 2,
     velocity: 0,
     touch: true,
+    loop:true,
+    interval: { timing: 3000 },
+    animation: 'lazy',
     easing: 'cubic-bezier(0, 0, 0.2, 1)'
   };
   public carouselTileLoad(j) {

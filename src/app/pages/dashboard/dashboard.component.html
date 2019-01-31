@@ -26,9 +26,9 @@ High resolution
 <div class="pading_textdata">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
 <mat-card >
-    <mat-card-content>
+    <mat-card-content style="background-color: #EEF5F9;">
         <mat-card-title class="flex">
-            Key Features
+            <span class="primary-color symbol" [innerHTML]="'star' | feather"></span>Key Features
         </mat-card-title>
         <ngu-carousel class="myCarousel" #myCarousel [inputs]="carouselTile" [dataSource]="carouselTileItems">
             <ngu-tile *nguCarouselDef="let item; let i = index">
