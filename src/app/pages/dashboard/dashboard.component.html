@@ -87,7 +87,8 @@ High resolution
                                     <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
 
                         </mat-expansion-panel-header>
-
+                        <ng-scrollbar [autoHide] = "true" [overlay]="true">
+                            
                         <mat-tab-group>
                             <mat-tab label="Projects">
                                 <table class="display_prop" mat-table [dataSource]="myDataArraya">
@@ -141,6 +142,7 @@ High resolution
                                 <mat-card-content>Content 2</mat-card-content>
                             </mat-tab>
                         </mat-tab-group>
+                    </ng-scrollbar>
                     </mat-expansion-panel>
 
                 </mat-accordion>
@@ -165,8 +167,10 @@ High resolution
                       </mat-expansion-panel-header>
 
                         <mat-tab-group id="overdue">
-                           
+                            
                             <mat-tab label="Opportunities">
+                                    <ng-scrollbar [autoHide] = "true" [overlay]="true">
+
                           <table class="display_prop" mat-table [dataSource]="Dataarray8">
                          <ng-container matColumnDef="taskname">
                            <th mat-header-cell *matHeaderCellDef>Task Name </th>
@@ -209,6 +213,7 @@ High resolution
                                             <tr mat-row *matRowDef="let pin; columns: discolumns8;"></tr>
                                           </table>
                                           <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                          </ng-scrollbar>
                             </mat-tab>
                             <mat-tab label="Calls">
                                 <mat-card-content>Content 2</mat-card-content>
@@ -262,6 +267,7 @@ High resolution
                             <mat-tab label="Unconfirmed Bugs">
                                 <mat-card-content>Content 2</mat-card-content>
                             </mat-tab>
+                        
                         </mat-tab-group>
                     </mat-expansion-panel>
 

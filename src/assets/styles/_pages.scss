@@ -189,7 +189,11 @@ border-bottom: none !important;
     border: 1px solid #d1d1d1;
     padding: 0px 4px;
 }
-
+#overdue{
+    .mat-tab-body-wrapper{
+        height:500px;
+    }
+}
 
 .head{
     margin:0 auto;
@@ -267,6 +271,9 @@ border-bottom: none !important;
 .custom-header{
     .mat-expansion-panel-content{
         height:456px;
+    }
+    .mat-expansion-panel-body{
+        height:472px;
     }
 }
 .fiftyHeight{
