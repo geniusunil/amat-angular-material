@@ -158,7 +158,7 @@ height: 40px !important;
          padding-right: 0px !important;
          height:250px;
          .mat-grid-list{
-             height:-webkit-fill-available;
+             height:calc(100% - 23px);
          }
      }
      .mat-figure {
@@ -180,6 +180,9 @@ border-bottom: none !important;
 .matlist{
     .mat-list-item-content {
         padding: 6px 16px !important;
+        @include mobile{
+            padding:6px 0 !important;
+        }
     }}
 .overdueSearchInput {
     border: none;
@@ -202,7 +205,8 @@ border-bottom: none !important;
 }
 .goalsBox {
     float: left;
-    width: 300px;
+    width: -webkit-fill-available;
+    max-width:300px;
     margin-left: 24px;
     padding-top: 15px !important;
     top: -3px !important;
@@ -219,7 +223,9 @@ border-bottom: none !important;
         }
     }
 }
-
+    @include mobile{
+        margin:0 5px;
+    }
 }
 .chartDiv{
     display: block;
@@ -276,6 +282,11 @@ border-bottom: none !important;
         height:472px;
     }
 }
+.goal-reports{
+    .mat-expansion-panel-content{
+        height:100px;
+    }
+}
 .fiftyHeight{
     .mat-expansion-panel-content{
         height:500px;
@@ -304,7 +315,7 @@ border-bottom: none !important;
 {
     float:right !important;
     width:70%;
-    display:flex;
+    display:contents;
     justify-content: flex-end;
     .mat-form-field{
         width: 80%;
@@ -474,6 +485,9 @@ width: 90%;
 .overdueMeetingsInsert{
     height: 60px;
     display:flex;
+    @include mobile{
+        display:none;
+    }
 }
 .overdueMeetingsInsertSpan{
     vertical-align:middle;
@@ -532,6 +546,9 @@ width: 90%;
     width:auto;
     .mat-select-value{
         color:$gray;
+    }
+    @include mobile{
+        display:none !important;
     }
 }
 .xPanelIndicatorSpan{
@@ -615,6 +632,11 @@ width: 90%;
     // display:none;
     @include mobile{
         display: none !important;
+    }
+}
+.ftable{
+    .m24{
+        padding-right:24px;
     }
 }
 /*******************

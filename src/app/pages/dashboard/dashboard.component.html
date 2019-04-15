@@ -190,14 +190,14 @@ High resolution
                                                     </td>
                                                   </ng-container>
                                             <ng-container matColumnDef="relatedto">
-                                                <th mat-header-cell *matHeaderCellDef>Related to</th>
-                                                <td mat-cell *matCellDef="let Overdue"> 
+                                                <th mat-header-cell *matHeaderCellDef class="hidemobile">Related to</th>
+                                                <td mat-cell *matCellDef="let Overdue" class="hidemobile"> 
                                                         
                                                 </td>
                                               </ng-container>
                                               <ng-container matColumnDef="Participants">
-                                                    <th mat-header-cell *matHeaderCellDef>Participants </th>
-                                                    <td mat-cell *matCellDef="let Overdue"> 
+                                                    <th mat-header-cell *matHeaderCellDef class="hidemobile">Participants </th>
+                                                    <td mat-cell *matCellDef="let Overdue" class="hidemobile"> 
                                                             {{Overdue.Participants}} 
                                                     </td>
                                                   </ng-container>
@@ -1052,7 +1052,7 @@ High resolution
         <div fxFlex.gt-sm="100%" fxFlex="100">
             <mat-card>
                 <mat-accordion>
-                    <mat-expansion-panel expanded="true" class="custom-header" hideToggle="true" #example>
+                    <mat-expansion-panel expanded="true" class="custom-header goal-reports" hideToggle="true" #example>
                         <mat-expansion-panel-header class="dashboard-title" [expandedHeight]="'44px'">
                             <mat-panel-title>
                                 Goal Reports
@@ -1520,7 +1520,7 @@ High resolution
                                 <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                     </mat-expansion-panel-header>
 
-                    <table mat-table [dataSource]="dataSource">
+                    <table mat-table [dataSource]="dataSource" class="ftable">
 
     
 
@@ -1532,19 +1532,19 @@ High resolution
                     
                         <!-- Weight Column -->
                         <ng-container matColumnDef="weight">
-                          <th mat-header-cell *matHeaderCellDef> Date </th>
-                          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                          <th mat-header-cell *matHeaderCellDef class="m24"> Date </th>
+                          <td mat-cell *matCellDef="let element" class="m24"> {{element.weight}} </td>
                         </ng-container>
                     
                         <!-- Symbol Column -->
-                        <ng-container matColumnDef="symbol">
-                          <th mat-header-cell *matHeaderCellDef> Invoice </th>
-                          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                        <ng-container matColumnDef="symbol" >
+                          <th mat-header-cell *matHeaderCellDef class="hidemobile"> Invoice </th>
+                          <td mat-cell *matCellDef="let element"  class="hidemobile"> {{element.symbol}} </td>
                         </ng-container>
                         <!-- Position Column -->
                         <ng-container matColumnDef="position">
-                          <th mat-header-cell *matHeaderCellDef> Amount </th>
-                          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                          <th mat-header-cell *matHeaderCellDef class="hidemobile"> Amount </th>
+                          <td mat-cell *matCellDef="let element" class="hidemobile"> {{element.position}} </td>
                         </ng-container>
                     
                     
@@ -1571,7 +1571,7 @@ High resolution
                                 <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm5-11H5v2h10V9z" /></svg></span>
                     </mat-expansion-panel-header>
 
-                    <table mat-table [dataSource]="dataSource">
+                    <table mat-table [dataSource]="dataSource" class="ftable">
 
     
 
@@ -1583,19 +1583,19 @@ High resolution
                     
                         <!-- Weight Column -->
                         <ng-container matColumnDef="weight">
-                          <th mat-header-cell *matHeaderCellDef> Date </th>
-                          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                          <th mat-header-cell *matHeaderCellDef class="m24"> Date </th>
+                          <td mat-cell *matCellDef="let element" class="m24"> {{element.weight}} </td>
                         </ng-container>
                     
                         <!-- Symbol Column -->
                         <ng-container matColumnDef="symbol">
-                          <th mat-header-cell *matHeaderCellDef> Invoice </th>
-                          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                          <th mat-header-cell *matHeaderCellDef class="hidemobile"> Invoice </th>
+                          <td mat-cell *matCellDef="let element" class="hidemobile"> {{element.symbol}} </td>
                         </ng-container>
                         <!-- Position Column -->
                         <ng-container matColumnDef="position">
-                          <th mat-header-cell *matHeaderCellDef> Amount </th>
-                          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                          <th mat-header-cell *matHeaderCellDef class="hidemobile"> Amount </th>
+                          <td mat-cell *matCellDef="let element" class="hidemobile"> {{element.position}} </td>
                         </ng-container>
                     
                     
