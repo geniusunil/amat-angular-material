@@ -12,6 +12,7 @@ $headingfont: 'Open Sans', sans-serif;
 
 $desktop : 1100px;
 $mobile : 767px;
+$four80 : 480px;
 
 @mixin mobile{
     @media(max-width:#{$mobile}){
@@ -25,6 +26,11 @@ $mobile : 767px;
 }
 @mixin belowDesktop{
     @media(max-width:#{$desktop}){
+        @content;
+    }
+}
+@mixin four80{
+    @media(max-width:#{$four80}){
         @content;
     }
 }

@@ -634,6 +634,12 @@ width: 90%;
         display: none !important;
     }
 }
+.hidefour80{
+    // display:none;
+    @include four80{
+        display: none !important;
+    }
+}
 .ftable{
     .m24{
         padding-right:24px;
