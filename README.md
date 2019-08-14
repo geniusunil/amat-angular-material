@@ -1,6 +1,21 @@
 # amat
+live demo : http://kynetweb.com/utiliko-material-dashboard/
+
 
 Project which includes creating an angular app with material design using Angular 7 and angular-material.
+
+Features :
+- Angular material Design
+- Angular Flex-Layout
+- Angular Unit testing (Jasmine, Karma)
+- Angular Universal/ Server side rendering
+- Chart.js/Canvas manipulation
+- D3.js/charts/Canvas manipulation
+- REST API
+- Angular dynamic menu
+- Custom scrollbars
+- Angular material forms
+- Development on Git.
 
 
 Installation
